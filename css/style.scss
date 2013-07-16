@@ -1,0 +1,316 @@
+/* Ten Thousand */
+
+@import "reset.css";
+
+/* Variables */
+
+$hoverwhite: rgba(255,255,255,0.7);
+$altgray: rgba(240,241,245,1);
+$strokegray: rgba(229,229,229,1);
+$typegray: rgba(172,173,176,1);
+$linkgray: rgba(153,153,156,1);
+$purple: rgba(80,40,90,1);
+$black: black;
+
+/* Base Styles */
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	height: 100%;
+	font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	-webkit-tap-highlight-color: black;
+}
+
+::selection {
+	background: black;
+	color: white;
+}
+
+::-moz-selection {
+	background: black;
+	color: white;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+a,h1,h2,h3,h3,h5,section,article,ul,li,span {
+	transition: all 0.15s ease-in;
+	-webkit-transition: all 0.15s ease-in;
+	-moz-transition: all 0.15s ease-in;
+	-o-transition: all 0.15s ease-in;
+}
+
+a.current {
+	color: $black;
+}
+
+div.clear {
+	clear:left;
+	height: 0;
+}
+
+div.clearright {
+	clear: both;
+	height: 0;
+}
+
+em {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+.purple {
+	color: $purple;
+}
+
+.white {
+	color: white;
+}
+
+/* Type Styles */
+
+h1 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.15em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 0.875em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+h4 {
+	
+}
+
+h5 {
+	
+}
+
+p {
+	font-family: "Times New Roman", Times, serif;
+	color: $typegray;
+	line-height: 1.3em;
+}
+
+a.logo {
+	display: block;
+	width: 20em;
+	height: 3em;
+	background: url(../img/tenthoulogo.png) no-repeat center center;
+	background-size: 100%;
+	text-indent: -9999px;
+	float: left;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+a.btn {
+	display: table;
+	color: white;
+	background-color: $purple;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	font-weight: 700;
+	padding: 1em 2em;
+	border-radius: 10em;
+	margin: 0 auto;
+	cursor: pointer;
+	&:hover {
+		background: $black;
+	}
+}
+
+article {
+	width: 64em;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+section,header,footer {
+	width: 100%;
+}
+
+header {
+	nav {
+	font-size: 0.8em;
+	margin: 1.35em 0 0 0;
+	float: right;
+		a {
+			display: inline-block;
+			margin: 0 2em 0 0;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $linkgray;
+			letter-spacing: 0.1em;
+			&:hover {
+				color: $black;
+			}
+		}
+		span.cart {
+			figure {
+				display: inline-block;
+				background-color: $purple;
+				height: 2em;
+				font-size: 90%;
+				padding: 0.5em 0.7em 0 0.7em;
+				border-radius: 1em;
+				margin: 0 0 0 0.25em;
+				color: white;
+				font-weight: 700;
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+section.hero {
+	height: 80%;
+	background: url(../img/hero.jpg);
+	background-size: cover;
+	article {
+		h1 {
+			font-size: 400%;
+			text-align: center;
+			display: block;
+			margin: 40% 0 0 0;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+		}
+	}
+}
+
+aside.third {
+	width: 33.33333%;
+	height: 23.5em;
+	float: left;
+}
+
+section.homepage {
+	article {
+		padding: 0 2em;
+	}
+	aside.third {
+		height: 23.5em;
+		padding: 2.5em 3em;
+		border-right: 1px solid $strokegray;
+		&:nth-child(3) {
+		border-right: none;
+		}
+		h2 {
+			text-align: center;
+			margin: 0 0 1em 0;
+		}
+		h3 {
+			text-align: center;
+			margin: 0 0 3em 0;
+		}
+		p {
+			font-size: 0.938em;
+			text-align: left;
+			margin: 2em 0 3em 0;
+		}
+		
+	}
+}
+
+section.products {
+	border-top: 1px solid $strokegray;
+	a.product {
+		float: left;
+		width: 28em;
+		height: 28em;
+		margin: 0 4em 2em 0;
+		position: relative;
+		&:nth-child(2n) {
+			margin: 0 0 2em 0;
+		}
+		div {
+			background: $hoverwhite;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 45% 0 0 0;
+			text-align: center;
+			h2 {
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+footer {
+	text-transform: uppercase;
+	background: $altgray;
+	border-top: 1px solid $strokegray;
+	padding: 2em 0;
+	background: url(../img/xlogo.png) no-repeat center 4.25em;
+	background-size: 50px 50px;
+	aside {
+		width: 50%;
+		float: left;
+		nav {
+			a {
+				display: table;
+				margin: 0 auto;
+				font-size: 0.8em;
+				font-weight: 700;
+				color: $linkgray;
+				line-height: 1.85em;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+	
+	h5 {
+		margin: 5em 0 0 0;
+		font-size: 0.8em;
+		font-weight: 700;
+		color: $typegray;
+		text-align: center;
+	}
+}

@@ -1,0 +1,234 @@
+@import url(reset.css);
+/* Ten Thousand */
+/* Variables */
+/* Base Styles */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: black; }
+
+::selection {
+  background: black;
+  color: white; }
+
+::-moz-selection {
+  background: black;
+  color: white; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a, h1, h2, h3, h3, h5, section, article, ul, li, span {
+  transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in; }
+
+a.current {
+  color: black; }
+
+div.clear {
+  clear: left;
+  height: 0; }
+
+div.clearright {
+  clear: both;
+  height: 0; }
+
+em {
+  font-style: italic; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.purple {
+  color: #50285a; }
+
+.white {
+  color: white; }
+
+/* Type Styles */
+h1 {
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1.15em;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 0.875em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  color: #acadb0;
+  line-height: 1.3em; }
+
+a.logo {
+  display: block;
+  width: 20em;
+  height: 3em;
+  background: url(../img/tenthoulogo.png) no-repeat center center;
+  background-size: 100%;
+  text-indent: -9999px;
+  float: left;
+  cursor: pointer; }
+  a.logo:hover {
+    opacity: 0.7; }
+
+a.btn {
+  display: table;
+  color: white;
+  background-color: #50285a;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 1em 2em;
+  border-radius: 10em;
+  margin: 0 auto;
+  cursor: pointer; }
+  a.btn:hover {
+    background: black; }
+
+article {
+  width: 64em;
+  margin: 0 auto;
+  padding: 2em; }
+
+section, header, footer {
+  width: 100%; }
+
+header nav {
+  font-size: 0.8em;
+  margin: 1.35em 0 0 0;
+  float: right; }
+  header nav a {
+    display: inline-block;
+    margin: 0 2em 0 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #99999c;
+    letter-spacing: 0.1em; }
+    header nav a:hover {
+      color: black; }
+  header nav span.cart figure {
+    display: inline-block;
+    background-color: #50285a;
+    height: 2em;
+    font-size: 90%;
+    padding: 0.5em 0.7em 0 0.7em;
+    border-radius: 1em;
+    margin: 0 0 0 0.25em;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    z-index: 1; }
+
+section.hero {
+  height: 80%;
+  background: url(../img/hero.jpg);
+  background-size: cover; }
+  section.hero article h1 {
+    font-size: 400%;
+    text-align: center;
+    display: block;
+    margin: 40% 0 0 0;
+    font-weight: 700;
+    letter-spacing: 0.1em; }
+
+aside.third {
+  width: 33.33333%;
+  height: 23.5em;
+  float: left; }
+
+section.homepage article {
+  padding: 0 2em; }
+section.homepage aside.third {
+  height: 23.5em;
+  padding: 2.5em 3em;
+  border-right: 1px solid #e5e5e5; }
+  section.homepage aside.third:nth-child(3) {
+    border-right: none; }
+  section.homepage aside.third h2 {
+    text-align: center;
+    margin: 0 0 1em 0; }
+  section.homepage aside.third h3 {
+    text-align: center;
+    margin: 0 0 3em 0; }
+  section.homepage aside.third p {
+    font-size: 0.938em;
+    text-align: left;
+    margin: 2em 0 3em 0; }
+
+section.products {
+  border-top: 1px solid #e5e5e5; }
+  section.products a.product {
+    float: left;
+    width: 28em;
+    height: 28em;
+    margin: 0 4em 2em 0;
+    position: relative; }
+    section.products a.product:nth-child(2n) {
+      margin: 0 0 2em 0; }
+    section.products a.product div {
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 45% 0 0 0;
+      text-align: center; }
+      section.products a.product div h2 {
+        line-height: 1.5em; }
+
+footer {
+  text-transform: uppercase;
+  background: #f0f1f5;
+  border-top: 1px solid #e5e5e5;
+  padding: 2em 0;
+  background: url(../img/xlogo.png) no-repeat center 4.25em;
+  background-size: 50px 50px; }
+  footer aside {
+    width: 50%;
+    float: left; }
+    footer aside nav a {
+      display: table;
+      margin: 0 auto;
+      font-size: 0.8em;
+      font-weight: 700;
+      color: #99999c;
+      line-height: 1.85em; }
+      footer aside nav a:hover {
+        color: black; }
+  footer h5 {
+    margin: 5em 0 0 0;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #acadb0;
+    text-align: center; }

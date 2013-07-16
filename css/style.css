@@ -13,7 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   width: 100%;
   height: 100%;
-  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "ARS Maquette Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
   -webkit-tap-highlight-color: black; }
 
 ::selection {
@@ -80,9 +80,9 @@ h2 {
 
 h3 {
   font-size: 0.875em;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.2em; }
 
 p {
   font-family: "Times New Roman", Times, serif;
@@ -131,7 +131,7 @@ header nav {
     display: inline-block;
     margin: 0 2em 0 0;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     color: #99999c;
     letter-spacing: 0.1em; }
     header nav a:hover {
@@ -209,10 +209,9 @@ section.products {
 
 footer {
   text-transform: uppercase;
-  background: #f0f1f5;
   border-top: 1px solid #e5e5e5;
   padding: 2em 0;
-  background: url(../img/xlogo.png) no-repeat center 4.25em;
+  background: #f0f1f5 url(../img/xlogo.png) no-repeat center 4.25em;
   background-size: 50px 50px; }
   footer aside {
     width: 50%;

@@ -5,11 +5,13 @@
 /* Variables */
 
 $hoverwhite: rgba(255,255,255,0.7);
+$lightgray: rgba(250,251,255,1);
 $altgray: rgba(240,241,245,1);
 $strokegray: rgba(229,229,229,1);
 $typegray: rgba(172,173,176,1);
+$darkertype: rgba(110,113,116,1);
 $linkgray: rgba(153,153,156,1);
-$purple: rgba(80,40,90,1);
+$purple: rgba(120,68,133,1);
 $black: black;
 
 /* Base Styles */
@@ -26,7 +28,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	width: 100%;
 	height: 100%;
-	font-family: "ARS Maquette Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: "ars-maquette-web", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	-webkit-tap-highlight-color: black;
 }
 
@@ -58,7 +60,7 @@ img {
 }
 
 
-a,h1,h2,h3,h3,h5,section,article,ul,li,span {
+a,h1,h2,h3,h3,h5,span {
 	transition: all 0.15s ease-in;
 	-webkit-transition: all 0.15s ease-in;
 	-moz-transition: all 0.15s ease-in;
@@ -99,13 +101,14 @@ a {
 /* Type Styles */
 
 h1 {
-	font-weight: 700;
+	font-size: 1.5em;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 
 h2 {
 	font-size: 1.15em;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 
@@ -125,22 +128,21 @@ h5 {
 }
 
 p {
-	font-family: "Times New Roman", Times, serif;
 	color: $typegray;
-	line-height: 1.3em;
+	line-height: 1.5em;
 }
 
 a.logo {
 	display: block;
-	width: 20em;
-	height: 3em;
+	width: 19em;
+	height: 2.75em;
 	background: url(../img/tenthoulogo.png) no-repeat center center;
 	background-size: 100%;
 	text-indent: -9999px;
 	float: left;
 	cursor: pointer;
 	&:hover {
-		opacity: 0.7;
+		opacity: 0.5;
 	}
 }
 
@@ -150,8 +152,8 @@ a.btn {
 	background-color: $purple;
 	text-transform: uppercase;
 	font-size: 0.75em;
-	font-weight: 700;
-	padding: 1em 2em;
+	font-weight: 600;
+	padding: 0.9em 2em 1em;
 	border-radius: 10em;
 	margin: 0 auto;
 	cursor: pointer;
@@ -161,9 +163,9 @@ a.btn {
 }
 
 article {
-	width: 64em;
+	width: 66em;
 	margin: 0 auto;
-	padding: 2em;
+	padding: 4em 3em;
 }
 
 section,header,footer {
@@ -177,7 +179,7 @@ header {
 	float: right;
 		a {
 			display: inline-block;
-			margin: 0 2em 0 0;
+			margin: 0 3em 0 0;
 			text-transform: uppercase;
 			font-weight: 500;
 			color: $linkgray;
@@ -187,42 +189,53 @@ header {
 			}
 		}
 		span.cart {
+			a {
+				margin: 0;
+				&.cartclicked {
+					color: $black;
+				}
+			}
 			figure {
 				display: inline-block;
 				background-color: $purple;
 				height: 2em;
 				font-size: 90%;
-				padding: 0.5em 0.7em 0 0.7em;
+				padding: 0.38em 0.7em 0 0.7em;
 				border-radius: 1em;
-				margin: 0 0 0 0.25em;
+				margin: 0 0 0 0.5em;
 				color: white;
 				font-weight: 700;
 				position: relative;
 				z-index: 1;
+				top: -1px;
+				&.cartclicked {
+					background-color: $black;
+				}
 			}
 		}
 	}
 }
 
 section.hero {
-	height: 80%;
-	background: url(../img/hero.jpg);
+	height: 70%;
+	background: url(../img/hero.jpg) center 60%;
 	background-size: cover;
 	article {
+		display: table;
+		height: 100%;
 		h1 {
-			font-size: 400%;
+			font-size: 600%;
 			text-align: center;
 			display: block;
-			margin: 40% 0 0 0;
-			font-weight: 700;
 			letter-spacing: 0.1em;
+			display: table-cell;
+			vertical-align: middle;
 		}
 	}
 }
 
 aside.third {
-	width: 33.33333%;
-	height: 23.5em;
+	width: 33%;
 	float: left;
 }
 
@@ -231,8 +244,8 @@ section.homepage {
 		padding: 0 2em;
 	}
 	aside.third {
-		height: 23.5em;
-		padding: 2.5em 3em;
+		height: 26em;
+		padding: 5em 3em;
 		border-right: 1px solid $strokegray;
 		&:nth-child(3) {
 		border-right: none;
@@ -243,11 +256,12 @@ section.homepage {
 		}
 		h3 {
 			text-align: center;
-			margin: 0 0 3em 0;
+			margin: 0 0 2.25em 0;
 		}
 		p {
-			font-size: 0.938em;
-			text-align: left;
+			font-size: 0.875em;
+			text-align: center;
+			line-height: 1.5em;
 			margin: 2em 0 3em 0;
 		}
 		
@@ -272,9 +286,9 @@ section.products {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			padding: 45% 0 0 0;
+			padding: 40% 0 0 0;
 			text-align: center;
-			h2 {
+			h3 {
 				line-height: 1.5em;
 			}
 		}
@@ -285,7 +299,7 @@ footer {
 	text-transform: uppercase;
 	border-top: 1px solid $strokegray;
 	padding: 2em 0;
-	background: $altgray url(../img/xlogo.png) no-repeat center 4.25em;
+	background: $altgray url(../img/xlogo.png) no-repeat center 6em;
 	background-size: 50px 50px;
 	aside {
 		width: 50%;
@@ -295,7 +309,7 @@ footer {
 				display: table;
 				margin: 0 auto;
 				font-size: 0.8em;
-				font-weight: 700;
+				font-weight: 500;
 				color: $linkgray;
 				line-height: 1.85em;
 				&:hover {
@@ -313,3 +327,332 @@ footer {
 		text-align: center;
 	}
 }
+
+
+
+
+
+/* PRODUCT PAGE */
+
+section.mainproduct {
+	background: $lightgray;
+	border-bottom: 1px solid $strokegray;
+	figure {
+		width: 66%;
+		padding: 0 5em 0 0;
+		float: left;
+	}
+	aside {
+		float: left;
+		width: 33%;
+	}
+	h1.title {
+		padding: 0 0 0.6em 0;
+		border-bottom: 1px solid $strokegray;
+		margin: 0 0 0.6em 0;
+	}
+	p {
+		margin: 2em 0;
+		line-height: 1.6em;
+		font-size: 0.875em;
+	}
+	
+	figure.colorsize {
+	width: 100%;
+	padding: 0;
+		select {
+			-webkit-appearance: none;
+			width: 100%;
+			display: block;
+			border-radius: 0;
+			background: $strokegray url(../img/arrow.png) 93% center no-repeat;
+			background-size: 12px 12px;
+			padding: 2em;
+			font-family: "ARS Maquette Pro";
+			text-transform: uppercase;
+			font-weight: 700;
+			margin: 0 0 0.625em 0;
+			font-size: 0.813em;
+			color: $black;
+			border: 0;
+		}
+	}
+	.submitbutton {
+			-webkit-appearance: none;
+			width: 100%;
+			color: white;
+			background: $black;
+			border: 0;
+			padding: 2em;
+			font-family: "ARS Maquette Pro";
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 0.75em;
+			letter-spacing: 1px;
+			cursor: pointer;
+			&:hover {
+				background: $purple;
+			}
+	}
+}
+
+section.productspotlights {
+	aside.third {
+		padding: 0 3em;
+		figure {
+			width: 14em;
+			height: 14em;
+			margin: 0 auto 2em;
+			border-radius: 7em;
+			background: $purple;
+			overflow: hidden;
+			img {
+				max-width: 150%;
+			}
+		}
+		p {
+			margin: 1em 0;
+			font-size: 0.875em;
+			line-height: 1.5em;
+		}
+	}
+}
+
+section.productfeature {
+	article {
+		display: table;
+	}
+	
+	aside.third {
+	text-align: center;
+		&.left {
+			margin: 6em 11em 0 4em;
+		}
+		&.right {
+			margin: 6em 4em 0 11em;
+		}
+		h1 {
+			margin: 0 0 1em 0;
+		}
+	}
+	figure.featureimg {
+		width: 25em;
+		height: 25em;
+		border-radius: 50%;
+		overflow: hidden;
+		background: black;
+		float: left;
+		img {
+			max-width: 200%;
+		}
+	}
+	&.gray {
+		background-color: $lightgray;
+		
+		p {
+			color: $linkgray;
+		}
+	}
+}
+
+section.productexplore {
+	h1 {
+		text-align: center;
+		color: $typegray;
+		margin: 0 0 1.75em 0;
+	}
+	aside.third {
+		width: 18em;
+		margin: 0 3em 0 0;
+		&:nth-child(4) {
+			margin: 0;
+		}
+		a {
+			display: table;
+			text-align: center;
+			color: $linkgray;
+			&:hover {
+				color: $black;
+			}
+			h3 {
+				margin: 1.5em auto 2.25em;
+			}
+		}
+	}
+}
+
+
+
+/* END PRODUCT PAGE */
+
+
+
+
+
+/* CART */
+
+section.cart-disp {
+	background: rgba(0,0,0,0.9);
+	position: absolute;
+	top: 8em;
+	color: white;
+	z-index: 5;
+	article {
+	padding: 3em 3em 4em;
+	position: relative;
+	
+	a.closebtn {
+		 	text-indent: -9999px;
+		 	position: absolute;
+		 	top: 1.5em;
+		 	right: 3.25em;
+		 	display: block;
+			background: url(../img/closebtn_w.svg) no-repeat center center;
+			opacity: 0.25;
+			width: 17px;
+			height: 17px;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+
+	}
+	* {
+		box-sizing: content-box;
+	}
+	
+	div.cart-contain {
+		width: 40em;
+		float: left;
+	}
+	
+	table.shopcart {
+		border-collapse: collapse;
+		width: 100%;
+		text-transform: uppercase;
+		margin: 0 0 1em 0;
+		
+		tr {
+			border-bottom: 1px solid white;
+		}
+		
+		thead {
+			font-size: 75%;
+			font-weight: 600;
+			letter-spacing: 0.1em;
+		}
+		
+		.td-name {
+			text-align: left;
+			padding: 20px 0;
+			font-weight: 600;
+		}
+		
+		.td-quantity, .td-price, .td-remove {
+			text-align: center;
+			padding: 20px 0;
+			&.sm {
+				padding: 10px 0;
+			}
+		}
+		
+		.td-quantity {
+			width: 80px;
+		}
+		
+		.td-price {
+			width: 150px;
+		}
+		
+		.td-remove {
+			width: 90px;
+		}
+	}
+	/* Closed Shop Cart */
+	
+	div.cart-actions {
+		width: 20em;
+		float: left;
+		box-sizing: border-box;
+		padding: 0.625em 0 0 3em;
+		text-align: center;
+		* {
+			box-sizing: border-box;
+		}
+		h3 {
+			color: $linkgray;
+		}
+		h2 {
+			margin: 0.25em auto 0.75em;
+			font-size: 2.25em;
+			padding: 0 0 0.15em;
+			display: table;
+			border-bottom: 2px solid white;
+		}
+		a.checkout {
+			display: table;
+			margin: 0 auto;
+			color: white;
+			background: $darkertype;
+			padding: 0.75em 3em 1em;
+			text-transform: uppercase;
+			font-weight: 700;
+			&:hover {
+				background-color: $purple;
+			}
+			
+		}
+	}
+	
+	}
+}
+
+
+section.mission {
+	height: 50%;
+	background: url(../img/mission.jpg) no-repeat center center;
+	background-size: cover;
+	h1 {
+		font-size: 150%;
+		font-weight: 300;
+		color: black;
+	}
+}
+
+section.mission-copy {
+	
+	p {
+	width: 50%;
+	margin: 0 auto 3em;
+	color: $darkertype;
+	}
+	figure {
+		margin: 3em auto;
+		width: 2em;
+		height: 2em;
+	}
+}
+
+
+section.mission2 {
+	height: 42em;
+	background: url(../img/mission2.jpg) no-repeat center center;
+	background-size: cover;
+	h1 {
+		margin: 1.6em auto 0;
+		line-height: 1.15em;
+		letter-spacing: 0.1em;
+		font-size: 500%;
+		text-align: center;
+		font-weight: 300;
+		color: black;
+	}
+	figure {
+		margin: 2em auto;
+		width: 3em;
+		height: 3em;
+	}
+}
+
+
+

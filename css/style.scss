@@ -5,7 +5,7 @@
 /* Variables */
 
 $hoverwhite: rgba(255,255,255,0.7);
-$lightgray: rgba(250,251,255,1);
+$lightgray: rgba(250,251,253,1);
 $altgray: rgba(240,241,245,1);
 $strokegray: rgba(229,229,229,1);
 $typegray: rgba(172,173,176,1);
@@ -108,7 +108,7 @@ a {
 
 h1 {
 	font-size: 1.5em;
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 }
@@ -435,7 +435,6 @@ section.productspotlights {
 			height: 14em;
 			margin: 0 auto 2em;
 			border-radius: 7em;
-			background: $purple;
 			overflow: hidden;
 			img {
 				max-width: 150%;
@@ -464,6 +463,8 @@ section.productfeature {
 		}
 		h1 {
 			margin: 0 0 1em 0;
+			font-size: 125%;
+			font-weight: 300;
 		}
 	}
 	figure.featureimg {
@@ -490,6 +491,7 @@ section.productexplore {
 	h1 {
 		text-align: center;
 		color: $typegray;
+		font-weight: 300;
 		margin: 0 0 1.75em 0;
 	}
 	aside.third {
@@ -519,10 +521,38 @@ section.productexplore {
 
 
 
+/* EMPTY CART */
+section.cart-disp-empty {
+  background: rgba(0,0,0,0.9);
+	position: absolute;
+	top: 8em;
+	color: white;
+	z-index: 5;
+	   article {
+  	  padding: 8em 3em;
+  	  position: relative;
+  	  text-align: center;
+  	 }
+  	 h1 {
+    	 font-weight: 300;
+    	 letter-spacing: 0.2em;
+  	 }
+  	 p {
+    	 margin: 0.5em 0 0 0;
+  	 }
+  	 a {
+    	 color: $darkertype;
+    	 &:hover {
+      	 color:white;
+    	 }
+  	 }
+  
+}
+
 
 /* CART */
 
-section.cart-disp {
+section.cart-disp-full {
 	background: rgba(0,0,0,0.9);
 	position: absolute;
 	top: 8em;
@@ -629,12 +659,12 @@ section.cart-disp {
 
 section.mission {
 	height: 50%;
-	background: url(../img/mission.jpg) no-repeat center center;
+	background: url(../img/mission.jpg) no-repeat center 42%;
 	background-size: cover;
 	h1 {
 		font-size: 150%;
-		font-weight: 300;
-		color: black;
+		font-weight: 500;
+		color: white;
 	}
 }
 

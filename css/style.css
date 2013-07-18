@@ -4,9 +4,13 @@
 /* Base Styles */
 body, html {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0; }
+
+html {
+  height: 100%; }
+  html.static {
+    background: #f0f1f5; }
 
 body {
   font-size: 100%;
@@ -14,7 +18,10 @@ body {
   width: 100%;
   height: 100%;
   font-family: "ars-maquette-web", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  -webkit-tap-highlight-color: black; }
+  -webkit-tap-highlight-color: black;
+  background: white; }
+  body.static {
+    height: auto; }
 
 ::selection {
   background: black;
@@ -75,8 +82,8 @@ a {
 
 /* Type Styles */
 h1 {
-  font-size: 1.5em;
-  font-weight: 500;
+  font-size: 2em;
+  font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase; }
 
@@ -91,6 +98,11 @@ h3 {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2em; }
+
+h4 {
+  font-size: 0.75em;
+  font-weight: 500;
+  text-transform: uppercase; }
 
 p {
   color: #acadb0;
@@ -181,8 +193,8 @@ header nav {
         transition: background-color 0.1s ease-out; }
 
 section.hero {
-  height: 70%;
-  background: url(../img/hero.jpg) center 60%;
+  height: 60%;
+  background: url(../img/hero.jpg) center 25%;
   background-size: cover; }
   section.hero article {
     display: table;
@@ -192,6 +204,7 @@ section.hero {
       text-align: center;
       display: block;
       letter-spacing: 0.1em;
+      font-weight: 500;
       display: table-cell;
       vertical-align: middle; }
 
@@ -475,7 +488,7 @@ section.cart-disp-full {
           background-color: #784485; }
 
 section.mission {
-  height: 50%;
+  height: 60%;
   background: url(../img/mission.jpg) no-repeat center 42%;
   background-size: cover; }
   section.mission h1 {
@@ -483,21 +496,47 @@ section.mission {
     font-weight: 500;
     color: white; }
 
-section.mission-copy p {
-  width: 50%;
-  margin: 0 auto 3em;
-  color: #6e7174; }
-section.mission-copy figure {
-  margin: 3em auto;
-  width: 2em;
-  height: 2em; }
+section.static-copy {
+  border-top: 1px solid #e5e5e5; }
+  section.static-copy h1 {
+    text-align: center;
+    margin: 0 auto 2em; }
+  section.static-copy h4 {
+    font-weight: 600;
+    margin: 1em 0 0 0;
+    color: #6e7174;
+    width: 20%;
+    line-height: 1.25em; }
+    section.static-copy h4.sub {
+      width: 55%;
+      margin: 1em auto 0.25em; }
+  section.static-copy p {
+    width: 55%;
+    margin: 0 auto 2em;
+    color: #6e7174; }
+    section.static-copy p.secondary {
+      font-size: 0.813em;
+      margin: 0 auto 2em; }
+  section.static-copy figure {
+    margin: 3em auto;
+    width: 2em;
+    height: 2em; }
+  section.static-copy ul {
+    list-style-type: disc;
+    width: 55%;
+    margin: 0 auto 1em; }
+    section.static-copy ul li {
+      font-size: 0.813em;
+      margin: 0 0 0 2em;
+      color: #6e7174;
+      line-height: 1.25em; }
 
 section.mission2 {
-  height: 42em;
+  height: 50em;
   background: url(../img/mission2.jpg) no-repeat center center;
   background-size: cover; }
   section.mission2 h1 {
-    margin: 1.6em auto 0;
+    margin: 2.5em auto 0;
     line-height: 1.15em;
     letter-spacing: 0.1em;
     font-size: 500%;

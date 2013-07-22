@@ -253,6 +253,11 @@ section.products {
       text-align: center; }
       section.products a.product div h3 {
         line-height: 1.5em; }
+      section.products a.product div h4 {
+        color: black;
+        letter-spacing: 0.1em;
+        margin: 1em 0 0 0;
+        color: #6e7174; }
 
 footer {
   text-transform: uppercase;
@@ -503,7 +508,8 @@ section.static-copy {
     margin: 0 auto 2em; }
   section.static-copy h4 {
     font-weight: 600;
-    margin: 1em 0 0 0;
+    position: relative;
+    margin: 4em 0 -1.35em 0;
     color: #6e7174;
     width: 20%;
     line-height: 1.25em; }
@@ -516,7 +522,7 @@ section.static-copy {
     color: #6e7174; }
     section.static-copy p.secondary {
       font-size: 0.813em;
-      margin: 0 auto 2em; }
+      margin: 0 auto 1em; }
   section.static-copy figure {
     margin: 3em auto;
     width: 2em;

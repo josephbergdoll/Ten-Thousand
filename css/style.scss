@@ -335,6 +335,12 @@ section.products {
 			h3 {
 				line-height: 1.5em;
 			}
+			h4 {
+  			color: black;
+  			letter-spacing: 0.1em;
+  			margin: 1em 0 0 0;
+  			color: $darkertype;
+			}
 		}
 	}
 }
@@ -691,7 +697,8 @@ section.static-copy {
 	}
 	h4 {
 	 	font-weight: 600;
-	 	margin: 1em 0 0 0;
+	 	position: relative;
+	 	margin: 4em 0 -1.35em 0;
 	 	color: $darkertype;
 	 	width: 20%;
 	 	line-height: 1.25em;
@@ -706,7 +713,7 @@ section.static-copy {
 	color: $darkertype;
 	&.secondary {
   	font-size: 0.813em;
-  	margin: 0 auto 2em;
+  	margin: 0 auto 1em;
 	}
 	}
 	figure {

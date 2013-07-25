@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="static">
 <head>
 <title></title>
 <meta name="description" content="" />
@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="">
 
 <!-- CSS Styles -->
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 
 <!-- jQuery() -->
 
@@ -18,8 +18,7 @@
 <![endif]-->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/scripts-ck.js"></script>
+<script src="../js/scripts-ck.js"></script>
 
 <!-- TypeKit-->
 <script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
@@ -27,7 +26,8 @@
 
 </head>
 
-<body class="full">
+<body class="full static">
+
 
 <section class="cart-disp-full">
 	<article>
@@ -72,17 +72,19 @@
 <section class="cart-disp-empty">
   <article>
     <h1>Your cart is empty</h1>
-    <p><a href="products/">Click here to check out our products</a></p>
+    <p><a href="../products/">Click here to check out our products</a></p>
   </article>
 </section>
 
+
+
 <header>
 <article>
-<a href="index.html" class="logo">Ten Thousand</a>
+<a href="../index.html" class="logo">Ten Thousand</a>
 <nav>
-<a href="products/">Products</a>
-<a href="mission/">About</a>
-<a href="journal/">Journal</a>
+<a href="../products/">Products</a>
+<a href="../mission/">About</a>
+<a href="../journal/">Journal</a>
 <span class="cart">
 	<a href="#">Cart
 	<figure class="counter">3<div class="closebtn">close</div></figure>
@@ -93,66 +95,39 @@
 </article>
 </header>
 
-<section class="hero">
-<div class="slideshow">
-	<ul class="slides">
-	
-	 <li class="two">
-    <div class="outer">
-    		<h1 class="white">Unite the<br>restless ones</h1>
-    </div>
-	</li>
-	
-	<li class="one">
-	   <div class="outer">
-  		<h1 class="white">Your life<br>Your Journey</h1>
-	   </div>
-	</li>
-	
-	<li class="three">
-    <div class="outer">
-    		<h1 class="white">Dare to be<br>greater</h1>
-    </div>
-	</li>
-	
-	</ul>
-	<div class="pager"></div>
-</div>
-</section>
 
-<section class="homepage">
-	<article>
-	<aside class="third">
-		<h3>Our Products</h3>
-		<figure><img src="img/shorts.png"></figure>
-	</aside>
-	
-	<aside class="third">
-		<h3>Our Mission</h3>
-			<h2>
-			Dare To Be Greater
-			</h2>
-		<p>We champion the champions, the fighters, the hurdlers of adversity and self-doubt.
-		</p>
-		<a href="mission/" class="btn">Read More</a>
-	</aside>
-	
-	<aside class="third">
-		<h3>The 10,000 Kit</h3>
-		<figure><img src="img/kit.png"></figure>
-	</aside>
-	<div class="clear"></div>
-	</article>
+<section class="checkout-page">
+  
+  <article>
+  <aside class="checkout-opts login">
+  <h1>Registered users</h1>
+  <form name="input">
+			<input type="text" name="username" placeholder="email" autofocus>
+			<input type="password" name="pwd" placeholder="password">
+			<a href="#" class="submitbutton">Sign In</a>
+			<h4><a class="forgot" href="#">Forgot password?</a></h4>
+			</form>
+
+  </aside>
+  
+  <aside class="checkout-opts guest">
+  <h1>Guest Login</h2>
+  <a class="submitbutton" href="#">Continue as guest</a>
+    <h4>you can create an account later</h4>
+  </aside>
+  <div class="clear"></div>
+  </article>
+
 </section>
 
 <footer>
 	<article>
 	<aside>
 		<nav>
-		  <a href="legal/">Gear Refresh</a>
-			<a href="terms/">Terms</a>
-			<a href="privacy/">Privacy</a>
-			<a href="shipping-info/">Shipping Info</a>
+			<a href="#">Legal</a>
+			<a href="#">Terms</a>
+			<a href="#">Privacy</a>
+			<a href="#">Shipping Info</a>
 		</nav>
 	</aside>
 	<aside>

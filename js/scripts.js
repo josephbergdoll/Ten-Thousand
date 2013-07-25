@@ -25,3 +25,18 @@ $(document).ready(function(){
 
 	
 });
+
+$(window).load(function() {
+    $('.slideshow').flexslider({
+	    keyboard: true,
+	    animation: "fade",
+	    slideshow: true,
+	    slideshowSpeed: 5000,
+	    animationSpeed: 500,
+	    touch: true,
+	    video: true,
+	    controlNav: true,
+	    directionNav: false,
+	    controlsContainer: ".pager"
+    });
+    });

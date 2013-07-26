@@ -97,27 +97,55 @@
 
 
 <section class="checkout-page">
-  
-  <article>
-  <aside class="checkout-opts login">
-  <h1>Registered users</h1>
-  <form name="input">
-			<input type="text" name="username" placeholder="email" autofocus>
-			<input type="password" name="pwd" placeholder="password">
-			<a href="#" class="submitbutton">Sign In</a>
-			<h4><a class="forgot" href="createorder.html">Forgot password?</a></h4>
-			</form>
-
-  </aside>
-  
-  <aside class="checkout-opts guest">
-  <h1>Guest Login</h2>
-  <a class="submitbutton" href="createorder.html">Continue as guest</a>
-    <h4>you can create an account later</h4>
-  </aside>
-  <div class="clear"></div>
-  </article>
-
+ 	<article>
+ 		<header>
+ 		<div class="cart-contain">
+	<table border="0" cellspacing="0" cellpadding="0" class="shopcart">
+		<thead>
+			<tr class="first">
+			<th>Your order:</th>
+				<th class="td-quantity sm" scope="col">Qty.</th>
+				<th class="td-price sm" scope="col">Price</th>
+				<th class="td-remove sm" scope="col">Remove</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="td-name" scope="row">Board Shorts</th>
+				<td class="td-quantity">2</td>
+				<td class="td-price">$198.00</td>
+				<td class="td-remove">x</td>
+			</tr>
+			<tr>
+				<th class="td-name" scope="row">Echo Shirt</th>
+				<td class="td-quantity">1</td>
+				<td class="td-price">$129.00</td>
+				<td class="td-remove">x</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<div class="cart-actions">
+	<h3>Subtotal</h3>
+	<h2>$327.00</h2>
+	<h3>Step 1 of 2</h3>
+	</div>
+	<div class="clear"></div>
+ 		</header>
+ 		<aside class="billinginfo">
+	 		<h3>Billing Info</h3>
+	 		<form name="billinginfo">
+	 			<input type="text" name="firstname" placeholder="first" autofocus>
+				<input type="text" name="lastname" placeholder="last">
+				<input type="text" name="company" placeholder="company">
+				<input type="text" name="address1" placeholder="Street Address">
+				<input type="text" name="address2" placeholder="address2">
+				<input type="text" name="city" placeholder="city">
+				<input type="text" name="state" placeholder="state">
+				<input type="text" name="zip" placeholder="zip">
+	 		</form>
+ 		</aside>
+ 	</article>
 </section>
 
 <footer>

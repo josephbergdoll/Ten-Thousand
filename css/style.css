@@ -509,10 +509,15 @@ section.productexplore aside.third {
 section.checkout-page {
   background: #fafbfd; }
   section.checkout-page aside.login {
-    padding: 0 3em 0 0;
+    padding: 0 5em;
     border-right: 1px solid #e5e5e5; }
+  section.checkout-page tr {
+    border-bottom: 1px solid black !important; }
+  section.checkout-page div.cart-actions h2 {
+    border-bottom: 2px solid black !important;
+    margin: 0.25em auto 1.5em !important; }
   section.checkout-page aside.guest {
-    padding: 0 0 0 3em; }
+    padding: 0 5em; }
   section.checkout-page aside.login, section.checkout-page aside.guest {
     display: block;
     width: 50%;
@@ -522,34 +527,46 @@ section.checkout-page {
       font-weight: 700;
       letter-spacing: 0.15em;
       margin: 0 0 1em 0; }
-    section.checkout-page aside.login input, section.checkout-page aside.guest input {
-      -webkit-appearance: none;
-      width: 100%;
-      display: block;
-      border-radius: 0;
-      background: #e5e5e5;
-      padding: 2em;
-      font-family: "ARS Maquette Pro";
-      font-weight: 500;
-      margin: 0 0 0.625em 0;
-      font-size: 85%;
-      color: black;
-      border: 0; }
-    section.checkout-page aside.login ::-webkit-input-placeholder, section.checkout-page aside.guest ::-webkit-input-placeholder {
-      text-transform: uppercase; }
-    section.checkout-page aside.login :-moz-placeholder, section.checkout-page aside.guest :-moz-placeholder {
-      text-transform: uppercase; }
-    section.checkout-page aside.login ::-moz-placeholder, section.checkout-page aside.guest ::-moz-placeholder {
-      text-transform: uppercase; }
-    section.checkout-page aside.login :-ms-input-placeholder, section.checkout-page aside.guest :-ms-input-placeholder {
-      text-transform: uppercase; }
-    section.checkout-page aside.login h4, section.checkout-page aside.guest h4 {
-      margin: 1em 0 0 0;
+  section.checkout-page input {
+    -webkit-appearance: none;
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    background: #e5e5e5;
+    padding: 2em;
+    font-family: "ARS Maquette Pro";
+    font-weight: 500;
+    margin: 0 0 0.625em 0;
+    font-size: 85%;
+    color: black;
+    border: 0; }
+  section.checkout-page ::-webkit-input-placeholder {
+    text-transform: uppercase; }
+  section.checkout-page :-moz-placeholder {
+    text-transform: uppercase; }
+  section.checkout-page ::-moz-placeholder {
+    text-transform: uppercase; }
+  section.checkout-page :-ms-input-placeholder {
+    text-transform: uppercase; }
+  section.checkout-page h4 {
+    margin: 1em 0 0 0;
+    color: #99999c; }
+    section.checkout-page h4 a {
       color: #99999c; }
-      section.checkout-page aside.login h4 a, section.checkout-page aside.guest h4 a {
-        color: #99999c; }
-        section.checkout-page aside.login h4 a:hover, section.checkout-page aside.guest h4 a:hover {
-          color: black; }
+      section.checkout-page h4 a:hover {
+        color: black; }
+
+aside.billinginfo {
+  margin: 3em 0 0 0;
+  border-top: 1px solid black;
+  width: 40%;
+  padding: 0.75em 0 0 0; }
+  aside.billinginfo h3 {
+    margin: 0 0 1.5em;
+    font-weight: 700; }
+  aside.billinginfo input {
+    padding: 1.25em 1em;
+    margin: 0 0 0.75em; }
 
 /* EMPTY CART */
 section.cart-disp-empty {
@@ -581,69 +598,72 @@ section.cart-disp-full {
   z-index: 5; }
   section.cart-disp-full article {
     padding: 3em 3em 4em;
-    position: relative;
-    /* Closed Shop Cart */ }
+    position: relative; }
     section.cart-disp-full article * {
       box-sizing: content-box; }
-    section.cart-disp-full article div.cart-contain {
-      width: 40em;
-      float: left; }
-    section.cart-disp-full article table.shopcart {
-      border-collapse: collapse;
-      width: 100%;
-      text-transform: uppercase;
-      margin: 0 0 1em 0; }
-      section.cart-disp-full article table.shopcart tr {
-        border-bottom: 1px solid white; }
-      section.cart-disp-full article table.shopcart thead {
-        font-size: 75%;
-        font-weight: 600;
-        letter-spacing: 0.1em; }
-      section.cart-disp-full article table.shopcart .td-name {
-        text-align: left;
-        padding: 20px 0;
-        font-weight: 500;
-        letter-spacing: 0.1em; }
-      section.cart-disp-full article table.shopcart .td-quantity, section.cart-disp-full article table.shopcart .td-price, section.cart-disp-full article table.shopcart .td-remove {
-        text-align: center;
-        padding: 20px 0; }
-        section.cart-disp-full article table.shopcart .td-quantity.sm, section.cart-disp-full article table.shopcart .td-price.sm, section.cart-disp-full article table.shopcart .td-remove.sm {
-          padding: 10px 0; }
-      section.cart-disp-full article table.shopcart .td-quantity {
-        width: 80px; }
-      section.cart-disp-full article table.shopcart .td-price {
-        width: 150px; }
-      section.cart-disp-full article table.shopcart .td-remove {
-        width: 90px; }
-    section.cart-disp-full article div.cart-actions {
-      width: 20em;
-      float: left;
-      box-sizing: border-box;
-      padding: 0.625em 0 0 3em;
-      text-align: center; }
-      section.cart-disp-full article div.cart-actions * {
-        box-sizing: border-box; }
-      section.cart-disp-full article div.cart-actions h3 {
-        color: #99999c; }
-      section.cart-disp-full article div.cart-actions h2 {
-        margin: 0.25em auto 0.75em;
-        font-size: 2.25em;
-        padding: 0 0 0.15em;
-        display: table;
-        border-bottom: 2px solid white;
-        font-weight: 300; }
-      section.cart-disp-full article div.cart-actions a.checkout {
-        display: table;
-        margin: 0 auto;
-        color: white;
-        background: #6e7174;
-        padding: 1em 3em 1.15em;
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 0.2em;
-        font-size: 0.813em; }
-        section.cart-disp-full article div.cart-actions a.checkout:hover {
-          background-color: #784485; }
+
+div.cart-contain {
+  width: 40em;
+  float: left; }
+
+table.shopcart {
+  border-collapse: collapse;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 0 0 1em 0; }
+  table.shopcart tr {
+    border-bottom: 1px solid white; }
+  table.shopcart thead {
+    font-size: 75%;
+    font-weight: 600;
+    letter-spacing: 0.1em; }
+  table.shopcart .td-name {
+    text-align: left;
+    padding: 20px 0;
+    font-weight: 500;
+    letter-spacing: 0.1em; }
+  table.shopcart .td-quantity, table.shopcart .td-price, table.shopcart .td-remove {
+    text-align: center;
+    padding: 20px 0; }
+    table.shopcart .td-quantity.sm, table.shopcart .td-price.sm, table.shopcart .td-remove.sm {
+      padding: 10px 0; }
+  table.shopcart .td-quantity {
+    width: 80px; }
+  table.shopcart .td-price {
+    width: 150px; }
+  table.shopcart .td-remove {
+    width: 90px; }
+
+/* Closed Shop Cart */
+div.cart-actions {
+  width: 20em;
+  float: left;
+  box-sizing: border-box !important;
+  padding: 0.625em 0 0 3em;
+  text-align: center; }
+  div.cart-actions * {
+    box-sizing: border-box; }
+  div.cart-actions h3 {
+    color: #99999c; }
+  div.cart-actions h2 {
+    margin: 0.25em auto 0.75em;
+    font-size: 2.25em;
+    padding: 0 0 0.15em;
+    display: table;
+    border-bottom: 2px solid white;
+    font-weight: 300; }
+  div.cart-actions a.checkout {
+    display: table;
+    margin: 0 auto;
+    color: white;
+    background: #6e7174;
+    padding: 1em 3em 1.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 0.813em; }
+    div.cart-actions a.checkout:hover {
+      background-color: #784485; }
 
 section.mission {
   height: 60%;

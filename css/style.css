@@ -750,10 +750,17 @@ section.mission {
   height: 60%;
   background: url(../img/mission.jpg) no-repeat center 42%;
   background-size: cover; }
+  section.mission article {
+    display: table;
+    width: 100%;
+    height: 100%; }
   section.mission h1 {
-    font-size: 150%;
+    font-size: 400%;
     font-weight: 500;
-    color: white; }
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
 
 section.static-copy {
   border-top: 1px solid #e5e5e5; }

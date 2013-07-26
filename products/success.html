@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="static">
 <head>
 <title></title>
 <meta name="description" content="" />
@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="">
 
 <!-- CSS Styles -->
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 
 <!-- jQuery() -->
 
@@ -18,34 +18,16 @@
 <![endif]-->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/scripts-ck.js"></script>
+<script src="../js/scripts-ck.js"></script>
 
 <!-- TypeKit-->
 <script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<script>
-$(window).load(function() {
 
-    $('.slideshow').flexslider({
-	    keyboard: true,
-	    animation: "fade",
-	    slideshow: true,
-	    slideshowSpeed: 5000,
-	    animationSpeed: 500,
-	    touch: true,
-	    video: true,
-	    controlNav: true,
-	    directionNav: false,
-	    controlsContainer: ".pager"
-    });
-       
-
-});
-</script>
 </head>
 
-<body class="full">
+<body class="empty static">
+
 
 <section class="cart-disp-full">
 	<article>
@@ -79,7 +61,7 @@ $(window).load(function() {
 	<div class="cart-actions">
 	<h3>Subtotal</h3>
 	<h2>$327.00</h2>
-	<a class="checkout" href="/products/cart.html">
+	<a class="checkout" href="#">
 	Checkout
 	</a>
 	</div>
@@ -90,20 +72,22 @@ $(window).load(function() {
 <section class="cart-disp-empty">
   <article>
     <h1>Your cart is empty</h1>
-    <p><a href="products/">Click here to check out our products</a></p>
+    <p><a href="../products/">Click here to check out our products</a></p>
   </article>
 </section>
 
+
+
 <header>
 <article>
-<a href="index.html" class="logo">Ten Thousand</a>
+<a href="../index.html" class="logo">Ten Thousand</a>
 <nav>
-<a href="products/">Products</a>
-<a href="mission/">About</a>
-<a href="journal/">Journal</a>
+<a href="../products/">Products</a>
+<a href="../mission/">About</a>
+<a href="../journal/">Journal</a>
 <span class="cart">
 	<a href="#">Cart
-	<figure class="counter">3<div class="closebtn">close</div></figure>
+	<figure class="counter">0<div class="closebtn">close</div></figure>
 	</a>
 </span>
 </nav>
@@ -111,66 +95,29 @@ $(window).load(function() {
 </article>
 </header>
 
-<section class="hero">
-<div class="slideshow">
-	<ul class="slides">
-	
-	 <li class="two">
-    <div class="outer">
-    		<h1 class="white">Unite the<br>restless ones</h1>
-    </div>
-	</li>
-	
-	<li class="one">
-	   <div class="outer">
-  		<h1 class="white">Your life<br>Your Journey</h1>
-	   </div>
-	</li>
-	
-	<li class="three">
-    <div class="outer">
-    		<h1 class="white">Dare to be<br>greater</h1>
-    </div>
-	</li>
-	
-	</ul>
-	<div class="pager"></div>
-</div>
-</section>
 
-<section class="homepage">
-	<article>
-	<aside class="third">
-		<h3>Our Products</h3>
-		<figure><img src="img/shorts.png"></figure>
-	</aside>
-	
-	<aside class="third">
-		<h3>Our Mission</h3>
-			<h2>
-			Dare To Be Greater
-			</h2>
-		<p>We champion the champions, the fighters, the hurdlers of adversity and self-doubt.
-		</p>
-		<a href="mission/" class="btn">Read More</a>
-	</aside>
-	
-	<aside class="third">
-		<h3>The 10,000 Kit</h3>
-		<figure><img src="img/kit.png"></figure>
-	</aside>
-	<div class="clear"></div>
-	</article>
+<section class="checkout-page">
+ 	<article>
+ 	<aside class="order-completed">
+ 		<p>Your order of:<p>
+ 		<h2 class="productordered">Board Shorts x2</h2>
+ 		<h2 class="productordered">Echo Shirt</h2>
+ 		<p class="success">was completed successfully! Your order number is <span>2296543</span></p>
+ 		<p class="success">An email receipt containing information about your order has been sent. Please keep it for your records.</p>
+ 		<a class="submitbutton account" href="#">Click here to create your account</a>
+ 		<p>Thank you for purchasing gear from Ten Thousand!</p>
+ 	</aside>
+ 	</article>
 </section>
 
 <footer>
 	<article>
 	<aside>
 		<nav>
-		  <a href="legal/">Gear Refresh</a>
-			<a href="terms/">Terms</a>
-			<a href="privacy/">Privacy</a>
-			<a href="shipping-info/">Shipping Info</a>
+			<a href="#">Legal</a>
+			<a href="#">Terms</a>
+			<a href="#">Privacy</a>
+			<a href="#">Shipping Info</a>
 		</nav>
 	</aside>
 	<aside>

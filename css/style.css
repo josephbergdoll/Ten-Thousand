@@ -81,6 +81,15 @@ a {
   color: white; }
 
 /* Type Styles */
+h1.white, h2.white, h3.white, h4.white, h5.white, p.white {
+  color: white; }
+h1.gray, h2.gray, h3.gray, h4.gray, h5.gray, p.gray {
+  color: #99999c; }
+h1.notrack, h2.notrack, h3.notrack, h4.notrack, h5.notrack, p.notrack {
+  letter-spacing: normal; }
+h1.inlineblock, h2.inlineblock, h3.inlineblock, h4.inlineblock, h5.inlineblock, p.inlineblock {
+  display: inline-block; }
+
 h1 {
   font-size: 2em;
   font-weight: 300;
@@ -442,6 +451,22 @@ a.submitbutton {
   cursor: pointer; }
   a.submitbutton:hover {
     background: #784485; }
+  a.submitbutton.right {
+    text-align: center;
+    margin: 1.25em 0 0 0;
+    width: 12rem;
+    transition: margin 0.35s ease-in;
+    -webkit-transition: margin 0.35s ease-in !important;
+    -moz-transition: all 0.35s ease-in;
+    -o-transition: all 0.35s ease-in; }
+  a.submitbutton.centered {
+    margin: 1.25em 0 0 24rem !important; }
+  a.submitbutton.apply {
+    width: 6rem;
+    padding: 1em; }
+  a.submitbutton.completepurchase {
+    width: 20rem;
+    margin: 4rem auto 0; }
 
 section.productspotlights aside.third {
   padding: 0 3em; }
@@ -511,6 +536,13 @@ section.checkout-page {
   section.checkout-page aside.login {
     padding: 0 5em;
     border-right: 1px solid #e5e5e5; }
+  section.checkout-page a.goback {
+    font-size: 0.875em;
+    display: table;
+    margin: 1rem auto 0;
+    color: #99999c; }
+    section.checkout-page a.goback:hover {
+      color: black; }
   section.checkout-page tr {
     border-bottom: 1px solid black !important; }
   section.checkout-page div.cart-actions h2 {
@@ -527,17 +559,17 @@ section.checkout-page {
       font-weight: 700;
       letter-spacing: 0.15em;
       margin: 0 0 1em 0; }
-  section.checkout-page input {
+  section.checkout-page input.textbox {
     -webkit-appearance: none;
     width: 100%;
     display: block;
     border-radius: 0;
     background: #e5e5e5;
-    padding: 2em;
+    padding: 1em;
     font-family: "ARS Maquette Pro";
     font-weight: 500;
     margin: 0 0 0.625em 0;
-    font-size: 85%;
+    font-size: 0.875em;
     color: black;
     border: 0; }
   section.checkout-page ::-webkit-input-placeholder {
@@ -548,6 +580,8 @@ section.checkout-page {
     text-transform: uppercase; }
   section.checkout-page :-ms-input-placeholder {
     text-transform: uppercase; }
+  section.checkout-page input.checkbox {
+    margin: 0 1em 0 0; }
   section.checkout-page h4 {
     margin: 1em 0 0 0;
     color: #99999c; }
@@ -556,17 +590,64 @@ section.checkout-page {
       section.checkout-page h4 a:hover {
         color: black; }
 
-aside.billinginfo {
+aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.paymentinfo {
   margin: 3em 0 0 0;
   border-top: 1px solid black;
-  width: 40%;
+  float: left;
+  width: 45%;
   padding: 0.75em 0 0 0; }
-  aside.billinginfo h3 {
+  aside.billinginfo h3, aside.shippinginfo h3, aside.shippingspeed h3, aside.paymentinfo h3 {
     margin: 0 0 1.5em;
     font-weight: 700; }
-  aside.billinginfo input {
+  aside.billinginfo input, aside.shippinginfo input, aside.shippingspeed input, aside.paymentinfo input {
     padding: 1.25em 1em;
     margin: 0 0 0.75em; }
+  aside.billinginfo p, aside.shippinginfo p, aside.shippingspeed p, aside.paymentinfo p {
+    font-size: 0.875em;
+    color: #acadb0; }
+  aside.billinginfo select, aside.shippinginfo select, aside.shippingspeed select, aside.paymentinfo select {
+    -webkit-appearance: none;
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    background: #e5e5e5 url(../img/arrow.png) 93% center no-repeat;
+    background-size: 12px 12px;
+    padding: 1em;
+    font-family: "ARS Maquette Pro";
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 1em 0 1.5em;
+    font-size: 0.875em;
+    color: black;
+    border: 0; }
+    aside.billinginfo select.one, aside.shippinginfo select.one, aside.shippingspeed select.one, aside.paymentinfo select.one {
+      margin: 0 3% 0 0; }
+    aside.billinginfo select.exp, aside.shippinginfo select.exp, aside.shippingspeed select.exp, aside.paymentinfo select.exp {
+      width: 48%;
+      display: inline-block; }
+  aside.billinginfo input.discountcode, aside.shippinginfo input.discountcode, aside.shippingspeed input.discountcode, aside.paymentinfo input.discountcode {
+    margin: 1em 0; }
+
+aside.billinginfo, aside.shippingspeed {
+  margin: 3em 10% 0 0; }
+
+aside.order-completed {
+  width: 55%;
+  background: white;
+  border: 1px solid #e5e5e5;
+  padding: 2em;
+  margin: 2em auto; }
+  aside.order-completed h2.productordered {
+    border-bottom: 1px solid black;
+    padding: 1em 0 0.75em; }
+  aside.order-completed p.success {
+    margin: 1em 0 0 0; }
+    aside.order-completed p.success span {
+      font-weight: 600;
+      color: #99999c; }
+  aside.order-completed a.account {
+    margin: 2rem 0;
+    padding: 1.5em; }
 
 /* EMPTY CART */
 section.cart-disp-empty {
@@ -726,3 +807,21 @@ section.mission2 {
     margin: 2em auto;
     width: 3em;
     height: 3em; }
+
+/* Journal */
+section.journal {
+  border-top: 1px solid #e5e5e5; }
+
+a.entry {
+  display: block;
+  max-width: 18em;
+  height: auto;
+  margin: 0 0 36px 0;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none; }
+
+div.gutter-sizer {
+  width: 36px;
+  margin: 0 !important; }

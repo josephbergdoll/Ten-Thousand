@@ -18,12 +18,22 @@
 <![endif]-->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../js/masonry.js"></script>
 <script src="../js/scripts-ck.js"></script>
 
 <!-- TypeKit-->
 <script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+<script>
+$(window).load(function() {
+         var $container = $('div#journalcontainer');
+        $container.masonry({
+            itemSelector: ".entry",
+            gutter: ".gutter-sizer",
+            transitionDuration: "0.2s"
+        });
+    });
+</script>
 </head>
 
 <body class="full">
@@ -60,7 +70,7 @@
 	<div class="cart-actions">
 	<h3>Subtotal</h3>
 	<h2>$327.00</h2>
-	<a class="checkout" href="#">
+	<a class="checkout" href="../products/cart.html">
 	Checkout
 	</a>
 	</div>
@@ -91,6 +101,52 @@
 <div class="clearright"></div>
 </article>
 </header>
+
+<section class="journal">
+  <article>
+  <div id="journalcontainer">
+      <div class="grid-sizer">&nbsp;</div>
+    <div class="gutter-sizer">&nbsp;</div>
+    <a class="entry w2">
+      <img src="img/bridge1.jpg" alt="bridge1">
+    </a>
+     <a class="entry w1">
+      <img src="img/bridge2.jpg" alt="bridge2">
+    </a>
+     <a class="entry w2">
+      <img src="img/bridge3.jpg" alt="bridge3">
+    </a>
+     <a class="entry w2">
+      <img src="img/bridge4.jpg" alt="bridge4">
+    </a>
+     <a class="entry w2">
+      <img src="img/bridge5.jpg" alt="bridge1">
+    </a>
+     <a class="entry w1">
+      <img src="img/bridge6.jpg" alt="bridge1">
+    </a>
+      <a class="entry w2">
+      <img src="img/bridge1.jpg" alt="bridge1">
+    </a>
+     <a class="entry w1">
+      <img src="img/bridge2.jpg" alt="bridge2">
+    </a>
+     <a class="entry w2">
+      <img src="img/bridge3.jpg" alt="bridge3">
+    </a>
+     <a class="entry w2">
+      <img src="img/bridge4.jpg" alt="bridge4">
+    </a>
+     <a class="entry w2">
+      <img src="img/bridge5.jpg" alt="bridge1">
+    </a>
+     <a class="entry w1">
+      <img src="img/bridge6.jpg" alt="bridge1">
+    </a>
+
+  </div>
+  </article>
+</section>
 
 
 <footer>

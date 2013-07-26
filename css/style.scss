@@ -114,7 +114,23 @@ a {
 	color: white;
 }
 
+
+
 /* Type Styles */
+h1,h2,h3,h4,h5,p {
+  &.white {
+    color: white;
+  }
+  &.gray {
+    color: $linkgray;
+  }
+  &.notrack {
+    letter-spacing: normal;
+  }
+  &.inlineblock {
+    display: inline-block;
+  }
+}
 
 h1 {
 	font-size: 2em;
@@ -548,6 +564,28 @@ a.submitbutton {
 			&:hover {
 				background: $purple;
 			}
+			&.right {
+  			text-align: center;
+  			margin: 1.25em 0 0 0;
+  			width: 12rem;
+  			transition: margin 0.35s ease-in;
+    			-webkit-transition: margin 0.35s ease-in !important;
+    			-moz-transition: all 0.35s ease-in;
+    			-o-transition: all 0.35s ease-in;
+
+			}
+		  &.centered {
+    			margin: 1.25em 0 0 24rem !important;
+    		}
+    		&.apply {
+      		width: 6rem;
+      		padding: 1em;
+    		}
+      &.completepurchase {
+      width: 20rem;
+        margin: 4rem auto 0;
+      }
+
 		}
 
 section.productspotlights {
@@ -651,6 +689,16 @@ section.checkout-page {
     border-right: 1px solid $strokegray;
   }
   
+  a.goback {
+      font-size: 0.875em;
+  		display: table;
+  		margin: 1rem auto 0;
+  		color: $linkgray;
+  		&:hover {
+    		color: black;
+  		}
+		}
+  
   tr {
 	  border-bottom: 1px solid black !important;
   }
@@ -674,17 +722,17 @@ section.checkout-page {
       margin: 0 0 1em 0;
     }
     }
-    input {
+    input.textbox {
      -webkit-appearance: none;
 			width: 100%;
 			display: block;
 			border-radius: 0;
 			background: $strokegray;
-			padding: 2em;
+			padding: 1em;
 			font-family: "ARS Maquette Pro";
 			font-weight: 500;
 			margin: 0 0 0.625em 0;
-			font-size: 85%;
+			font-size: 0.875em;
 			color: $black;
 			border: 0;
     }
@@ -700,6 +748,9 @@ section.checkout-page {
     :-ms-input-placeholder {  
       text-transform: uppercase;;  
     }
+    input.checkbox {
+      margin: 0 1em 0 0;
+    }
     h4 {
       margin: 1em 0 0 0;
       color: $linkgray;
@@ -712,20 +763,80 @@ section.checkout-page {
     }
   }
 
-aside.billinginfo {
+aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.paymentinfo {
 	margin: 3em 0 0 0;
 	border-top: 1px solid black;
+	float: left;
 	h3 {
 		margin: 0 0 1.5em;
 		font-weight: 700;
 	}
-	width: 40%;
+	width: 45%;
 	padding: 0.75em 0 0 0;
 	input {
 		padding: 1.25em 1em;
 		margin: 0 0 0.75em;
 	}
+	p {
+  	font-size: 0.875em;
+  	color: $typegray;
+	}
+			select {
+			-webkit-appearance: none;
+			width: 100%;
+			display: block;
+			border-radius: 0;
+			background: $strokegray url(../img/arrow.png) 93% center no-repeat;
+			background-size: 12px 12px;
+			padding: 1em;
+			font-family: "ARS Maquette Pro";
+			text-transform: uppercase;
+			font-weight: 500;
+			margin: 1em 0 1.5em;
+			font-size: 0.875em;
+			color: $black;
+			border: 0;
+			&.one {
+  			margin: 0 3% 0 0;
+			}
+			&.exp {
+  			width: 48%;
+  			display: inline-block;
+			}
+		}
+		input.discountcode {
+  		margin: 1em 0;
+		}
+
 }
+
+aside.billinginfo, aside.shippingspeed {
+  margin: 3em 10% 0 0;
+}
+
+aside.order-completed {
+  width: 55%;
+  background: white;
+  border: 1px solid $strokegray;
+  padding: 2em;
+  margin: 2em auto;
+  h2.productordered {
+    border-bottom: 1px solid $black;
+    padding: 1em 0 0.75em;
+  }
+  p.success {
+    margin: 1em 0 0 0;
+    span {
+      font-weight: 600;
+      color: $linkgray;
+    }
+  }
+  a.account {
+    margin: 2rem 0;
+    padding: 1.5em;
+  }
+}
+
 
 /* EMPTY CART */
 section.cart-disp-empty {
@@ -944,4 +1055,26 @@ section.mission2 {
 }
 
 
+/* Journal */
 
+section.journal {
+  border-top: 1px solid $strokegray;
+}
+
+a.entry {
+  display: block;
+  max-width: 18em;
+  height: auto;
+  margin: 0 0 36px 0;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+}
+
+
+
+div.gutter-sizer {
+  width: 36px;
+  margin: 0 !important;
+}

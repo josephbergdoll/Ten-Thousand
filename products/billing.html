@@ -61,7 +61,7 @@
 	<div class="cart-actions">
 	<h3>Subtotal</h3>
 	<h2>$327.00</h2>
-	<a class="checkout" href="#">
+	<a class="checkout" href="cart.html">
 	Checkout
 	</a>
 	</div>
@@ -132,39 +132,59 @@
 	</div>
 	<div class="clear"></div>
  		</header>
- 		<aside class="billinginfo">
-	 		<h3>Billing Info</h3>
-	 		<form name="billinginfo">
-	 		  <input class="textbox" type="text" name="email" placeholder="email" autofocus>
-	 			<input class="textbox" type="text" name="firstname" placeholder="first">
-				<input class="textbox" type="text" name="lastname" placeholder="last">
-				<input class="textbox" type="text" name="company" placeholder="company">
-				<input class="textbox" type="text" name="address1" placeholder="Street Address">
-				<input class="textbox" type="text" name="address2" placeholder="address 2">
-				<input class="textbox" type="text" name="city" placeholder="city">
-				<input class="textbox" type="text" name="state" placeholder="state">
-				<input class="textbox" type="text" name="zip" placeholder="zip">
-				<input id="show-shipping" class="checkbox" type="checkbox"><h3 class="gray notrack inlineblock">shipping info differs from billing info</h3>
-	 		</form>
- 		</aside>
+ 		<aside class="shippingspeed">
+	  <h3>Shipping Method</h3>
+	  <p>Please select how you would like your order to be delivered.</p>
+	  <form name="shipping">
+  	 	<select name="color">
+    		<option value="USPSpriority">USPS Priority Mail</option>
+    		<option value="UPSground">UPS Ground</option>
+    		<option value="UPS2day">UPS 2-Day Select</option>
+    		<option value="UPSovernight">UPS Overnight</option>
+  		</select>
+  		<p>Have a discount code? Enter it here.</p>
+  		<input type="text" class="textbox discountcode" placeholder="discount">
+  		<a class="submitbutton apply">Apply</a>
+	 	</form>
+
+	  
+	  </aside>
  		
- 			<aside class="shippinginfo">
-	 		<h3>Shipping Info</h3>
-	 		<form name="billinginfo">
-	 			<input class="textbox" type="text" name="firstname" placeholder="first">
-				<input class="textbox" type="text" name="lastname" placeholder="last">
-				<input class="textbox" type="text" name="company" placeholder="company">
-				<input class="textbox" type="text" name="address1" placeholder="Street Address">
-				<input class="textbox" type="text" name="address2" placeholder="address 2">
-				<input class="textbox" type="text" name="city" placeholder="city">
-				<input class="textbox" type="text" name="state" placeholder="state">
-				<input class="textbox" type="text" name="zip" placeholder="zip">
-	 		</form>
- 		</aside>
+ 	  <aside class="paymentinfo">
+	  <h3>Payment Information</h3>
+	  <p>All transactions are secure and encrypted, and we never store your credit card information. To learn more, please view our privacy policy.</p>
+	  <form name="card">
+	  <input type="text" class="textbox discountcode" placeholder="Credit Card Number">
+	  <p>Expiration date</p>
+	  <select name="expirationmonth" class="exp one">
+  	  <option value="Month">January</option>
+  	  <option value="Month">February</option>
+  	  <option value="Month">March</option>
+  	  <option value="Month">April</option>
+  	  <option value="Month">May</option>
+  	  <option value="Month">June</option>
+  	  <option value="Month">July</option>
+  	  <option value="Month">August</option>
+  	  <option value="Month">September</option>
+  	  <option value="Month">October</option>
+  	  <option value="Month">November</option>
+  	  <option value="Month">December</option>
+	  </select>
+	  
+	  <select name="expirationyear" class="exp">
+  	  <option value="Month">2013</option>
+  	  <option value="Month">2014</option>
+  	  <option value="Month">2015</option>
+  	  <option value="Month">2016</option>
+  	  <option value="Month">2017</option>
+	  </select>
+	  </form>
+	  </aside>
  		
  		<div class="clear"></div>
  		
- 		<a href="billing.html" class="submitbutton right">Continue</a>
+ 		<a href="success.html" class="submitbutton completepurchase">Complete purchase</a>
+ 		<a href="createorder.html" class="goback">Made an error? Go back</a>
  	</article>
 </section>
 

@@ -114,6 +114,19 @@ a {
 	color: white;
 }
 
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 
 
 /* Type Styles */
@@ -567,18 +580,9 @@ a.submitbutton {
 			&:hover {
 				background: $purple;
 			}
-			&.right {
-  			text-align: center;
-  			margin: 1.25em 0 0 0;
-  			width: 13rem;
-  			transition: margin 0.35s ease-in;
-    			-webkit-transition: margin 0.35s ease-in !important;
-    			-moz-transition: all 0.35s ease-in;
-    			-o-transition: all 0.35s ease-in;
-
-			}
 		  &.centered {
-    			margin: 1.25em 0 0 24rem !important;
+		      width: 13rem;
+    			margin: 1.25em auto 2rem;
     		}
     		&.apply {
       		width: 6rem;
@@ -586,7 +590,7 @@ a.submitbutton {
     		}
       &.completepurchase {
       width: 20rem;
-        margin: 4rem auto 0;
+        margin: 2rem auto 3rem;
       }
 
 		}
@@ -687,17 +691,18 @@ section.productexplore {
 
 section.checkout-page {
   background: $lightgray;
-  aside.login {
-    padding: 0 5em;
-    border-right: 1px solid $strokegray;
+  
+  div.checkout-opts {
+    margin: 5em 0 1em;
   }
   
 
 	h3 {
-		margin: 0 0 1.5em;
+		margin: 4em 0 2em;
 		padding: 0 0 1em 0;
 		font-weight: 700;
 		border-bottom: 1px solid black;
+		text-align: center;
 	}
   
   a.goback {
@@ -719,11 +724,18 @@ section.checkout-page {
 	  margin: 0.25em auto 1.5em !important;
   }
   
-  aside.guest {
+  aside.login {
+    padding: 0 5em;
+    border-right: 1px solid $strokegray;
+  }
+  
+   aside.guest {
     padding: 0 5em;
   }
+  
   aside.login, aside.guest {
     display: block;
+    margin: 5em 0 0;
     width: 50%;
     float: left;
     h1 {
@@ -773,6 +785,51 @@ section.checkout-page {
       }
     }
   }
+  
+/* Purchase Steps */
+
+ol.purchase-steps {
+  li.purchase-step {
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid $strokegray;
+    &:last-child {
+      border-right: none;
+    }
+    &.completed {
+      opacity: 0.55;
+      border-right: 1px solid rgba(0,0,0,0.15);
+    }
+    &.next {
+      opacity: 0.1;
+      border-right: 1px solid $linkgray;
+    }
+  }
+  span.stepnum {
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    background: $black;
+    color: white;
+    text-shadow: 0 0 1px rbga(255,255,255,0.1);
+    font-size: 0.75em;
+    font-weight: 700;
+    vertical-align: baseline;
+    display: inline-block;
+  }
+  span.stepname {
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rbga(0,0,0,0.1);
+    letter-spacing: 0.1em;
+    font-size: 0.825em;
+    line-height: 2em;
+  }
+
+}
 
 aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon {
 	//margin: 3em 0 0 0;
@@ -825,21 +882,22 @@ aside.billinginfo, aside.shippinginfo {
 }
 
 aside.order-completed {
-  width: 55%;
+  width: 100%;
   background: white;
   border: 1px solid $strokegray;
-  padding: 2em;
-  margin: 2em auto;
+  padding: 6em 15% 8em;
+  margin: 3em auto 2em;
   h2.productordered {
     border-bottom: 1px solid $black;
     padding: 1em 0 0.75em;
   }
-  p.success {
-    margin: 1em 0 0 0;
-    span {
+  span {
       font-weight: 600;
       color: $linkgray;
     }
+  p.success {
+    margin: 1em 0 0 0;
+    
   }
   a.account {
     margin: 2rem 0;

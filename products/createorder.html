@@ -98,8 +98,26 @@
 
 <section class="checkout-page">
  	<article>
- 	<h3>Shipping Info</h3>
- 	
+ 	 	<ol class="purchase-steps clearfix">
+ 	  <li class="purchase-step completed">
+ 	  <span class="stepnum">1</span>
+ 	  <span class="stepname">Login</span>
+ 	  </li>
+ 	  <li class="purchase-step">
+ 	  <span class="stepnum">2</span>
+ 	  <span class="stepname">Shipping</span>
+ 	  </li>
+ 	  <li class="purchase-step next">
+ 	  <span class="stepnum">3</span>
+ 	  <span class="stepname">Billing</span>
+ 	  </li>
+ 	   <li class="purchase-step next">
+ 	  <span class="stepnum">4</span>
+ 	  <span class="stepname">Confirm</span>
+ 	  </li>
+ 	</ol>
+ 	<div class="checkout-opts clearfix">
+ 	 	<h3>Shipping Info</h3>
  		<aside class="shippinginfo">
 	 		<form name="billinginfo">
 	 		  <p>Email Address</p>
@@ -183,7 +201,6 @@
   				<p>Zip</p>
   				<input class="textbox" type="text" name="zip" placeholder="zip">
 				</div>
-				<div class="clear"></div>
 				</form>
  		</aside>
  		
@@ -198,11 +215,8 @@
   		</select>
 	  </form>
  	</aside>
- 		
- 		
- 		<div class="clear"></div>
- 		
- 		<a href="billing.html" class="submitbutton right">Continue</a>
+ 	</div>
+ 			<a href="billing.html" class="submitbutton centered">Continue</a>
  	</article>
 </section>
 

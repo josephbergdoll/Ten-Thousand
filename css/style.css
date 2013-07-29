@@ -80,6 +80,17 @@ a {
 .white {
   color: white; }
 
+.clearfix {
+  display: block; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
 /* Type Styles */
 h1.white, h2.white, h3.white, h4.white, h5.white, p.white {
   color: white; }
@@ -453,22 +464,15 @@ a.submitbutton {
   cursor: pointer; }
   a.submitbutton:hover {
     background: #784485; }
-  a.submitbutton.right {
-    text-align: center;
-    margin: 1.25em 0 0 0;
-    width: 13rem;
-    transition: margin 0.35s ease-in;
-    -webkit-transition: margin 0.35s ease-in !important;
-    -moz-transition: all 0.35s ease-in;
-    -o-transition: all 0.35s ease-in; }
   a.submitbutton.centered {
-    margin: 1.25em 0 0 24rem !important; }
+    width: 13rem;
+    margin: 1.25em auto 2rem; }
   a.submitbutton.apply {
     width: 6rem;
     padding: 1em; }
   a.submitbutton.completepurchase {
     width: 20rem;
-    margin: 4rem auto 0; }
+    margin: 2rem auto 3rem; }
 
 section.productspotlights aside.third {
   padding: 0 3em; }
@@ -535,14 +539,14 @@ section.productexplore aside.third {
 /* Full Cart Page */
 section.checkout-page {
   background: #fafbfd; }
-  section.checkout-page aside.login {
-    padding: 0 5em;
-    border-right: 1px solid #e5e5e5; }
+  section.checkout-page div.checkout-opts {
+    margin: 5em 0 1em; }
   section.checkout-page h3 {
-    margin: 0 0 1.5em;
+    margin: 4em 0 2em;
     padding: 0 0 1em 0;
     font-weight: 700;
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid black;
+    text-align: center; }
   section.checkout-page a.goback {
     font-size: 0.875em;
     display: table;
@@ -555,10 +559,14 @@ section.checkout-page {
   section.checkout-page div.cart-actions h2 {
     border-bottom: 2px solid black !important;
     margin: 0.25em auto 1.5em !important; }
+  section.checkout-page aside.login {
+    padding: 0 5em;
+    border-right: 1px solid #e5e5e5; }
   section.checkout-page aside.guest {
     padding: 0 5em; }
   section.checkout-page aside.login, section.checkout-page aside.guest {
     display: block;
+    margin: 5em 0 0;
     width: 50%;
     float: left; }
     section.checkout-page aside.login h1, section.checkout-page aside.guest h1 {
@@ -596,6 +604,41 @@ section.checkout-page {
       color: #99999c; }
       section.checkout-page h4 a:hover {
         color: black; }
+
+/* Purchase Steps */
+ol.purchase-steps li.purchase-step {
+  width: 25%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #e5e5e5; }
+  ol.purchase-steps li.purchase-step:last-child {
+    border-right: none; }
+  ol.purchase-steps li.purchase-step.completed {
+    opacity: 0.55;
+    border-right: 1px solid rgba(0, 0, 0, 0.15); }
+  ol.purchase-steps li.purchase-step.next {
+    opacity: 0.1;
+    border-right: 1px solid #99999c; }
+ol.purchase-steps span.stepnum {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  background: black;
+  color: white;
+  text-shadow: 0 0 1px rbga(255, 255, 255, 0.1);
+  font-size: 0.75em;
+  font-weight: 700;
+  vertical-align: baseline;
+  display: inline-block; }
+ol.purchase-steps span.stepname {
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rbga(0, 0, 0, 0.1);
+  letter-spacing: 0.1em;
+  font-size: 0.825em;
+  line-height: 2em; }
 
 aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon {
   width: 45%;
@@ -635,19 +678,19 @@ aside.billinginfo, aside.shippinginfo {
   margin: 0 10% 0 0; }
 
 aside.order-completed {
-  width: 55%;
+  width: 100%;
   background: white;
   border: 1px solid #e5e5e5;
-  padding: 2em;
-  margin: 2em auto; }
+  padding: 6em 15% 8em;
+  margin: 3em auto 2em; }
   aside.order-completed h2.productordered {
     border-bottom: 1px solid black;
     padding: 1em 0 0.75em; }
+  aside.order-completed span {
+    font-weight: 600;
+    color: #99999c; }
   aside.order-completed p.success {
     margin: 1em 0 0 0; }
-    aside.order-completed p.success span {
-      font-weight: 600;
-      color: #99999c; }
   aside.order-completed a.account {
     margin: 2rem 0;
     padding: 1.5em; }

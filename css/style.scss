@@ -541,6 +541,9 @@ section.mainproduct {
 			font-size: 0.813em;
 			color: $black;
 			border: 0;
+			}
+		select option:first-child {
+		  color: $typegray !important;
 		}
 	}
 }
@@ -567,7 +570,7 @@ a.submitbutton {
 			&.right {
   			text-align: center;
   			margin: 1.25em 0 0 0;
-  			width: 12rem;
+  			width: 13rem;
   			transition: margin 0.35s ease-in;
     			-webkit-transition: margin 0.35s ease-in !important;
     			-moz-transition: all 0.35s ease-in;
@@ -689,6 +692,14 @@ section.checkout-page {
     border-right: 1px solid $strokegray;
   }
   
+
+	h3 {
+		margin: 0 0 1.5em;
+		padding: 0 0 1em 0;
+		font-weight: 700;
+		border-bottom: 1px solid black;
+	}
+  
   a.goback {
       font-size: 0.875em;
   		display: table;
@@ -763,25 +774,23 @@ section.checkout-page {
     }
   }
 
-aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.paymentinfo {
-	margin: 3em 0 0 0;
-	border-top: 1px solid black;
-	float: left;
-	h3 {
-		margin: 0 0 1.5em;
-		font-weight: 700;
-	}
+aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon {
+	//margin: 3em 0 0 0;
+	
 	width: 45%;
 	padding: 0.75em 0 0 0;
+	float: left;
 	input {
 		padding: 1.25em 1em;
-		margin: 0 0 0.75em;
+		margin: 0 0 1em !important;
 	}
 	p {
-  	font-size: 0.875em;
+  	font-size: 0.75em;
+  	margin: 0 0 0.5em;
   	color: $typegray;
+  	text-transform: uppercase;
 	}
-			select {
+		select {
 			-webkit-appearance: none;
 			width: 100%;
 			display: block;
@@ -792,26 +801,27 @@ aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.paymentinfo {
 			font-family: "ARS Maquette Pro";
 			text-transform: uppercase;
 			font-weight: 500;
-			margin: 1em 0 1.5em;
+			//margin: 0.75em 0 1.5em;
 			font-size: 0.875em;
 			color: $black;
 			border: 0;
 			&.one {
-  			margin: 0 3% 0 0;
+  			margin: 0 3% 1em 0;
 			}
 			&.exp {
   			width: 48%;
   			display: inline-block;
 			}
 		}
+		
 		input.discountcode {
   		margin: 1em 0;
 		}
 
 }
 
-aside.billinginfo, aside.shippingspeed {
-  margin: 3em 10% 0 0;
+aside.billinginfo, aside.shippinginfo {
+  margin: 0 10% 0 0;
 }
 
 aside.order-completed {
@@ -834,6 +844,14 @@ aside.order-completed {
   a.account {
     margin: 2rem 0;
     padding: 1.5em;
+  }
+}
+
+div.cart-half {
+  width: 48%;
+  float: left;
+  &.half-first {
+    margin: 0 4% 0 0;
   }
 }
 

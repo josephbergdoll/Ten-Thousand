@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("section.cart-disp-full").hide();
 	$("section.cart-disp-empty").hide();
 	$("div.closebtn").hide();
-	$("aside.shippinginfo").hide();
+	//$("aside.shippinginfo").hide();
 	
 	$("a.product").hover(function(){
 		$(this).children('div.desc').fadeToggle(150);
@@ -32,11 +32,11 @@ $(document).ready(function(){
 		$("div.closebtn").fadeToggle(300);
 	});
 	
-	$('#show-shipping').click(function () {
+	/*$('#show-shipping').click(function () {
     $(".shippinginfo").fadeToggle(this.checked);
     $("a.right").toggleClass("centered",this.checked);
-});
+});*/
 
-	
+
 });
 

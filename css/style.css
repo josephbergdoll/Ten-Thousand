@@ -432,6 +432,8 @@ section.mainproduct {
       font-size: 0.813em;
       color: black;
       border: 0; }
+    section.mainproduct figure.colorsize select option:first-child {
+      color: #acadb0 !important; }
 
 a.submitbutton {
   /*-webkit-appearance: none;*/
@@ -454,7 +456,7 @@ a.submitbutton {
   a.submitbutton.right {
     text-align: center;
     margin: 1.25em 0 0 0;
-    width: 12rem;
+    width: 13rem;
     transition: margin 0.35s ease-in;
     -webkit-transition: margin 0.35s ease-in !important;
     -moz-transition: all 0.35s ease-in;
@@ -536,6 +538,11 @@ section.checkout-page {
   section.checkout-page aside.login {
     padding: 0 5em;
     border-right: 1px solid #e5e5e5; }
+  section.checkout-page h3 {
+    margin: 0 0 1.5em;
+    padding: 0 0 1em 0;
+    font-weight: 700;
+    border-bottom: 1px solid black; }
   section.checkout-page a.goback {
     font-size: 0.875em;
     display: table;
@@ -590,22 +597,19 @@ section.checkout-page {
       section.checkout-page h4 a:hover {
         color: black; }
 
-aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.paymentinfo {
-  margin: 3em 0 0 0;
-  border-top: 1px solid black;
-  float: left;
+aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon {
   width: 45%;
-  padding: 0.75em 0 0 0; }
-  aside.billinginfo h3, aside.shippinginfo h3, aside.shippingspeed h3, aside.paymentinfo h3 {
-    margin: 0 0 1.5em;
-    font-weight: 700; }
-  aside.billinginfo input, aside.shippinginfo input, aside.shippingspeed input, aside.paymentinfo input {
+  padding: 0.75em 0 0 0;
+  float: left; }
+  aside.billinginfo input, aside.shippinginfo input, aside.shippingspeed input, aside.coupon input {
     padding: 1.25em 1em;
-    margin: 0 0 0.75em; }
-  aside.billinginfo p, aside.shippinginfo p, aside.shippingspeed p, aside.paymentinfo p {
-    font-size: 0.875em;
-    color: #acadb0; }
-  aside.billinginfo select, aside.shippinginfo select, aside.shippingspeed select, aside.paymentinfo select {
+    margin: 0 0 1em !important; }
+  aside.billinginfo p, aside.shippinginfo p, aside.shippingspeed p, aside.coupon p {
+    font-size: 0.75em;
+    margin: 0 0 0.5em;
+    color: #acadb0;
+    text-transform: uppercase; }
+  aside.billinginfo select, aside.shippinginfo select, aside.shippingspeed select, aside.coupon select {
     -webkit-appearance: none;
     width: 100%;
     display: block;
@@ -616,20 +620,19 @@ aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.paymentinfo {
     font-family: "ARS Maquette Pro";
     text-transform: uppercase;
     font-weight: 500;
-    margin: 1em 0 1.5em;
     font-size: 0.875em;
     color: black;
     border: 0; }
-    aside.billinginfo select.one, aside.shippinginfo select.one, aside.shippingspeed select.one, aside.paymentinfo select.one {
-      margin: 0 3% 0 0; }
-    aside.billinginfo select.exp, aside.shippinginfo select.exp, aside.shippingspeed select.exp, aside.paymentinfo select.exp {
+    aside.billinginfo select.one, aside.shippinginfo select.one, aside.shippingspeed select.one, aside.coupon select.one {
+      margin: 0 3% 1em 0; }
+    aside.billinginfo select.exp, aside.shippinginfo select.exp, aside.shippingspeed select.exp, aside.coupon select.exp {
       width: 48%;
       display: inline-block; }
-  aside.billinginfo input.discountcode, aside.shippinginfo input.discountcode, aside.shippingspeed input.discountcode, aside.paymentinfo input.discountcode {
+  aside.billinginfo input.discountcode, aside.shippinginfo input.discountcode, aside.shippingspeed input.discountcode, aside.coupon input.discountcode {
     margin: 1em 0; }
 
-aside.billinginfo, aside.shippingspeed {
-  margin: 3em 10% 0 0; }
+aside.billinginfo, aside.shippinginfo {
+  margin: 0 10% 0 0; }
 
 aside.order-completed {
   width: 55%;
@@ -648,6 +651,12 @@ aside.order-completed {
   aside.order-completed a.account {
     margin: 2rem 0;
     padding: 1.5em; }
+
+div.cart-half {
+  width: 48%;
+  float: left; }
+  div.cart-half.half-first {
+    margin: 0 4% 0 0; }
 
 /* EMPTY CART */
 section.cart-disp-empty {

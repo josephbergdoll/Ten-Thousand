@@ -98,69 +98,107 @@
 
 <section class="checkout-page">
  	<article>
- 		<header>
- 		<div class="cart-contain">
-	<table border="0" cellspacing="0" cellpadding="0" class="shopcart">
-		<thead>
-			<tr class="first">
-			<th>Your order:</th>
-				<th class="td-quantity sm" scope="col">Qty.</th>
-				<th class="td-price sm" scope="col">Price</th>
-				<th class="td-remove sm" scope="col">Remove</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th class="td-name" scope="row">Board Shorts</th>
-				<td class="td-quantity">2</td>
-				<td class="td-price">$198.00</td>
-				<td class="td-remove">x</td>
-			</tr>
-			<tr>
-				<th class="td-name" scope="row">Echo Shirt</th>
-				<td class="td-quantity">1</td>
-				<td class="td-price">$129.00</td>
-				<td class="td-remove">x</td>
-			</tr>
-		</tbody>
-	</table>
-	</div>
-	<div class="cart-actions">
-	<h3>Subtotal</h3>
-	<h2>$327.00</h2>
-	<h3>Step 1 of 2</h3>
-	</div>
-	<div class="clear"></div>
- 		</header>
- 		<aside class="billinginfo">
-	 		<h3>Billing Info</h3>
+ 	<h3>Shipping Info</h3>
+ 	
+ 		<aside class="shippinginfo">
 	 		<form name="billinginfo">
+	 		  <p>Email Address</p>
 	 		  <input class="textbox" type="text" name="email" placeholder="email" autofocus>
-	 			<input class="textbox" type="text" name="firstname" placeholder="first">
-				<input class="textbox" type="text" name="lastname" placeholder="last">
-				<input class="textbox" type="text" name="company" placeholder="company">
-				<input class="textbox" type="text" name="address1" placeholder="Street Address">
+	 		  
+	 			<div class="cart-half half-first">
+  	 			<p>Full  Name</p>
+  	 			<input class="textbox" type="text" name="fullname" placeholder="full name">
+	 			</div>
+	 			
+	 			<div class="cart-half">
+  	 			<p>Company</p>
+  				<input class="textbox" type="text" name="company" placeholder="company">
+	 			</div>
+	 			
+	 			<div class="clear"></div>
+	 			
+				<p>Address</p>
+				<input class="textbox" type="text" name="address1" placeholder="Address 1">
 				<input class="textbox" type="text" name="address2" placeholder="address 2">
-				<input class="textbox" type="text" name="city" placeholder="city">
-				<input class="textbox" type="text" name="state" placeholder="state">
-				<input class="textbox" type="text" name="zip" placeholder="zip">
-				<input id="show-shipping" class="checkbox" type="checkbox"><h3 class="gray notrack inlineblock">shipping info differs from billing info</h3>
-	 		</form>
+				<div class="cart-half half-first">
+  				<p>City</p>
+  				<input class="textbox" type="text" name="city" placeholder="city">
+				</div>
+				<div class="cart-half">
+  				<p>State</p>
+  				<select name="state" placeholder="state">
+  				  <option class="placeholder" value="" disabled selected>State</option>
+  				  <option value="ak">AK &ndash; Alaska</option>
+  				  <option value="ak">AL &ndash; Alabama</option>
+  				  <option value="ak">AZ &ndash; Arizona</option>
+  				  <option value="ak">CA &ndash; California</option>
+  				  <option value="ak">CO &ndash; Colorado</option>
+  				  <option value="ak">CT &ndash; Connecticut</option>
+  				  <option value="ak">DE &ndash; Delaware</option>
+  				  <option value="ak">FL &ndash; Florida</option>
+  				  <option value="ak">GA &ndash; Georgia</option>
+  				  <option value="ak">HI &ndash; Hawaii</option>
+  				  <option value="ak">IA &ndash; Iowa</option>
+  				  <option value="ak">ID &ndash; Idaho</option>
+  				  <option value="ak">IL &ndash; Illinois</option>
+  				  <option value="ak">IN &ndash; Indiana</option>
+  				  <option value="ak">KS &ndash; Kansas</option>
+  				  <option value="ak">KY &ndash; Kentucky</option>
+  				  <option value="ak">LA &ndash; Louisiana</option>
+  				  <option value="ak">MA &ndash; Massachusetts</option>
+  				  <option value="ak">MD &ndash; Maryland</option>
+  				  <option value="ak">ME &ndash; Maine</option>
+  				  <option value="ak">MI &ndash; Michigan</option>
+  				  <option value="ak">MN &ndash; Minnesota</option>
+  				  <option value="ak">MO &ndash; Missouri</option>
+  				  <option value="ak">MS &ndash; Mississippi</option>
+  				  <option value="ak">MT &ndash; Montana</option>
+  				  <option value="ak">NC &ndash; North Carolina</option>
+  				  <option value="ak">ND &ndash; North Dakota</option>
+  				  <option value="ak">NE &ndash; Nebraska</option>
+  				  <option value="ak">NH &ndash; New Hampshire</option>
+  				  <option value="ak">NJ &ndash; New Jersey</option>
+  				  <option value="ak">NM &ndash; New Mexico</option>
+  				  <option value="ak">NV &ndash; Nevada</option>
+  				  <option value="ak">NY &ndash; New York</option>
+  				  <option value="ak">OH &ndash; Ohio</option>
+  				  <option value="ak">OK &ndash; Oklahoma</option>
+  				  <option value="ak">OR &ndash; Oregon</option>
+  				  <option value="ak">PA &ndash; Pennsylvania</option>
+  				  <option value="ak">RI &ndash; Rhode Island</option>
+  				  <option value="ak">SC &ndash; South Carolina</option>
+  				  <option value="ak">SD &ndash; South Dakota</option>
+  				  <option value="ak">TN &ndash; Tennessee</option>
+  				  <option value="ak">TX &ndash; Texas</option>
+  				  <option value="ak">UT &ndash; Utah</option>
+  				  <option value="ak">VA &ndash; Virginia</option>
+  				  <option value="ak">VT &ndash; Vermont</option>
+  				  <option value="ak">WA &ndash; Washington</option>
+  				  <option value="ak">WI &ndash; Wisconsin</option>
+  				  <option value="ak">WV &ndash; West Virginia</option>
+  				  <option value="ak">WY &ndash; Wyoming</option>
+  				</select>
+				</div>
+				<div class="cart-half half-first">
+  				<p>Zip</p>
+  				<input class="textbox" type="text" name="zip" placeholder="zip">
+				</div>
+				<div class="clear"></div>
+				</form>
  		</aside>
  		
- 			<aside class="shippinginfo">
-	 		<h3>Shipping Info</h3>
-	 		<form name="billinginfo">
-	 			<input class="textbox" type="text" name="firstname" placeholder="first">
-				<input class="textbox" type="text" name="lastname" placeholder="last">
-				<input class="textbox" type="text" name="company" placeholder="company">
-				<input class="textbox" type="text" name="address1" placeholder="Street Address">
-				<input class="textbox" type="text" name="address2" placeholder="address 2">
-				<input class="textbox" type="text" name="city" placeholder="city">
-				<input class="textbox" type="text" name="state" placeholder="state">
-				<input class="textbox" type="text" name="zip" placeholder="zip">
-	 		</form>
- 		</aside>
+ 			<aside class="shippingspeed">
+	  <p>Please select how you would like your order to be delivered.</p>
+	  <form name="shipping">
+  	 	<select name="color">
+    		<option value="USPSpriority">USPS Priority Mail</option>
+    		<option value="UPSground">UPS Ground</option>
+    		<option value="UPS2day">UPS 2-Day Select</option>
+    		<option value="UPSovernight">UPS Overnight</option>
+  		</select>
+	  </form>
+ 	</aside>
+ 		
  		
  		<div class="clear"></div>
  		

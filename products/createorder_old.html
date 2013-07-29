@@ -97,27 +97,75 @@
 
 
 <section class="checkout-page">
-  
-  <article>
-  <aside class="checkout-opts login">
-  <h1>Returning Customers</h1>
-  <form name="input">
-			<input class="textbox" type="text" name="username" placeholder="email" autofocus>
-			<input class="textbox" type="password" name="pwd" placeholder="password">
-			<a href="createorder.html" class="submitbutton">Sign In</a>
-			<h4><a class="forgot" href="#">Forgot password?</a></h4>
-			</form>
-
-  </aside>
-  
-  <aside class="checkout-opts guest">
-  <h1>Join Ten Thousand</h2>
-  <input class="textbox" type="text" name="username" placeholder="email" autofocus>
-  <a class="submitbutton" href="createorder.html">Create Account</a>
-  </aside>
-  <div class="clear"></div>
-  </article>
-
+ 	<article>
+ 		<header>
+ 		<div class="cart-contain">
+	<table border="0" cellspacing="0" cellpadding="0" class="shopcart">
+		<thead>
+			<tr class="first">
+			<th>Your order:</th>
+				<th class="td-quantity sm" scope="col">Qty.</th>
+				<th class="td-price sm" scope="col">Price</th>
+				<th class="td-remove sm" scope="col">Remove</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="td-name" scope="row">Board Shorts</th>
+				<td class="td-quantity">2</td>
+				<td class="td-price">$198.00</td>
+				<td class="td-remove">x</td>
+			</tr>
+			<tr>
+				<th class="td-name" scope="row">Echo Shirt</th>
+				<td class="td-quantity">1</td>
+				<td class="td-price">$129.00</td>
+				<td class="td-remove">x</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<div class="cart-actions">
+	<h3>Subtotal</h3>
+	<h2>$327.00</h2>
+	<h3>Step 1 of 2</h3>
+	</div>
+	<div class="clear"></div>
+ 		</header>
+ 		<aside class="billinginfo">
+	 		<h3>Billing Info</h3>
+	 		<form name="billinginfo">
+	 		  <input class="textbox" type="text" name="email" placeholder="email" autofocus>
+	 			<input class="textbox" type="text" name="firstname" placeholder="first">
+				<input class="textbox" type="text" name="lastname" placeholder="last">
+				<input class="textbox" type="text" name="company" placeholder="company">
+				<input class="textbox" type="text" name="address1" placeholder="Street Address">
+				<input class="textbox" type="text" name="address2" placeholder="address 2">
+				<input class="textbox" type="text" name="city" placeholder="city">
+				<input class="textbox" type="text" name="state" placeholder="state">
+				<input class="textbox" type="text" name="zip" placeholder="zip">
+				<input id="show-shipping" class="checkbox" type="checkbox"><h3 class="gray notrack inlineblock">shipping info differs from billing info</h3>
+	 		</form>
+ 		</aside>
+ 		
+ 			<aside class="shippinginfo">
+	 		<h3>Shipping Info</h3>
+	 		<form name="billinginfo">
+	 			<input class="textbox" type="text" name="firstname" placeholder="first">
+				<input class="textbox" type="text" name="lastname" placeholder="last">
+				<input class="textbox" type="text" name="company" placeholder="company">
+				<input class="textbox" type="text" name="address1" placeholder="Street Address">
+				<input class="textbox" type="text" name="address2" placeholder="address 2">
+				<input class="textbox" type="text" name="city" placeholder="city">
+				<input class="textbox" type="text" name="state" placeholder="state">
+				<input class="textbox" type="text" name="zip" placeholder="zip">
+	 		</form>
+ 		</aside>
+ 		
+ 		<div class="clear"></div>
+ 		
+ 		<a href="billing.html" class="submitbutton right">Continue</a>
+ 	</article>
 </section>
 
 <footer>

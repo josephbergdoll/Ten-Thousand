@@ -268,6 +268,7 @@ header {
 		div.closebtn {
 		 	text-indent: -9999px;
 		 	position: absolute;
+		 	display: none;
 		  top: 0;
 		  left: 0;
 			background: $black url(../img/closebtn_w.svg) no-repeat center center;
@@ -735,7 +736,7 @@ section.checkout-page {
   
   aside.login, aside.guest {
     display: block;
-    margin: 5em 0 0;
+    margin: 3em 0 4em;
     width: 50%;
     float: left;
     h1 {
@@ -744,7 +745,11 @@ section.checkout-page {
       letter-spacing: 0.15em;
       margin: 0 0 1em 0;
     }
+    a.submitbutton {
+      margin: 1.6em 0 0;
     }
+    }
+    
     input.textbox {
      -webkit-appearance: none;
 			width: 100%;
@@ -831,6 +836,15 @@ ol.purchase-steps {
 
 }
 
+aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon, aside.login, aside.guest {
+  p {
+  	font-size: 0.75em;
+  	margin: 0 0 0.5em;
+  	color: $typegray;
+  	text-transform: uppercase;
+	}
+}
+
 aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon {
 	//margin: 3em 0 0 0;
 	
@@ -840,12 +854,6 @@ aside.billinginfo, aside.shippinginfo, aside.shippingspeed, aside.coupon {
 	input {
 		padding: 1.25em 1em;
 		margin: 0 0 1em !important;
-	}
-	p {
-  	font-size: 0.75em;
-  	margin: 0 0 0.5em;
-  	color: $typegray;
-  	text-transform: uppercase;
 	}
 		select {
 			-webkit-appearance: none;
@@ -897,7 +905,6 @@ aside.order-completed {
     }
   p.success {
     margin: 1em 0 0 0;
-    
   }
   a.account {
     margin: 2rem 0;
@@ -913,10 +920,47 @@ div.cart-half {
   }
 }
 
+div.orderlist {
+  h3 {
+    margin: 4em 0 1em;
+  }
+  li.cart-product {
+  border-bottom: 1px solid $strokegray;
+  padding: 0.5em 1em;
+  margin: 0 0 0.5em 0;
+    figure.cart-product-img {
+      width: 65px;
+      height: 65px;
+      float: left;
+    }
+   p.cart-product-detail {
+     float: left;
+     line-height: 1.5em;
+     margin: 0.75rem 0 0 1.5rem;
+     span.name {
+       font-weight: 700;
+       font-size: 0.875rem;
+       display: block;
+       color: black;
+     }
+     span.quantity {
+       margin: 0 0.5rem 0 0;
+       text-transform: none;
+     }
+     &.price {
+       font-size: 1rem;
+       float: right;
+       text-align: right;
+     }
+   }
+  }
+}
+
 
 /* EMPTY CART */
 section.cart-disp-empty {
   background: rgba(0,0,0,0.9);
+  display: none;
 	position: absolute;
 	top: 8em;
 	color: white;
@@ -947,6 +991,7 @@ section.cart-disp-empty {
 
 section.cart-disp-full {
 	background: rgba(0,0,0,0.9);
+	display:none;
 	position: absolute;
 	top: 8em;
 	color: white;

@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
 	$("div.desc").hide();
-	$("section.cart-disp-full").hide();
-	$("section.cart-disp-empty").hide();
-	$("div.closebtn").hide();
 	//$("aside.shippinginfo").hide();
 	
 	$("a.product").hover(function(){

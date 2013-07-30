@@ -26,12 +26,11 @@
 
 </head>
 
-<body class="empty static">
+<body class="full static">
 
 
 <section class="cart-disp-full">
 	<article>
-	
 	<div class="cart-contain">
 	<table border="0" cellspacing="0" cellpadding="0" class="shopcart">
 		<thead>
@@ -47,13 +46,13 @@
 				<th class="td-name" scope="row">Board Shorts</th>
 				<td class="td-quantity">2</td>
 				<td class="td-price">$198.00</td>
-				<td class="td-remove"><a href="#">x</a></td>
+				<td class="td-remove">x</td>
 			</tr>
 			<tr>
 				<th class="td-name" scope="row">Echo Shirt</th>
 				<td class="td-quantity">1</td>
 				<td class="td-price">$129.00</td>
-				<td class="td-remove"><a href="#">x</a></td>
+				<td class="td-remove">x</td>
 			</tr>
 		</tbody>
 	</table>
@@ -61,7 +60,7 @@
 	<div class="cart-actions">
 	<h3>Subtotal</h3>
 	<h2>$327.00</h2>
-	<a class="checkout" href="#">
+	<a class="checkout" href="cart.html">
 	Checkout
 	</a>
 	</div>
@@ -87,7 +86,7 @@
 <a href="../journal/">Journal</a>
 <span class="cart">
 	<a href="#">Cart
-	<figure class="counter">0<div class="closebtn">close</div></figure>
+	<figure class="counter">3<div class="closebtn">close</div></figure>
 	</a>
 </span>
 </nav>
@@ -111,17 +110,38 @@
  	  <span class="stepnum">3</span>
  	  <span class="stepname">Billing</span>
  	  </li>
- 	   <li class="purchase-step completed">
+ 	   <li class="purchase-step">
  	  <span class="stepnum">4</span>
  	  <span class="stepname">Confirm</span>
  	  </li>
  	</ol>
 
-<div class="checkout-opts clearfix">
-  <h3>Order Received</h3>
- 	<aside class="order-completed">
- 		    <div class="order-summary">
-	  <h3>Order #2296543</h3>
+ 		<div class="checkoutopts clearfix">
+ 		 	<h3>Confirm Order</h3>
+ 	  <aside class="confirmationinfo clearfix">
+ 	  
+ 	  <div class="conf-contain">
+	  <p>Shipping Address</p>
+	  <span class="conf-name">Joseph Bergdoll</span>
+	  <span class="conf-address1">322 E 81st St</span>
+	  <span class="conf-address2">Apt 4RE</span>
+	  <span class="conf-city-state-zip">New York, NY 10010</span>
+	  <span class="conf-shipspeed">UPS Ground</span>
+	  <a href="createorder.html">Change Shipping info</a>
+ 	  </div>
+ 	  
+ 	  <div class="conf-contain">
+	  <p class="billing-conf">Billing Information</p>
+	  <span class="conf-billingname">Joseph Bergdoll</span>
+	  <span class="conf-ccnumber"><figure class="cc-icon"><img src="../img/mastercardicon.jpg"></figure>**** **** **** 5525</span>
+	  <a href="billing.html">Change Billing Info</a>
+	  </div>
+	  
+	  </aside>
+	  
+	  <aside class="summary-final">
+	 	    <div class="order-summary">
+	  <h3>Order Summary</h3>
 	  <ul>
 	  <li class="cart-product clearfix">
 	  <figure class="cart-product-img"><img src="../img/shorts.png"></figure>
@@ -157,9 +177,10 @@
 	  
 	 	  </ul>
 	  </div>
- 		<p class="success">Thank you for your order. Your order number is <span>2296543</span> An email receipt containing information about your order has been sent. Please keep it for your records.</p>
- 	</aside>
- 	</div>
+
+	  </aside>
+ 		</div>
+ 		<a href="success.html" class="submitbutton completepurchase">Complete purchase</a>
  	</article>
 </section>
 

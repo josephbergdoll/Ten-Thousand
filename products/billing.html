@@ -31,7 +31,6 @@
 
 <section class="cart-disp-full">
 	<article>
-	
 	<div class="cart-contain">
 	<table border="0" cellspacing="0" cellpadding="0" class="shopcart">
 		<thead>
@@ -126,6 +125,7 @@
 	  <input type="text" class="textbox discountcode" placeholder="Credit Card Number">
 	  <p>Name on card</p>
 	  <input type="text" class="textbox" placeholder="Name">
+	  <div class="expiration-contain clearfix">
 	  <p>Expiration date</p>
 	  <select name="expirationmonth" class="exp one">
   	  <option value="Month">01 &ndash; January</option>
@@ -149,23 +149,62 @@
   	  <option value="Month">2016</option>
   	  <option value="Month">2017</option>
 	  </select>
-	  <div class="clear"></div>
+	  </div>
+	    <form name="couponcode">
+	   <p>Have a discount code? Enter it here.</p>
+  		<input type="text" class="textbox discountcode" placeholder="discount">
+  		<a class="submitbutton apply">Apply</a>
+	   </form>
+
 	  
-	  <p>All transactions are secure and encrypted, and we never store your credit card information. To learn more, please view our privacy policy.</p>
+	  <p class="secure-transactions">All transactions are secure and encrypted, and we never store your credit card information. To learn more, please view our privacy policy.</p>
 
 	  </form>
 
 	  </aside>
 	  
-	  <aside class="coupon">
-	   <form name="couponcode">
-	   <p>Have a discount code? Enter it here.</p>
-  		<input type="text" class="textbox discountcode" placeholder="discount">
-  		<a class="submitbutton apply">Apply</a>
-	   </form>
+	  <aside class="summary-final">
+	 	    <div class="order-summary">
+	  <h3>Order Summary</h3>
+	  <ul>
+	  <li class="cart-product clearfix">
+	  <figure class="cart-product-img"><img src="../img/shorts.png"></figure>
+	  <p class="cart-product-detail">
+	   <span class="name">Board Shorts</span>
+	   <span class="size">Large</span>/<span class="color">Navy</span>
+	  </p>
+	  <p class="cart-product-detail price">
+	  <span class="quantity">2x</span><span class="price">$99.00</span>
+	  </p>
+	  </li>
+	  
+	   <li class="cart-product clearfix">
+	  <figure class="cart-product-img"><img src="../img/shorts.png"></figure>
+	  <p class="cart-product-detail">
+	   <span class="name">Echo Shirt</span>
+	   <span class="size">Medium</span>/<span class="color">Gray</span>
+	  </p>
+	  <p class="cart-product-detail price">
+	  <span class="quantity"></span><span class="price">$129.00</span>
+	  </p>
+	  <li class="cart-total clearfix">
+	  <p class="purchase-total clearfix">
+	  <span class="total-name">Subtotal:</span><span class="total-num">$327.00</span>
+	  </p>
+	  <p class="purchase-total clearfix">
+	  <span class="total-name">UPS Ground Shipping:</span><span class="total-num">$5.59</span>
+	  </p>
+	  <p class="purchase-total final-total clearfix">
+	  <span class="total-name">Total:</span><span class="total-num">$332.59</span>
+	  </p>
+	  </li>
+	  
+	 	  </ul>
+	  </div>
+
 	  </aside>
  		</div>
- 		<a href="success.html" class="submitbutton completepurchase">Complete purchase</a>
+ 		<a href="confirm.html" class="submitbutton completepurchase">Confirm Order</a>
  	</article>
 </section>
 

@@ -203,18 +203,8 @@
 				</form>
  		</aside>
  		
- 			<aside class="shippingspeed">
-	  <p>Please select how you would like your order to be delivered.</p>
-	  <form name="shipping">
-  	 	<select name="color">
-    		<option value="USPSpriority">USPS Priority Mail</option>
-    		<option value="UPSground">UPS Ground</option>
-    		<option value="UPS2day">UPS 2-Day Select</option>
-    		<option value="UPSovernight">UPS Overnight</option>
-  		</select>
-	  </form>
-	  
-	  <div class="orderlist">
+ 			<aside class="summary-final">	  
+	  <div class="order-summary">
 	  <h3>Order Summary</h3>
 	  <ul>
 	  <li class="cart-product clearfix">
@@ -237,9 +227,25 @@
 	  <p class="cart-product-detail price">
 	  <span class="quantity"></span><span class="price">$129.00</span>
 	  </p>
+	  <li class="cart-total clearfix">
+	  <p class="purchase-total">
+	  <span class="total-name">Subtotal:</span><span class="total-num">$327.00</span>
+	  </p>
 	  </li>
 	  
 	 	  </ul>
+	  </div>
+	  
+	  <div class="select-shipping">
+	  <p>Please select how you would like your order to be delivered.</p>
+	  <form name="shipping">
+  	 	<select name="selectshipping">
+    		<option value="USPSpriority">USPS Priority Mail</option>
+    		<option value="UPSground">UPS Ground</option>
+    		<option value="UPS2day">UPS 2-Day Select</option>
+    		<option value="UPSovernight">UPS Overnight</option>
+  		</select>
+	  </form>
 	  </div>
 	  
  	</aside>

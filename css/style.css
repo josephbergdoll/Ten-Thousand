@@ -16,12 +16,12 @@ body {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   width: 100%;
-  height: 100%;
+  height: auto;
   font-family: "ars-maquette-web", "Helvetica Neue", Arial, Helvetica, sans-serif;
   -webkit-tap-highlight-color: black;
   background: white; }
-  body.static {
-    height: auto; }
+  body.body-hero {
+    height: 100%; }
 
 ::selection {
   background: black;

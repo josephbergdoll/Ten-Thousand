@@ -45,12 +45,12 @@ img {
   max-width: 100%;
   height: auto; }
 
-a, h1, h2, h3, h3, h5, span {
+a, h1, h2, h3, h4, h5, span {
   transition: all 0.35s ease-in;
   -webkit-transition: all 0.35s ease-in;
   -moz-transition: all 0.35s ease-in;
   -o-transition: all 0.35s ease-in; }
-  a:hover, h1:hover, h2:hover, h3:hover, h3:hover, h5:hover, span:hover {
+  a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, span:hover {
     transition: all 0.15s ease-out;
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;

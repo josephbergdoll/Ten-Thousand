@@ -9,7 +9,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="">
 
 <!-- CSS Styles -->
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css" title="default">
+<link href="css/keithmode.css" rel="alternate stylesheet" type="text/css" title="alternate">
 
 <!-- jQuery() -->
 
@@ -19,6 +20,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
+<script src="js/styleswitcher.js"></script>
 <script src="js/scripts-ck.js"></script>
 
 <!-- TypeKit-->
@@ -46,6 +48,13 @@ $(window).load(function() {
 </head>
 
 <body class="full template-index">
+
+<div class="style-switcher">
+<form id="switchform">
+	<input type="radio" name="choice" value="none" checked="checked" onClick="chooseStyle(this.value, 60)">Light Mode<br />
+	<input type="radio" name="choice" value="alternate" onClick="chooseStyle(this.value, 60)">Keith Mode
+	</form>
+</div>
 
 <section class="cart-disp-full">
 	<article>
@@ -139,7 +148,7 @@ $(window).load(function() {
 </section>
 
 <section class="homepage">
-	<article>
+	<article class="clearfix">
 	<aside class="third">
 		<h3>Our Products</h3>
 		<figure><img src="img/shorts.png"></figure>
@@ -159,7 +168,6 @@ $(window).load(function() {
 		<h3>The 10,000 Kit</h3>
 		<figure><img src="img/kit.png"></figure>
 	</aside>
-	<div class="clear"></div>
 	</article>
 </section>
 

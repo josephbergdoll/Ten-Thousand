@@ -18,12 +18,25 @@
 <![endif]-->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../js/jquery.flexslider-min.js"></script>
 <script src="../js/scripts-ck.js"></script>
 
 <!-- TypeKit-->
 <script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+
+<script>
+$(window).load(function() {
+  $('.slideshow').flexslider({
+    controlsContainer: ".product-imgs",
+    animation: "fade",
+    animationSpeed: 300,
+    directionNav: false,
+    manualControls: "ol.slider-nav img"
+  });
+});
+</script>
 </head>
 
 <body class="full">
@@ -98,11 +111,27 @@
 
 <section class="mainproduct">
 
-	<article>
+	<article class="clearfix">
+	 <aside class="product-imgs">
+	 <div class="zoombtn">
+	 Zoom In
+	 </div>
 	
-		<figure class="main-product-img">
-		<img src="../img/shorts.png">
-		</figure>
+		  <div class="slideshow">
+  		  <ul class="slides">
+          <li><img src="../img/shorts.png" /></li>
+          <li><img src="../img/shorts_navy.png" /></li>
+          <li><img src="../img/shorts_gray.png" /></li>
+        </ul>
+      </div>
+      
+      <ol class="slider-nav clearfix">
+           <li><img src="../img/shorts.png" /></li>
+          <li><img src="../img/shorts_navy.png" /></li>
+          <li><img src="../img/shorts_gray.png" /></li>
+      </ol>
+
+</aside>
 		
 		<aside class="productdesc third">
 		<h1 class="title">Board Short</h1>
@@ -126,13 +155,21 @@
 	</select>
 </figure>
 </form>
-<div class="clear"></div>
+
 	<a id="addproduct" href="#" class="submitbutton">Add To Cart</a>
 		</aside>
 	
-	<div class="clear"></div>
 	</article>
 
+</section>
+
+<section class="product-actionshots">
+  <article class="clearfix">
+    <aside class="third action-desc">
+    <p>Run, swim or just straight up look good. Our Three Way Shorts can do all three, plus fit great. Fast drying, highly breathable with internal drawstrings and flow through pockets.
+			</p>
+    </aside>
+  </article>
 </section>
 
 <section class="productspotlights">

@@ -4,18 +4,18 @@
 
 /* Variables */
 
-$white: white;
+$white: black;
 $hoverwhite: rgba(255,255,255,0.97);
-$lightgray: rgba(250,251,253,1);
-$altgray: rgba(240,241,245,1);
-$strokegray: rgba(229,229,229,1);
-$typegray: rgba(172,173,176,1);
-$darkertype: rgba(110,113,116,1);
-$linkgray: rgba(153,153,156,1);
+$lightgray: rgba(40,41,43,1);
+$altgray: rgba(20,21,25,1);
+$strokegray: rgba(45,45,45,1);
+$typegray: rgba(122,123,126,1);
+$darkertype: white;
+$linkgray: rgba(183,183,186,1);
 $purple: rgba(120,68,133,1);
-$cartoverlaybg: rgba(0,0,0,0.9);
+$cartoverlaybg: rgba(255,255,255,0.95);
 $almostblack: rgba(75,75,75,1);
-$black: black;
+$black: white;
 
 /* Base Styles */
 
@@ -37,7 +37,7 @@ body {
 	height: auto;
 	font-family: "ars-maquette-web", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	-webkit-tap-highlight-color: $black;
-	background: white;
+	background: $white;
 	&.template-index {
 	height: 100%;
 	}
@@ -45,12 +45,12 @@ body {
 
 ::selection {
 	background: $black;
-	color: white;
+	color: $white;
 }
 
 ::-moz-selection {
 	background: $black;
-	color: white;
+	color: $white;
 }
 
 * {
@@ -127,7 +127,7 @@ a {
 }
 
 .white {
-	color: white;
+	color: white !important;
 }
 
 .clearfix {
@@ -148,7 +148,7 @@ a {
 /* Type Styles */
 h1,h2,h3,h4,h5,p {
   &.white {
-    color: white;
+    color: $white;
   }
   &.gray {
     color: $linkgray;
@@ -201,7 +201,7 @@ a.logo {
 	display: block;
 	width: 19em;
 	height: 2.75em;
-	background: url(../img/tenthoulogo.png) no-repeat center center;
+	background: url(../img/tenthoulogo_w.png) no-repeat center center;
 	background-size: 100%;
 	text-indent: -9999px;
 	float: left;
@@ -285,7 +285,7 @@ span.cart {
     z-index: 1;
     top: -1px;
     a {
-      color: white;
+      color: $white;
     }
 	
   }
@@ -298,7 +298,7 @@ div.closebtn {
   display: none;
   top: 0;
   left: 0;
-  background: $black url(../img/closebtn_w.svg) no-repeat center center;
+  background: $black url(../img/closebtn_k.svg) no-repeat center center;
   width: 2em;
   border-radius: 1em;
   height: 2em;
@@ -502,6 +502,12 @@ section.hero div.outer h1 {
 aside.third {
 	width: 33%;
 	float: left;
+	h3 {
+  	color: white;
+	}
+	h2 {
+  	color: $black;
+	}
 }
 
 section.homepage {
@@ -688,7 +694,7 @@ a.submitbutton {
 			width: 100%;
 			box-sizing: border-box;
 			display: block;
-			color: white;
+			color: $white;
 			background: $black;
 			border: 0;
 			padding: 2em;
@@ -924,7 +930,7 @@ ol.purchase-steps {
     text-align: center;
     line-height: 22px;
     background: $black;
-    color: white;
+    color: $white;
     text-shadow: 0 0 1px rbga(255,255,255,0.1);
     font-size: 0.75em;
     font-weight: 700;
@@ -1077,7 +1083,7 @@ p.secure-transactions {
 
 aside.order-completed {
   width: 100%;
-  background: white;
+  background: $white;
   border: 1px solid $strokegray;
   padding: 6em 15% 7em;
   margin: 3em auto 2em;
@@ -1127,7 +1133,7 @@ section.cart-disp-empty {
   display: none;
 	position: absolute;
 	top: 8em;
-	color: white;
+	color: $white;
 	z-index: 5;
 	   article {
   	  padding: 8em 3em;
@@ -1158,7 +1164,7 @@ section.cart-disp-full {
 	display:none;
 	position: absolute;
 	top: 8em;
-	color: white;
+	color: $white;
 	z-index: 5;
 	article {
   	padding: 3em 3em 4em;
@@ -1181,7 +1187,7 @@ table.shopcart {
   margin: 0 0 1em 0;
 
   tr {
-  	border-bottom: 1px solid white;
+  	border-bottom: 1px solid $white;
   }
 
   thead {
@@ -1212,7 +1218,7 @@ table.shopcart {
     border-radius: 1em;
     height: 1.1em;
     margin: 0 auto;
-    background: url(../img/closebtn_w.svg) center center no-repeat;
+    background: $white url(../img/closebtn_w.svg) center center no-repeat;
     &:hover {
       background-color: $almostblack;
     }
@@ -1249,14 +1255,14 @@ table.shopcart {
 			font-size: 2.25em;
 			padding: 0 0 0.15em;
 			display: table;
-			border-bottom: 2px solid white;
+			border-bottom: 2px solid $white;
 			font-weight: 300;
 		}
 		a.checkout {
 			display: table;
 			margin: 0 auto;
-			color: white;
-			background: $darkertype;
+			color: $black;
+			background: $white;
 			padding: 1em 3em 1.15em;
 			text-transform: uppercase;
 			font-weight: 500;
@@ -1324,7 +1330,7 @@ section.mission {
 	h1 {
 		font-size: 400%;
 		font-weight: 500;
-		color: white;
+		color: $white;
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
@@ -1332,7 +1338,7 @@ section.mission {
 }
 
 section.copy {
-  background: white;
+  background: $white;
 }
 
 .mission-points {

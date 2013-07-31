@@ -9,7 +9,7 @@ body, html {
 
 html {
   height: 100%;
-  background: #f0f1f5; }
+  background: #141519; }
 
 body {
   font-size: 100%;
@@ -17,18 +17,18 @@ body {
   width: 100%;
   height: auto;
   font-family: "ars-maquette-web", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  -webkit-tap-highlight-color: black;
-  background: white; }
+  -webkit-tap-highlight-color: white;
+  background: black; }
   body.template-index {
     height: 100%; }
 
 ::selection {
-  background: black;
-  color: white; }
+  background: white;
+  color: black; }
 
 ::-moz-selection {
-  background: black;
-  color: white; }
+  background: white;
+  color: black; }
 
 * {
   -moz-box-sizing: border-box;
@@ -56,15 +56,15 @@ a, h1, h2, h3, h4, h5, span {
     -o-transition: all 0.15s ease-out; }
 
 a.current {
-  color: black; }
+  color: white; }
 
 .style-switcher {
   position: fixed;
   bottom: 0;
   right: 0;
   padding: 1rem;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-size: 0.825em;
   text-transform: uppercase;
   line-height: 1.5em; }
@@ -84,13 +84,13 @@ em {
 
 a {
   text-decoration: none;
-  color: black; }
+  color: white; }
 
 .purple {
   color: #784485; }
 
 .white {
-  color: white; }
+  color: white !important; }
 
 .clearfix {
   display: block; }
@@ -105,9 +105,9 @@ a {
 
 /* Type Styles */
 h1.white, h2.white, h3.white, h4.white, h5.white, p.white {
-  color: white; }
+  color: black; }
 h1.gray, h2.gray, h3.gray, h4.gray, h5.gray, p.gray {
-  color: #99999c; }
+  color: #b7b7ba; }
 h1.notrack, h2.notrack, h3.notrack, h4.notrack, h5.notrack, p.notrack {
   letter-spacing: normal; }
 h1.inlineblock, h2.inlineblock, h3.inlineblock, h4.inlineblock, h5.inlineblock, p.inlineblock {
@@ -137,14 +137,14 @@ h4 {
   text-transform: uppercase; }
 
 p {
-  color: #acadb0;
+  color: #7a7b7e;
   line-height: 1.5em; }
 
 a.logo {
   display: block;
   width: 19em;
   height: 2.75em;
-  background: url(../img/tenthoulogo.png) no-repeat center center;
+  background: url(../img/tenthoulogo_w.png) no-repeat center center;
   background-size: 100%;
   text-indent: -9999px;
   float: left;
@@ -165,7 +165,7 @@ a.btn {
   margin: 0 auto;
   cursor: pointer; }
   a.btn:hover {
-    background: black; }
+    background: white; }
 
 article {
   width: 66em;
@@ -185,17 +185,17 @@ nav a {
   margin: 0 3em 0 0;
   text-transform: uppercase;
   font-weight: 500;
-  color: #99999c;
+  color: #b7b7ba;
   letter-spacing: 0.1em; }
   nav a:hover {
-    color: black; }
+    color: white; }
   nav a.current {
-    color: black; }
+    color: white; }
 
 span.cart a {
   margin: 0; }
   span.cart a.cartclicked {
-    color: black; }
+    color: white; }
 span.cart figure {
   display: inline-block;
   background-color: #784485;
@@ -212,7 +212,7 @@ span.cart figure {
   z-index: 1;
   top: -1px; }
   span.cart figure a {
-    color: white; }
+    color: black; }
 
 div.closebtn {
   text-indent: -9999px;
@@ -220,7 +220,7 @@ div.closebtn {
   display: none;
   top: 0;
   left: 0;
-  background: black url(../img/closebtn_w.svg) no-repeat center center;
+  background: white url(../img/closebtn_k.svg) no-repeat center center;
   width: 2em;
   border-radius: 1em;
   height: 2em;
@@ -233,9 +233,9 @@ div.closebtn {
 
 footer {
   text-transform: uppercase;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #2d2d2d;
   padding: 2em 0;
-  background: #f0f1f5 url(../img/xlogo.png) no-repeat center 6em;
+  background: #141519 url(../img/xlogo.png) no-repeat center 6em;
   background-size: 50px 50px; }
 
 footer aside {
@@ -247,16 +247,16 @@ footer nav a {
   margin: 0 auto;
   font-size: 0.8em;
   font-weight: 500;
-  color: #99999c;
+  color: #b7b7ba;
   line-height: 1.85em; }
   footer nav a:hover {
-    color: black; }
+    color: white; }
 
 footer h5 {
   margin: 5em 0 0 0;
   font-size: 0.8em;
   font-weight: 500;
-  color: #acadb0;
+  color: #7a7b7e;
   text-align: center; }
 
 /* Browser Resets */
@@ -378,16 +378,20 @@ section.hero div.outer h1 {
 aside.third {
   width: 33%;
   float: left; }
+  aside.third h3 {
+    color: white; }
+  aside.third h2 {
+    color: white; }
 
 section.homepage {
-  background: white; }
+  background: black; }
   section.homepage article {
     padding: 0 2em; }
 
 section.homepage aside.third {
   height: 26em;
   padding: 5em 3em;
-  border-right: 1px solid #e5e5e5; }
+  border-right: 1px solid #2d2d2d; }
   section.homepage aside.third:nth-child(3) {
     border-right: none; }
   section.homepage aside.third h2 {
@@ -403,7 +407,7 @@ section.homepage aside.third {
     margin: 2em 0 3em 0; }
 
 section.products {
-  border-top: 1px solid #e5e5e5; }
+  border-top: 1px solid #2d2d2d; }
 
 section.products a.product {
   float: left;
@@ -426,14 +430,14 @@ div.desc {
   div.desc h3 {
     line-height: 1.5em; }
   div.desc h4 {
-    color: black;
+    color: white;
     letter-spacing: 0.1em;
     margin: 1em 0 0 0;
-    color: #6e7174; }
+    color: white; }
 
 section.mainproduct {
-  background: #fafbfd;
-  border-bottom: 1px solid #e5e5e5; }
+  background: #28292b;
+  border-bottom: 1px solid #2d2d2d; }
 
 .zoombtn {
   text-indent: -9999px;
@@ -443,7 +447,7 @@ section.mainproduct {
   width: 1.25em;
   height: 1.25em;
   border-radius: 2em;
-  border: 2px solid black;
+  border: 2px solid white;
   opacity: 0.25;
   background: transparent url(../img/zoombtn_k.svg) center center no-repeat;
   background-size: 75% 75%;
@@ -469,14 +473,14 @@ ol.slider-nav {
     width: 7em;
     float: left;
     padding: 1em;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #2d2d2d;
     margin: 0 0.5em 0 0; }
     ol.slider-nav li img {
       margin: 0 auto; }
 
 h1.title {
   padding: 0 0 0.6em 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #2d2d2d;
   margin: 0 0 0.6em 0; }
 
 section.product-actionshots {
@@ -489,7 +493,7 @@ section.product-actionshots {
 
 .action-desc p {
   font-size: 0.875em;
-  color: white; }
+  color: black; }
 
 section.mainproduct p {
   margin: 2em 0;
@@ -505,14 +509,14 @@ select {
   width: 100%;
   display: block;
   border-radius: 0;
-  background: #e5e5e5 url(../img/arrow.png) 93% center no-repeat;
+  background: #2d2d2d url(../img/arrow.png) 93% center no-repeat;
   background-size: 12px 12px;
   padding: 1em;
   font-family: "ARS Maquette Pro";
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.875em;
-  color: black;
+  color: white;
   border: 0; }
 
 section.mainproduct select {
@@ -522,8 +526,8 @@ a.submitbutton {
   width: 100%;
   box-sizing: border-box;
   display: block;
-  color: white;
-  background: black;
+  color: black;
+  background: white;
   border: 0;
   padding: 2em;
   font-family: "ARS Maquette Pro";
@@ -562,9 +566,9 @@ figure.spotlight-img {
     max-width: 150%; }
 
 section.productfeature.gray {
-  background-color: #fafbfd; }
+  background-color: #28292b; }
   section.productfeature.gray p {
-    color: #99999c; }
+    color: #b7b7ba; }
 
 section.productfeature article {
   display: table; }
@@ -586,14 +590,14 @@ figure.feature-img {
   height: 25em;
   border-radius: 50%;
   overflow: hidden;
-  background: black;
+  background: white;
   float: left; }
   figure.feature-img img {
     max-width: 200%; }
 
 section.productexplore h1 {
   text-align: center;
-  color: #acadb0;
+  color: #7a7b7e;
   font-weight: 300;
   margin: 0 0 1.75em 0;
   font-size: 125%; }
@@ -606,15 +610,15 @@ section.productexplore aside.third {
 section.productexplore a {
   display: table;
   text-align: center;
-  color: #99999c; }
+  color: #b7b7ba; }
   section.productexplore a:hover {
-    color: black; }
+    color: white; }
   section.productexplore a h3 {
     margin: 1.5em auto 2.25em;
     -webkit-transition: color 0.15s ease-in; }
 
 section.checkout-page {
-  background: #fafbfd; }
+  background: #28292b; }
 
 div.checkout-opts {
   margin: 5em 0 1em; }
@@ -623,12 +627,12 @@ section.checkout-page h3 {
   margin: 4em 0 2em;
   padding: 0 0 1em 0;
   font-weight: 700;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   text-align: center; }
 
 aside.login {
   padding: 0 5em;
-  border-right: 1px solid #e5e5e5; }
+  border-right: 1px solid #2d2d2d; }
 
 aside.guest {
   padding: 0 5em; }
@@ -648,24 +652,24 @@ aside.login, aside.guest {
 
 aside.login h4 {
   margin: 1em 0 0 0;
-  color: #99999c; }
+  color: #b7b7ba; }
   aside.login h4 a {
-    color: #99999c; }
+    color: #b7b7ba; }
     aside.login h4 a:hover {
-      color: black; }
+      color: white; }
 
 input.textbox {
   -webkit-appearance: none;
   width: 100%;
   display: block;
   border-radius: 0;
-  background: #e5e5e5;
+  background: #2d2d2d;
   padding: 1em;
   font-family: "ARS Maquette Pro";
   font-weight: 500;
   margin: 0 0 0.625em 0;
   font-size: 0.875em;
-  color: black;
+  color: white;
   border: 0; }
 
 ::-webkit-input-placeholder {
@@ -685,7 +689,7 @@ ol.purchase-steps li.purchase-step {
   width: 25%;
   float: left;
   text-align: center;
-  border-right: 1px solid #e5e5e5; }
+  border-right: 1px solid #2d2d2d; }
   ol.purchase-steps li.purchase-step:last-child {
     border-right: none; }
   ol.purchase-steps li.purchase-step.completed {
@@ -693,14 +697,14 @@ ol.purchase-steps li.purchase-step {
     border-right: 1px solid rgba(0, 0, 0, 0.15); }
   ol.purchase-steps li.purchase-step.next {
     opacity: 0.1;
-    border-right: 1px solid #99999c; }
+    border-right: 1px solid #b7b7ba; }
 ol.purchase-steps span.stepnum {
   width: 22px;
   height: 22px;
   text-align: center;
   line-height: 22px;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   text-shadow: 0 0 1px rbga(255, 255, 255, 0.1);
   font-size: 0.75em;
   font-weight: 700;
@@ -732,7 +736,7 @@ aside.billinginfo, aside.shippinginfo, aside.confirmationinfo, aside.coupon, asi
   aside.billinginfo p, aside.shippinginfo p, aside.confirmationinfo p, aside.coupon p, aside.summary-final p {
     font-size: 0.75em;
     margin: 0 0 0.5em;
-    color: #acadb0;
+    color: #7a7b7e;
     text-transform: uppercase; }
 
 div.select-shipping {
@@ -741,8 +745,8 @@ div.select-shipping {
 /* Order Summary */
 div.order-summary h3 {
   margin: 0.25em 0 1em;
-  color: #acadb0;
-  border-bottom: 1px solid #e5e5e5; }
+  color: #7a7b7e;
+  border-bottom: 1px solid #2d2d2d; }
 div.order-summary li.cart-total {
   font-size: 1rem;
   padding: 0.5em 1em;
@@ -756,20 +760,20 @@ div.order-summary span.total-name {
   font-size: 0.875rem;
   vertical-align: baseline; }
 div.order-summary span.total-num {
-  color: black;
+  color: white;
   float: right;
   font-size: 1rem;
   vertical-align: baseline; }
 div.order-summary p.purchase-total {
   margin: 0 0 0.75em; }
 div.order-summary p.final-total {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #2d2d2d;
   padding: 0.75em 0 0;
   margin: 1em 0 0; }
 div.order-summary p.final-total span.total-num {
   font-weight: 700; }
 div.order-summary li.cart-product {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #2d2d2d;
   padding: 0.5em 1em;
   margin: 0 0 0.5em 0; }
 div.order-summary figure.cart-product-img {
@@ -784,7 +788,7 @@ div.order-summary span.name {
   font-weight: 700;
   font-size: 0.875rem;
   display: block;
-  color: black; }
+  color: white; }
 div.order-summary span.quantity {
   margin: 0 0.5rem 0 0;
   text-transform: none; }
@@ -805,16 +809,16 @@ p.secure-transactions {
 
 aside.order-completed {
   width: 100%;
-  background: white;
-  border: 1px solid #e5e5e5;
+  background: black;
+  border: 1px solid #2d2d2d;
   padding: 6em 15% 7em;
   margin: 3em auto 2em; }
   aside.order-completed h2.productordered {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     padding: 1em 0 0.75em; }
   aside.order-completed span.ordernumber {
     font-weight: 600;
-    color: #99999c; }
+    color: #b7b7ba; }
   aside.order-completed p.success {
     margin: 3em 0 0 0; }
   aside.order-completed a.account {
@@ -835,11 +839,11 @@ div.success-page {
     margin: 0 0 2em; }
 
 section.cart-disp-empty {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   display: none;
   position: absolute;
   top: 8em;
-  color: white;
+  color: black;
   z-index: 5; }
   section.cart-disp-empty article {
     padding: 8em 3em;
@@ -851,16 +855,16 @@ section.cart-disp-empty {
   section.cart-disp-empty p {
     margin: 0.5em 0 0 0; }
   section.cart-disp-empty a {
-    color: #6e7174; }
+    color: white; }
     section.cart-disp-empty a:hover {
       color: white; }
 
 section.cart-disp-full {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   display: none;
   position: absolute;
   top: 8em;
-  color: white;
+  color: black;
   z-index: 5; }
   section.cart-disp-full article {
     padding: 3em 3em 4em;
@@ -878,7 +882,7 @@ table.shopcart {
   text-transform: uppercase;
   margin: 0 0 1em 0; }
   table.shopcart tr {
-    border-bottom: 1px solid white; }
+    border-bottom: 1px solid black; }
   table.shopcart thead {
     font-size: 75%;
     font-weight: 600;
@@ -900,7 +904,7 @@ table.shopcart {
     border-radius: 1em;
     height: 1.1em;
     margin: 0 auto;
-    background: url(../img/closebtn_w.svg) center center no-repeat; }
+    background: black url(../img/closebtn_w.svg) center center no-repeat; }
     table.shopcart .td-remove a:hover {
       background-color: #4b4b4b; }
   table.shopcart .td-quantity {
@@ -920,19 +924,19 @@ div.cart-actions {
   div.cart-actions * {
     box-sizing: border-box; }
   div.cart-actions h3 {
-    color: #99999c; }
+    color: #b7b7ba; }
   div.cart-actions h2 {
     margin: 0.25em auto 0.75em;
     font-size: 2.25em;
     padding: 0 0 0.15em;
     display: table;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     font-weight: 300; }
   div.cart-actions a.checkout {
     display: table;
     margin: 0 auto;
     color: white;
-    background: #6e7174;
+    background: black;
     padding: 1em 3em 1.15em;
     text-transform: uppercase;
     font-weight: 500;
@@ -948,7 +952,7 @@ div.conf-contain {
 div.conf-contain:first-child {
   margin: 0 3em 0 0;
   padding: 0 3em 0 0;
-  border-right: 1px solid #e5e5e5; }
+  border-right: 1px solid #2d2d2d; }
 
 aside.confirmationinfo span {
   display: block;
@@ -963,12 +967,12 @@ figure.cc-icon {
 
 aside.confirmationinfo a {
   display: block;
-  color: #99999c;
+  color: #b7b7ba;
   margin: 1.5em 0 0 0;
   font-size: 0.75em;
   text-transform: uppercase; }
   aside.confirmationinfo a:hover {
-    color: black; }
+    color: white; }
 
 section.mission {
   height: 50em;
@@ -981,20 +985,20 @@ section.mission {
   section.mission h1 {
     font-size: 400%;
     font-weight: 500;
-    color: white;
+    color: black;
     display: table-cell;
     vertical-align: middle;
     text-align: center; }
 
 section.copy {
-  background: white; }
+  background: black; }
 
 .mission-points {
   margin: 4em 0; }
 
 section.copy aside.third {
   padding: 2em 3em;
-  border-right: 1px solid #e5e5e5; }
+  border-right: 1px solid #2d2d2d; }
   section.copy aside.third:nth-child(3) {
     border-right: none; }
   section.copy aside.third h2 {
@@ -1024,15 +1028,15 @@ section.mission2 {
     font-size: 500%;
     text-align: center;
     font-weight: 300;
-    color: black; }
+    color: white; }
   section.mission2 figure {
     margin: 2em auto;
     width: 3em;
     height: 3em; }
 
 section.static-copy {
-  border-top: 1px solid #e5e5e5;
-  background: white; }
+  border-top: 1px solid #2d2d2d;
+  background: black; }
   section.static-copy h1 {
     text-align: center;
     margin: 0 auto 2em; }
@@ -1040,7 +1044,7 @@ section.static-copy {
     font-weight: 600;
     position: relative;
     margin: 4em 0 -1.35em 0;
-    color: #6e7174;
+    color: white;
     width: 20%;
     line-height: 1.25em; }
     section.static-copy h4.sub {
@@ -1049,7 +1053,7 @@ section.static-copy {
   section.static-copy p {
     width: 55%;
     margin: 0 auto 2em;
-    color: #6e7174; }
+    color: white; }
     section.static-copy p.secondary {
       font-size: 0.813em;
       margin: 0 auto 1em; }
@@ -1064,11 +1068,11 @@ section.static-copy {
     section.static-copy ul li {
       font-size: 0.813em;
       margin: 0 0 0 2em;
-      color: #6e7174;
+      color: white;
       line-height: 1.25em; }
 
 section.journal {
-  border-top: 1px solid #e5e5e5; }
+  border-top: 1px solid #2d2d2d; }
 
 a.entry {
   display: block;

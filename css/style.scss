@@ -201,7 +201,7 @@ a.logo {
 	display: block;
 	width: 19em;
 	height: 2.75em;
-	background: url(../img/tenthoulogo.png) no-repeat center center;
+	background: url(../img/tenthoulogo_lg.png) no-repeat center center;
 	background-size: 100%;
 	text-indent: -9999px;
 	float: left;
@@ -241,6 +241,23 @@ section,header,footer {
 
 // Begin Header Styles
 
+header {
+  position: absolute;
+  z-index: 2;
+  -webkit-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
+  -moz-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
+  -o-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
+  background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  -o-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+header article {
+  padding: 2em 3em;
+}
+
 header nav {
 	font-size: 0.8em;
 	margin: 1em 0 0 0;
@@ -254,6 +271,7 @@ nav	a {
   font-weight: 500;
   color: $linkgray;
   letter-spacing: 0.1em;
+  text-shadow: 0 0 2px rgba(255,255,255,0.25);
   &:hover {
     color: $black;
   }
@@ -412,7 +430,7 @@ html[xmlns] .slides {
 }
 
 section.hero {
-  height: 60%;
+  height: 80%;
 }
 	
 div.slideshow {
@@ -450,6 +468,7 @@ div.outer {
   display: table;
   width: 100%;
 	height: 100%;
+	padding: 5.5em 0 0 0;
 }
 
 section.hero div.outer h1 {

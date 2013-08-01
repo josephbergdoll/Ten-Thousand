@@ -1207,7 +1207,7 @@ section.cart-disp-empty {
   background: $cartoverlaybg;
   display: none;
 	position: absolute;
-	top: 6em;
+	top: 100px;
 	color: white;
 	z-index: 5;
 	   article {
@@ -1238,7 +1238,7 @@ section.cart-disp-full {
 	background: $cartoverlaybg;
 	display:none;
 	position: absolute;
-	top: 6em;
+	top: 100px;
 	color: white;
 	z-index: 5;
 	article {

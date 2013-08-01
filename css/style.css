@@ -900,7 +900,7 @@ section.cart-disp-empty {
   background: rgba(0, 0, 0, 0.9);
   display: none;
   position: absolute;
-  top: 6em;
+  top: 100px;
   color: white;
   z-index: 5; }
   section.cart-disp-empty article {
@@ -921,7 +921,7 @@ section.cart-disp-full {
   background: rgba(0, 0, 0, 0.9);
   display: none;
   position: absolute;
-  top: 6em;
+  top: 100px;
   color: white;
   z-index: 5; }
   section.cart-disp-full article {

@@ -144,7 +144,6 @@ a {
 }
 
 
-
 /* Type Styles */
 h1,h2,h3,h4,h5,p {
   &.white {
@@ -199,8 +198,8 @@ p {
 
 a.logo {
 	display: block;
-	width: 19em;
-	height: 2.75em;
+	width: 18em;
+	height: 2.25em;
 	background: url(../img/tenthoulogo_lg.png) no-repeat center center;
 	background-size: 100%;
 	text-indent: -9999px;
@@ -242,17 +241,22 @@ section,header,footer {
 // Begin Header Styles
 
 header {
-  position: absolute;
+}
+
+.index-header {
+	position: relative;
   z-index: 2;
-  -webkit-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
-  -moz-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
-  -o-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
-  background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 100px);
+  -webkit-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 85px);
+  -moz-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 85px);
+  -o-background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 85px);
+  background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 85px);
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   -o-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+
 }
+
 
 header article {
   padding: 2em 3em;
@@ -260,7 +264,7 @@ header article {
 
 header nav {
 	font-size: 0.8em;
-	margin: 1em 0 0 0;
+	margin: 0.8em 0 0 0;
 	float: right;
 }
 
@@ -430,7 +434,9 @@ html[xmlns] .slides {
 }
 
 section.hero {
-  height: 80%;
+  position: relative;
+  margin: -100px 0 0 0;
+  height: 85%;
 }
 	
 div.slideshow {
@@ -468,29 +474,79 @@ div.outer {
   display: table;
   width: 100%;
 	height: 100%;
-	padding: 5.5em 0 0 0;
+	padding: 50px 0 0 0;
 }
 
 section.hero div.outer h1 {
   display: table-cell;
-	font-size: 600%;
+	font-size: 575%;
 	text-align: center;
 	letter-spacing: 0.1em;
 	font-weight: 500;
 	vertical-align: middle;
 }
 
+ul.flex-direction-nav {
+	position: absolute;
+	width: 95%;
+	top: 50%;
+	left: 2.5%;
+}
+
+.flex-direction-nav li {
+	width: 60px;
+	height: 60px;
+}
+
+.flex-direction-nav a {
+	font-size: 48px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	line-height: 60px;
+	cursor: pointer;
+	color: $white;
+	opacity: 0.5;
+	text-shadow: 0 0 1px $black;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.flex-direction-nav:after {
+	content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+
+}
+
+.flex-direction-nav li:first-child {
+	float: left;
+}
+
+.flex-direction-nav li:last-child {
+	float: right;
+}
+
 .pager {
   width: 100%;
 	text-align: center;
-	position: absolute;
-	bottom: 24px;
-	z-index: 400;
 	display: block;
 }
 
+.pager ol {
+	position: absolute;
+	bottom: 24px;
+	z-index: 2;
+	width: 100%;
+}
+
 .pager ol li {
-  display: inline-block;
+  	display: inline-block;
 	margin: 0 10px 0 0;
 }
 
@@ -498,7 +554,7 @@ section.hero div.outer h1 {
 	margin: 0;
 }
 
-.pager a {
+.pager ol li a {
 	display: block;
 	width: 8px;
 	height: 8px;
@@ -510,7 +566,7 @@ section.hero div.outer h1 {
 	-moz-transition: all 0.15s ease-in;
 }
 
-.pager a:hover {
+.pager ol li ra:hover {
 	background-color: rgba(255,255,255,1);
 }
 
@@ -617,9 +673,7 @@ section.mainproduct {
   background: transparent url(../img/zoombtn_k.svg) center center no-repeat;
   background-size: 75% 75%;
   z-index: 2;
-  &:hover {
-    opacity: 1;
-  }
+  cursor: -webkit-zoom-in;
 }
 
 aside.product-imgs {
@@ -627,8 +681,13 @@ aside.product-imgs {
   margin: 0 12% 0 0;
   float: left;
   position: relative;
+  &:hover {
+	    .zoombtn {
+		    opacity: 1 !important;
+	    }
   .slideshow {
     cursor: -webkit-zoom-in;
+    }
   }
 }
 
@@ -982,13 +1041,16 @@ aside.billinginfo, aside.shippinginfo, aside.confirmationinfo, aside.coupon, asi
   input.discountcode {
     margin: 1em 0;
   }
-  p {
-  	font-size: 0.75em;
-  	margin: 0 0 0.5em;
-  	color: $typegray;
-  	text-transform: uppercase;
-	}
 }
+
+aside.login, aside.guest, aside.billinginfo, aside.shippinginfo, aside.confirmationinfo, aside.coupon, aside.summary-final {
+	p {
+	  	font-size: 0.75em;
+	  	margin: 0 0 0.5em;
+	  	color: $typegray;
+	  	text-transform: uppercase;
+	}
+	}
 
 
 div.select-shipping {
@@ -1145,7 +1207,7 @@ section.cart-disp-empty {
   background: $cartoverlaybg;
   display: none;
 	position: absolute;
-	top: 8em;
+	top: 6em;
 	color: white;
 	z-index: 5;
 	   article {
@@ -1176,7 +1238,7 @@ section.cart-disp-full {
 	background: $cartoverlaybg;
 	display:none;
 	position: absolute;
-	top: 8em;
+	top: 6em;
 	color: white;
 	z-index: 5;
 	article {
@@ -1332,22 +1394,36 @@ table.shopcart {
 // Begin Mission Page Styles
 
 section.mission {
-	height: 50em;
-	background: url(../img/mission.jpg) no-repeat center 42%;
+	height: 30em;
 	background-size: cover;
 	article {
   	display: table;
   	width: 100%;
   	height: 100%;
 	}
-	h1 {
+}
+
+.mission-one {
+	background: url(../img/bridge4.jpg) no-repeat center 30%;
+	padding: 65px 0 0 0;
+	height: 40em !important;
+}
+
+.mission-two {
+	background: url(../img/bridge6.jpg) no-repeat center 85%;
+}
+
+
+.mission-three {
+	background: url(../img/bridge7.jpg) no-repeat center 30%;
+}
+
+.mission-hero {
 		font-size: 400%;
 		font-weight: 500;
-		color: white;
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
-	}
 }
 
 section.copy {
@@ -1381,29 +1457,45 @@ padding: 2em 3em;
 
 }
 
-p.mission-copy {
+.p-single-col {
   width: 55%;
   margin: 0 auto 1em;
+  line-height: 1.625em;
 }
-section.mission2 {
-	height: 50em;
-	background: url(../img/mission2.jpg) no-repeat center center;
+
+.mission-highlight-img, .mission-highlight-img-2, .mission-highlight-copy {
+	width: 50%;
+	float: left;
+	min-height: 20em;
+}
+
+.mission-highlight {
+	margin: 5em 0;
+}
+
+.mission-highlight-img {
+	background: url(../img/bridge4.jpg) no-repeat center center;
 	background-size: cover;
+}
+
+.mission-highlight-img-2 {
+	background: url(../img/bridge6.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+
+
+.mission-highlight-copy {
+	padding: 3em;
 	h1 {
-		margin: 2.5em auto 0;
-		line-height: 1.15em;
-		letter-spacing: 0.1em;
-		font-size: 500%;
-		text-align: center;
-		font-weight: 300;
-		color: $black;
-	}
-	figure {
-		margin: 2em auto;
-		width: 3em;
-		height: 3em;
+		text-transform: none;
+		letter-spacing: normal;
+		font-size: 1.25em;
+		font-weight: 500;
+		margin: 0 0 0.5em;
 	}
 }
+
 
 
 // End Missoin Page Styles

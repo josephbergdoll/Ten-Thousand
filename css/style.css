@@ -142,8 +142,8 @@ p {
 
 a.logo {
   display: block;
-  width: 19em;
-  height: 2.75em;
+  width: 18em;
+  height: 2.25em;
   background: url(../img/tenthoulogo_lg.png) no-repeat center center;
   background-size: 100%;
   text-indent: -9999px;
@@ -175,13 +175,13 @@ article {
 section, header, footer {
   width: 100%; }
 
-header {
-  position: absolute;
+.index-header {
+  position: relative;
   z-index: 2;
-  -webkit-background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 100px);
-  -moz-background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 100px);
-  -o-background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 100px);
-  background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 100px);
+  -webkit-background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 85px);
+  -moz-background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 85px);
+  -o-background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 85px);
+  background: linear-gradient(rgba(255, 255, 255, 0.95) 0px, rgba(255, 255, 255, 0.85) 85px);
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -192,7 +192,7 @@ header article {
 
 header nav {
   font-size: 0.8em;
-  margin: 1em 0 0 0;
+  margin: 0.8em 0 0 0;
   float: right; }
 
 nav a {
@@ -324,7 +324,9 @@ html[xmlns] .slides {
   display: block; }
 
 section.hero {
-  height: 80%; }
+  position: relative;
+  margin: -100px 0 0 0;
+  height: 85%; }
 
 div.slideshow {
   width: 100%;
@@ -350,23 +352,64 @@ div.outer {
   display: table;
   width: 100%;
   height: 100%;
-  padding: 5.5em 0 0 0; }
+  padding: 50px 0 0 0; }
 
 section.hero div.outer h1 {
   display: table-cell;
-  font-size: 600%;
+  font-size: 575%;
   text-align: center;
   letter-spacing: 0.1em;
   font-weight: 500;
   vertical-align: middle; }
 
+ul.flex-direction-nav {
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  left: 2.5%; }
+
+.flex-direction-nav li {
+  width: 60px;
+  height: 60px; }
+
+.flex-direction-nav a {
+  font-size: 48px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  line-height: 60px;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  text-shadow: 0 0 1px black; }
+  .flex-direction-nav a:hover {
+    opacity: 1; }
+
+.flex-direction-nav:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.flex-direction-nav li:first-child {
+  float: left; }
+
+.flex-direction-nav li:last-child {
+  float: right; }
+
 .pager {
   width: 100%;
   text-align: center;
+  display: block; }
+
+.pager ol {
   position: absolute;
   bottom: 24px;
-  z-index: 400;
-  display: block; }
+  z-index: 2;
+  width: 100%; }
 
 .pager ol li {
   display: inline-block;
@@ -375,7 +418,7 @@ section.hero div.outer h1 {
 .pager ol li:last-child {
   margin: 0; }
 
-.pager a {
+.pager ol li a {
   display: block;
   width: 8px;
   height: 8px;
@@ -386,7 +429,7 @@ section.hero div.outer h1 {
   -webkit-transition: all 0.15s ease-in;
   -moz-transition: all 0.15s ease-in; }
 
-.pager a:hover {
+.pager ol li ra:hover {
   background-color: white; }
 
 .pager a.flex-active {
@@ -464,16 +507,17 @@ section.mainproduct {
   opacity: 0.25;
   background: transparent url(../img/zoombtn_k.svg) center center no-repeat;
   background-size: 75% 75%;
-  z-index: 2; }
-  .zoombtn:hover {
-    opacity: 1; }
+  z-index: 2;
+  cursor: -webkit-zoom-in; }
 
 aside.product-imgs {
   width: 50%;
   margin: 0 12% 0 0;
   float: left;
   position: relative; }
-  aside.product-imgs .slideshow {
+  aside.product-imgs:hover .zoombtn {
+    opacity: 1 !important; }
+  aside.product-imgs:hover .slideshow {
     cursor: -webkit-zoom-in; }
 
 ol.slider-nav {
@@ -746,11 +790,12 @@ aside.billinginfo, aside.shippinginfo, aside.confirmationinfo, aside.coupon, asi
     display: inline-block; }
   aside.billinginfo input.discountcode, aside.shippinginfo input.discountcode, aside.confirmationinfo input.discountcode, aside.coupon input.discountcode, aside.summary-final input.discountcode {
     margin: 1em 0; }
-  aside.billinginfo p, aside.shippinginfo p, aside.confirmationinfo p, aside.coupon p, aside.summary-final p {
-    font-size: 0.75em;
-    margin: 0 0 0.5em;
-    color: #acadb0;
-    text-transform: uppercase; }
+
+aside.login p, aside.guest p, aside.billinginfo p, aside.shippinginfo p, aside.confirmationinfo p, aside.coupon p, aside.summary-final p {
+  font-size: 0.75em;
+  margin: 0 0 0.5em;
+  color: #acadb0;
+  text-transform: uppercase; }
 
 div.select-shipping {
   margin: 1.5em 0 0; }
@@ -855,7 +900,7 @@ section.cart-disp-empty {
   background: rgba(0, 0, 0, 0.9);
   display: none;
   position: absolute;
-  top: 8em;
+  top: 6em;
   color: white;
   z-index: 5; }
   section.cart-disp-empty article {
@@ -876,7 +921,7 @@ section.cart-disp-full {
   background: rgba(0, 0, 0, 0.9);
   display: none;
   position: absolute;
-  top: 8em;
+  top: 6em;
   color: white;
   z-index: 5; }
   section.cart-disp-full article {
@@ -988,20 +1033,30 @@ aside.confirmationinfo a {
     color: black; }
 
 section.mission {
-  height: 50em;
-  background: url(../img/mission.jpg) no-repeat center 42%;
+  height: 30em;
   background-size: cover; }
   section.mission article {
     display: table;
     width: 100%;
     height: 100%; }
-  section.mission h1 {
-    font-size: 400%;
-    font-weight: 500;
-    color: white;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center; }
+
+.mission-one {
+  background: url(../img/bridge4.jpg) no-repeat center 30%;
+  padding: 65px 0 0 0;
+  height: 40em !important; }
+
+.mission-two {
+  background: url(../img/bridge6.jpg) no-repeat center 85%; }
+
+.mission-three {
+  background: url(../img/bridge7.jpg) no-repeat center 30%; }
+
+.mission-hero {
+  font-size: 400%;
+  font-weight: 500;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
 
 section.copy {
   background: white; }
@@ -1026,26 +1081,35 @@ section.copy aside.third {
     line-height: 1.5em;
     margin: 2em 0 3em 0; }
 
-p.mission-copy {
+.p-single-col {
   width: 55%;
-  margin: 0 auto 1em; }
+  margin: 0 auto 1em;
+  line-height: 1.625em; }
 
-section.mission2 {
-  height: 50em;
-  background: url(../img/mission2.jpg) no-repeat center center;
+.mission-highlight-img, .mission-highlight-img-2, .mission-highlight-copy {
+  width: 50%;
+  float: left;
+  min-height: 20em; }
+
+.mission-highlight {
+  margin: 5em 0; }
+
+.mission-highlight-img {
+  background: url(../img/bridge4.jpg) no-repeat center center;
   background-size: cover; }
-  section.mission2 h1 {
-    margin: 2.5em auto 0;
-    line-height: 1.15em;
-    letter-spacing: 0.1em;
-    font-size: 500%;
-    text-align: center;
-    font-weight: 300;
-    color: black; }
-  section.mission2 figure {
-    margin: 2em auto;
-    width: 3em;
-    height: 3em; }
+
+.mission-highlight-img-2 {
+  background: url(../img/bridge6.jpg) no-repeat center center;
+  background-size: cover; }
+
+.mission-highlight-copy {
+  padding: 3em; }
+  .mission-highlight-copy h1 {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: 0 0 0.5em; }
 
 section.static-copy {
   border-top: 1px solid #e5e5e5;

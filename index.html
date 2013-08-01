@@ -33,12 +33,14 @@ $(window).load(function() {
 	    keyboard: true,
 	    animation: "fade",
 	    slideshow: true,
-	    slideshowSpeed: 10000,
-	    animationSpeed: 500,
+	    slideshowSpeed: 15000,
+	    animationSpeed: 1000,
 	    touch: true,
 	    video: true,
 	    controlNav: true,
-	    directionNav: false,
+	    directionNav: true,
+	    prevText: "<",
+	    nextText: ">",
 	    controlsContainer: ".pager"
     });
        
@@ -103,7 +105,7 @@ $(window).load(function() {
   </article>
 </section>
 
-<header>
+<header class="index-header">
 <article>
 <a href="index.html" class="logo">Ten Thousand</a>
 <nav>

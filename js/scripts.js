@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-	$("div.desc").hide();
+	$("div.product-index-desc").hide();
 	//$("aside.shippinginfo").hide();
 	
 	$("a.product").hover(function(){
-		$(this).children('div.desc').fadeToggle(150);
+		$(this).children('div.product-index-desc').fadeToggle(150);
 	});
 	
 	$("body.full span.cart a").click(function(){

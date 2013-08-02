@@ -195,7 +195,7 @@ header nav {
   margin: 0.8em 0 0 0;
   float: right; }
 
-nav a {
+header nav a {
   display: inline-block;
   margin: 0 3em 0 0;
   text-transform: uppercase;
@@ -203,9 +203,9 @@ nav a {
   color: #99999c;
   letter-spacing: 0.1em;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.25); }
-  nav a:hover {
+  header nav a:hover {
     color: black; }
-  nav a.current {
+  header nav a.current {
     color: black; }
 
 span.cart a {
@@ -248,30 +248,38 @@ div.closebtn {
     transition: background-color 0.1s ease-out; }
 
 footer {
+  padding: 3em;
   text-transform: uppercase;
-  border-top: 1px solid #e5e5e5;
-  padding: 2em 0;
-  background: #f0f1f5 url(../img/xlogo.png) no-repeat center 6em;
-  background-size: 50px 50px; }
+  background: white url(../img/xlogo.png) no-repeat center 10.25em;
+  background-size: 25px 25px; }
 
-footer aside {
-  width: 50%;
-  float: left; }
+footer article {
+  padding: 1.5em 0em 4em;
+  width: 60em;
+  border-top: 1px solid #e5e5e5; }
+
+footer nav {
+  text-align: center; }
 
 footer nav a {
-  display: table;
-  margin: 0 auto;
-  font-size: 0.8em;
-  font-weight: 500;
-  color: #99999c;
-  line-height: 1.85em; }
+  margin: 0 3em 0 0;
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  color: #acadb0;
+  line-height: 1.85em;
+  white-space: nowrap; }
   footer nav a:hover {
     color: black; }
 
+footer nav a:last-child {
+  margin: 0; }
+
 footer h5 {
-  margin: 5em 0 0 0;
-  font-size: 0.8em;
-  font-weight: 500;
+  margin: 2em 0 0 0;
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
   color: #acadb0;
   text-align: center; }
 
@@ -462,7 +470,7 @@ section.homepage aside.third {
     line-height: 1.5em;
     margin: 2em 0 3em 0; }
 
-section.products {
+section.products article {
   border-top: 1px solid #e5e5e5; }
 
 section.products a.product {
@@ -474,18 +482,18 @@ section.products a.product {
   section.products a.product:nth-child(2n) {
     margin: 0 0 2em 0; }
 
-div.desc {
-  background: rgba(255, 255, 255, 0.97);
+.product-index-desc {
+  background: rgba(255, 255, 255, 0.75);
   position: absolute;
-  top: 7em;
-  left: 7em;
-  width: 14em;
-  height: 14em;
-  padding: 4.5em 2em 2em;
+  top: 0em;
+  left: 0em;
+  width: 100%;
+  height: 100%;
+  padding: 10em 2em 2em;
   text-align: center; }
-  div.desc h3 {
+  .product-index-desc h3 {
     line-height: 1.5em; }
-  div.desc h4 {
+  .product-index-desc h4 {
     color: black;
     letter-spacing: 0.1em;
     margin: 1em 0 0 0;
@@ -1060,6 +1068,11 @@ section.mission {
 
 section.copy {
   background: white; }
+  section.copy p {
+    font-family: "minion-pro";
+    font-size: 1.05em;
+    text-align: left;
+    line-height: 1.625em; }
 
 .mission-points {
   margin: 4em 0; }
@@ -1076,15 +1089,11 @@ section.copy aside.third {
     text-align: center;
     margin: 0 0 2.25em 0; }
   section.copy aside.third p {
-    font-size: 0.875em;
-    text-align: left;
-    line-height: 1.5em;
     margin: 2em 0 3em 0; }
 
 .p-single-col {
   width: 55%;
-  margin: 0 auto 1em;
-  line-height: 1.625em; }
+  margin: 0 auto 1em; }
 
 .mission-highlight-img, .mission-highlight-img-2, .mission-highlight-copy {
   width: 50%;

@@ -450,11 +450,11 @@ aside.third {
 section.homepage {
   background: white; }
   section.homepage article {
-    padding: 0 2em; }
+    padding: 4em 3em 1em; }
 
 section.homepage aside.third {
-  height: 26em;
-  padding: 5em 3em;
+  height: 21em;
+  padding: 3em 3em;
   border-right: 1px solid #e5e5e5; }
   section.homepage aside.third:nth-child(3) {
     border-right: none; }

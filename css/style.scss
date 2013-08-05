@@ -15,6 +15,7 @@ $linkgray: rgba(153,153,156,1);
 $purple: rgba(120,68,133,1);
 $cartoverlaybg: rgba(0,0,0,0.9);
 $almostblack: rgba(75,75,75,1);
+$dark: rgba(20,20,21,1);
 $black: black;
 
 /* Base Styles */
@@ -72,15 +73,15 @@ img {
 
 
 a,h1,h2,h3,h4,h5,span {
-	transition: all 0.35s ease-in;
-	-webkit-transition: all 0.35s ease-in;
-	-moz-transition: all 0.35s ease-in;
-	-o-transition: all 0.35s ease-in;
+	transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+	-webkit-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+	-moz-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+	-o-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
   &:hover {
-      transition: all 0.15s ease-out;
-  	-webkit-transition: all 0.15s ease-out;
-  	-moz-transition: all 0.15s ease-out;
-  	-o-transition: all 0.15s ease-out;
+      transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+  	-webkit-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+  	-moz-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+  	-o-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
   	}
 }
 
@@ -342,8 +343,8 @@ div.closebtn {
 footer {
   padding: 3em;
 	text-transform: uppercase;
-	background: white url(../img/xlogo.png) no-repeat center 10.25em;
-	background-size: 25px 25px;
+	background: white url(../img/xlogo.png) no-repeat center 10.35em;
+	background-size: 20px 20px;
 }
 
 footer article {
@@ -357,7 +358,6 @@ footer nav {
   text-align: center;
 }
 footer nav a {
-    margin: 0 3em 0 0;
     font-size: 0.875em;
     letter-spacing: 0.1em;
     font-weight: 300;
@@ -369,7 +369,12 @@ footer nav a {
     }
 }
 
-footer nav a:last-child {
+footer ul li {
+  display: inline-block;
+  margin: 0 2.5rem 0 0;
+}
+
+footer nav ul li:last-child {
   margin: 0;
 }
 	
@@ -732,12 +737,16 @@ section.product-actionshots {
   background-size: cover;
 }
 
+
 .action-desc {
   margin: 18em 0 0 0;
+  width: 45%;
 }
 
 .action-desc p {
-  font-size: 0.875em;
+  font-size: 1.125em;
+  line-height: 1.8em;
+  font-weight: 300;
   color: $white;
 }
 
@@ -815,6 +824,11 @@ section.productspotlights	aside.third {
 		}
 }
 
+.productspotlights p, .productfeature p {
+  font-family: "ff-meta-serif-web-pro";
+}
+
+
 figure.spotlight-img {
   width: 14em;
   height: 14em;
@@ -823,10 +837,24 @@ figure.spotlight-img {
   overflow: hidden;
   img {
     max-width: 150%;
+    margin-left: -100px;
   }
 }
 
 section.productfeature {
+  article {
+    padding: 5em 3em;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &.black {
+    background-color: $black;
+  }
+  &.dark {
+    background-color: $dark;
+  }
   &.gray {
   background-color: $lightgray;
     p {
@@ -1440,7 +1468,7 @@ section.mission {
 section.copy {
   background: white;
   p {
-    font-family: "minion-pro";
+    font-family: "ff-meta-serif-web-pro";
       font-size: 1.05em;
 			text-align: left;
 			line-height: 1.625em;

@@ -554,17 +554,25 @@ h1.title {
 section.product-actionshots {
   height: 40em;
   background: url(../img/actionshot.jpg) no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
 
 .action-desc {
-  margin: 18em 0 0 0;
-  width: 45%; }
+  position: absolute;
+  bottom: 0;
+  width: 18em;
+  background: #141415;
+  padding: 2em 3em 4em; }
 
 .action-desc p {
-  font-size: 1.125em;
-  line-height: 1.8em;
-  font-weight: 300;
-  color: white; }
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.6em;
+  font-weight: 500;
+  border-top: 2px solid #4b4b4b;
+  font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+  padding: 1em 0;
+  color: #acadb0; }
 
 section.mainproduct p {
   margin: 2em 0;
@@ -628,7 +636,7 @@ section.productspotlights aside.third {
     line-height: 1.5em; }
 
 .productspotlights p, .productfeature p {
-  font-family: "ff-meta-serif-web-pro"; }
+  font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif; }
 
 figure.spotlight-img {
   width: 14em;
@@ -1061,7 +1069,9 @@ aside.confirmationinfo a {
 
 section.mission {
   height: 30em;
-  background-size: cover; }
+  background-size: cover;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
   section.mission article {
     display: table;
     width: 100%;
@@ -1080,7 +1090,7 @@ section.mission {
 
 .mission-hero {
   font-size: 400%;
-  font-weight: 500;
+  line-height: 1.125em;
   display: table-cell;
   vertical-align: middle;
   text-align: center; }

@@ -18,6 +18,8 @@ $almostblack: rgba(75,75,75,1);
 $dark: rgba(20,20,21,1);
 $black: black;
 
+$serif: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+
 /* Base Styles */
 
 body, html {
@@ -735,19 +737,28 @@ section.product-actionshots {
   height: 40em;
   background: url(../img/actionshot.jpg) no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 
 .action-desc {
-  margin: 18em 0 0 0;
-  width: 45%;
+  position: absolute;
+  bottom: 0;
+  width: 18em;
+  background: $dark;
+  padding: 2em 3em 4em;
 }
 
 .action-desc p {
-  font-size: 1.125em;
-  line-height: 1.8em;
-  font-weight: 300;
-  color: $white;
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.6em;
+  font-weight: 500;
+  border-top: 2px solid $almostblack;
+  font-family: $serif;
+  padding: 1em 0;
+  color: $typegray;
+  
 }
 
 section.mainproduct p {
@@ -825,7 +836,7 @@ section.productspotlights	aside.third {
 }
 
 .productspotlights p, .productfeature p {
-  font-family: "ff-meta-serif-web-pro";
+  font-family: $serif;
 }
 
 
@@ -1435,6 +1446,8 @@ table.shopcart {
 section.mission {
 	height: 30em;
 	background-size: cover;
+	border-top: 1px solid $strokegray;
+	border-bottom: 1px solid $strokegray;
 	article {
   	display: table;
   	width: 100%;
@@ -1459,7 +1472,7 @@ section.mission {
 
 .mission-hero {
 		font-size: 400%;
-		font-weight: 500;
+		line-height: 1.125em;
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;

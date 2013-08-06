@@ -716,6 +716,9 @@ ol.slider-nav {
     padding: 1em;
     border: 1px solid $strokegray;
     margin: 0 0.5em 0 0;
+    &:hover {
+      border: 2px solid $typegray;
+    }
     img {
       margin: 0 auto;
     }
@@ -825,31 +828,33 @@ section.productspotlights	aside.third {
 }
 
 .product-details article {
-  padding: 0 3em 5em !important;
+  padding: 0 3em !important;
 }
 
 .details-headline {
   color: $typegray;
   font-weight: 300;
-  background: $black;
+  background: $dark;
   padding: 0 2em 1em;
   display: table;
   margin: 0 auto;
+  letter-spacing: 0.2em;
+  font-size: 0.875em;
 }
 
 .details-list {
+  width: 100%;
   margin: 3em 0 0 0;
   color: $typegray;
   list-style-type: circle;
-  padding: 1.5em 2em;
-  border: 3px dashed $black;
+  padding: 0 0 3em 0;
+  border-bottom: 2px solid $dark;
   li {
     display: block;
-    box-sizing: content-box;
-    background: $black;
+    background: $dark;
     padding: 1em 2em;
     font-size: 0.875em;
-    width: 27.5em;
+    width: 49.5%;
     float: left;
     margin: 0.5em 0 0;
     position: relative;
@@ -859,7 +864,7 @@ section.productspotlights	aside.third {
 
 .details-list li:nth-child(odd) {
   clear: both;
-  margin: 0.5em 0.5em 0 0;
+  margin: 0.5em 1% 0 0;
 }
 
 

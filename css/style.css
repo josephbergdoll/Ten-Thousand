@@ -519,17 +519,15 @@ section.mainproduct {
   background: transparent url(../img/zoombtn_k.svg) center center no-repeat;
   background-size: 75% 75%;
   z-index: 2;
-  cursor: -webkit-zoom-in; }
+  cursor: pointer; }
+  .zoombtn:hover {
+    opacity: 1; }
 
 aside.product-imgs {
   width: 50%;
   margin: 0 12% 0 0;
   float: left;
   position: relative; }
-  aside.product-imgs:hover .zoombtn {
-    opacity: 1 !important; }
-  aside.product-imgs:hover .slideshow {
-    cursor: -webkit-zoom-in; }
 
 ol.slider-nav {
   display: table;
@@ -555,24 +553,15 @@ section.product-actionshots {
   height: 40em;
   background: url(../img/actionshot.jpg) no-repeat;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  padding: 17em 0 0 0; }
 
 .action-desc {
-  position: absolute;
-  bottom: 0;
-  width: 18em;
-  background: #141415;
-  padding: 2em 3em 4em; }
-
-.action-desc p {
-  display: block;
-  font-size: 0.875em;
-  line-height: 1.6em;
-  font-weight: 500;
-  border-top: 2px solid #4b4b4b;
-  font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
-  padding: 1em 0;
-  color: #acadb0; }
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  display: table;
+  padding: 1em 2em; }
 
 section.mainproduct p {
   margin: 2em 0;
@@ -638,6 +627,38 @@ section.productspotlights aside.third {
 .productspotlights p, .productfeature p {
   font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif; }
 
+.product-details article {
+  padding: 0 3em 5em !important; }
+
+.details-headline {
+  color: #acadb0;
+  font-weight: 300;
+  background: black;
+  padding: 0 2em 1em;
+  display: table;
+  margin: 0 auto; }
+
+.details-list {
+  margin: 3em 0 0 0;
+  color: #acadb0;
+  list-style-type: circle;
+  padding: 1.5em 2em;
+  border: 3px dashed black; }
+  .details-list li {
+    display: block;
+    box-sizing: content-box;
+    background: black;
+    padding: 1em 2em;
+    font-size: 0.875em;
+    width: 27.5em;
+    float: left;
+    margin: 0.5em 0 0;
+    position: relative; }
+
+.details-list li:nth-child(odd) {
+  clear: both;
+  margin: 0.5em 0.5em 0 0; }
+
 figure.spotlight-img {
   width: 14em;
   height: 14em;
@@ -656,7 +677,7 @@ section.productfeature img {
 section.productfeature.black {
   background-color: black; }
 section.productfeature.dark {
-  background-color: #141415; }
+  background-color: #19191b; }
 section.productfeature.gray {
   background-color: #fafbfd; }
   section.productfeature.gray p {

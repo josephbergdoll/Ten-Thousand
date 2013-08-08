@@ -43,9 +43,9 @@ $(document).ready(function() {
 
 <body class="full">
 
-<!--<a class="scroll to-top" href="#top">
+<a class="scroll to-top" href="#top">
 Back To Top
-</a>-->
+</a>
 
 <section class="cart-disp-full">
 	<article>
@@ -105,7 +105,7 @@ Back To Top
 <a href="../journal/">Journal</a>
 <span class="cart">
 	<a href="#">Cart
-	<figure class="counter">3<div class="closebtn">close</div></figure>
+	<figure id="cartcounter" class="counter">3<div class="closebtn">close</div></figure>
 	</a>
 </span>
 </nav>
@@ -145,7 +145,7 @@ Back To Top
 		
 <form action="">
 <figure class="colorsize">
-	<select name="color">
+	<select id="color" name="color">
 		<option value="navy">Charcoal</option>
 		<option value="charcoal">Red</option>
 		<option value="black">Blue</option>
@@ -201,13 +201,13 @@ Back To Top
 </section>
 
 
-<section id="features" class="productfeature dark">
+<section class="productfeature dark">
   <article>
   <img src="../img/productshot5.png" alt="productshot3" width="880" height="587">
   </article>
 </section>
 
-<section class="productfeature black product-details">
+<section id="features" class="productfeature black product-details">
   <article>
   <h2 class="details-headline">Product Details</h2>
     <ul class="details-list clearfix">
@@ -248,7 +248,7 @@ Back To Top
 <section class="productfeature black">
   <article>
   <img src="../img/productshot8.jpg" alt="productshot3" width="880" height="587">
-  <a class="scroll submitbutton purchase" href="#top">Add to Cart</a>
+  <a id="selectcolorsize" class="scroll submitbutton purchase" href="#top">Select Color &amp; Size</a>
   </article>
 </section>
 
@@ -258,15 +258,15 @@ Back To Top
 	<h1>More to Explore</h1>
 		<aside class="third">
 			<a href="#"><figure><img src="../img/shorts.jpg"></figure>
-			<h3>Board Short</h3></a>
+			Board Short</a>
 		</aside>
 		<aside class="third">
 			<a href="#"><figure><img src="../img/shorts.jpg"></figure>
-			<h3>Board Short</h3></a>
+			Board Short</a>
 		</aside>
 		<aside class="third">
 			<a href="#"><figure><img src="../img/shorts.jpg"></figure>
-			<h3>Board Short</h3></a>
+			Board Short</a>
 		</aside>
 		
 		<div class="clear"></div>

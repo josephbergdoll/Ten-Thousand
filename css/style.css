@@ -175,24 +175,28 @@ article {
 section, header, footer {
   width: 100%; }
 
-/*a.to-top {
-	position: fixed;
-	text-indent: -9999px;
-	right: 2em;
-	top: 2em;
-	background: white;
-	height: 36px;
-	width: 36px;
-	background: url(../img/backtotop.png) no-repeat center center;
-	background-size: 36px 36px;
-	z-index: 100;
-	opacity: 0.3;
-	transition: none !important;
-	-webkit-transition: none !important;
-	&:hover {
-		opacity: 0.75;
-	}
-}*/
+a.to-top {
+  position: fixed;
+  padding: 16px 18px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  right: -128px;
+  top: 2em;
+  background: #19191b;
+  width: 128px;
+  z-index: 100;
+  opacity: 1;
+  color: #acadb0;
+  transition: right 0.15s ease-out;
+  -webkit-transition: right 0.15s ease-out; }
+  a.to-top:hover {
+    background: #4b4b4b;
+    color: white; }
+  a.to-top.slideright {
+    right: 0; }
+
 .index-header {
   position: relative;
   z-index: 2;
@@ -209,7 +213,7 @@ header article {
   padding: 2em 3em; }
 
 header nav {
-  font-size: 0.8em;
+  font-size: 0.875em;
   margin: 0.8em 0 0 0;
   float: right; }
 
@@ -266,9 +270,9 @@ div.closebtn {
     transition: background-color 0.1s ease-out; }
 
 footer {
-  padding: 3em;
+  padding: 1em 3em 5em;
   text-transform: uppercase;
-  background: white url(../img/xlogo.png) no-repeat center 10.35em;
+  background: white url(../img/xlogo.png) no-repeat center 8.35em;
   background-size: 20px 20px; }
 
 footer article {
@@ -471,7 +475,7 @@ aside.third {
 section.homepage {
   background: white; }
   section.homepage article {
-    padding: 4em 3em 1em; }
+    padding: 4em 3em; }
 
 section.homepage aside.third {
   height: 21em;
@@ -481,15 +485,17 @@ section.homepage aside.third {
     border-right: none; }
   section.homepage aside.third h2 {
     text-align: center;
-    margin: 0 0 1em 0; }
+    margin: 1em 0 0em 0; }
   section.homepage aside.third h3 {
     text-align: center;
-    margin: 0 0 2.25em 0; }
+    margin: 0 0 2.25em 0;
+    color: #acadb0; }
   section.homepage aside.third p {
     font-size: 0.875em;
     text-align: center;
     line-height: 1.5em;
-    margin: 2em 0 3em 0; }
+    margin: 1.75em 0 3em 0;
+    font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif; }
 
 section.products article {
   border-top: 1px solid #e5e5e5; }
@@ -560,7 +566,7 @@ ol.slider-nav {
     border: 1px solid #e5e5e5;
     margin: 0 0.5em 0 0; }
     ol.slider-nav li:hover {
-      border: 2px solid #acadb0; }
+      border: 1px solid #acadb0; }
     ol.slider-nav li img {
       margin: 0 auto; }
 
@@ -600,7 +606,7 @@ select {
   background: #e5e5e5 url(../img/arrow.png) 93% center no-repeat;
   background-size: 12px 12px;
   padding: 1em;
-  font-family: "ars-maquette-web";
+  font-family: "ars-maquette-web", 'Helvetica Neue', Arial, Helvetica sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.875em;
@@ -618,7 +624,7 @@ a.submitbutton {
   background: black;
   border: 0;
   padding: 2em;
-  font-family: "ars-maquette-web";
+  font-family: "ars-maquette-web", 'Helvetica Neue', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.8em;
@@ -750,12 +756,14 @@ section.productexplore aside.third {
 section.productexplore a {
   display: table;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.875em;
   color: #99999c; }
+  section.productexplore a img {
+    margin: 0 0 1em 0; }
   section.productexplore a:hover {
     color: black; }
-  section.productexplore a h3 {
-    margin: 1.5em auto 2.25em;
-    -webkit-transition: color 0.15s ease-in; }
 
 section.checkout-page {
   background: #fafbfd; }
@@ -1166,7 +1174,7 @@ section.copy aside.third {
     text-align: center;
     margin: 0 0 2.25em 0; }
   section.copy aside.third p {
-    margin: 2em 0 3em 0; }
+    margin: 2em 0 0.5em 0; }
 
 .p-single-col {
   width: 55%;
@@ -1193,7 +1201,7 @@ section.copy aside.third {
   .mission-highlight-copy h1 {
     text-transform: none;
     letter-spacing: normal;
-    font-size: 1.25em;
+    font-size: 1.05em;
     font-weight: 500;
     margin: 0 0 0.5em; }
 

@@ -243,24 +243,32 @@ section,header,footer {
 
 // Begin Header Styles
 
-/*a.to-top {
+a.to-top {
 	position: fixed;
-	text-indent: -9999px;
-	right: 2em;
+	padding: 16px 18px;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	right: -128px;
 	top: 2em;
-	background: white;
-	height: 36px;
-	width: 36px;
-	background: url(../img/backtotop.png) no-repeat center center;
-	background-size: 36px 36px;
+	background: $dark;
+	width: 128px;
 	z-index: 100;
-	opacity: 0.3;
-	transition: none !important;
-	-webkit-transition: none !important;
+	opacity: 1;
+	color: $typegray;
 	&:hover {
-		opacity: 0.75;
+		background: $almostblack;
+		color: $white;
 	}
-}*/
+	&.slideright {
+  	right: 0;
+	}
+	
+transition: right 0.15s ease-out;
+-webkit-transition: right 0.15s ease-out;
+	
+}
 
 header {
 }
@@ -285,7 +293,7 @@ header article {
 }
 
 header nav {
-	font-size: 0.8em;
+	font-size: 0.875em;
 	margin: 0.8em 0 0 0;
 	float: right;
 }
@@ -362,9 +370,9 @@ div.closebtn {
 // Begin Footer Styles
 
 footer {
-  padding: 3em;
+  padding: 1em 3em 5em;
 	text-transform: uppercase;
-	background: white url(../img/xlogo.png) no-repeat center 10.35em;
+	background: white url(../img/xlogo.png) no-repeat center 8.35em;
 	background-size: 20px 20px;
 }
 
@@ -619,7 +627,7 @@ aside.third {
 section.homepage {
   background: $white;
 	article {
-		padding: 4em 3em 1em;
+		padding: 4em 3em;
 	}
 }
 
@@ -632,17 +640,19 @@ section.homepage aside.third {
 		}
 		h2 {
 			text-align: center;
-			margin: 0 0 1em 0;
+			margin: 1em 0 0em 0;
 		}
 		h3 {
 			text-align: center;
 			margin: 0 0 2.25em 0;
+			color: $typegray;
 		}
 		p {
 			font-size: 0.875em;
 			text-align: center;
 			line-height: 1.5em;
-			margin: 2em 0 3em 0;
+			margin: 1.75em 0 3em 0;
+			font-family: $serif;
 		}
 }
 
@@ -736,7 +746,7 @@ ol.slider-nav {
     border: 1px solid $strokegray;
     margin: 0 0.5em 0 0;
     &:hover {
-      border: 2px solid $typegray;
+      border: 1px solid $typegray;
     }
     img {
       margin: 0 auto;
@@ -787,7 +797,7 @@ select {
 			background: $strokegray url(../img/arrow.png) 93% center no-repeat;
 			background-size: 12px 12px;
 			padding: 1em;
-			font-family: "ars-maquette-web";
+			font-family: "ars-maquette-web", 'Helvetica Neue', Arial, Helvetica sans-serif;
 			text-transform: uppercase;
 			font-weight: 500;
 			font-size: 0.875em;
@@ -808,7 +818,7 @@ a.submitbutton {
 			background: $black;
 			border: 0;
 			padding: 2em;
-			font-family: "ars-maquette-web";
+			font-family: "ars-maquette-web", 'Helvetica Neue', Arial, Helvetica, sans-serif;
 			text-transform: uppercase;
 			font-weight: 500;
 			font-size:0.8em;
@@ -980,16 +990,17 @@ section.productexplore {
 section.productexplore a {
 			display: table;
 			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-size: 0.875em;
 			color: $linkgray;
+			img {
+  			margin: 0 0 1em 0;
+			}
 			&:hover {
 				color: $black;
 			}
-			h3 {
-				margin: 1.5em auto 2.25em;
-				-webkit-transition: color 0.15s ease-in;
-			}
 }
-
 
 
 // End Individual Product Page Styles
@@ -1561,7 +1572,7 @@ padding: 2em 3em;
 		}
 		p {
 			
-			margin: 2em 0 3em 0;
+			margin: 2em 0 0.5em 0;
 		}
 
 }
@@ -1598,7 +1609,7 @@ padding: 2em 3em;
 	h1 {
 		text-transform: none;
 		letter-spacing: normal;
-		font-size: 1.25em;
+		font-size: 1.05em;
 		font-weight: 500;
 		margin: 0 0 0.5em;
 	}

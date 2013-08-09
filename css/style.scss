@@ -852,48 +852,45 @@ section.productspotlights	aside.third {
 		}
 }
 
-.productspotlights p, .productfeature p {
+.productdesc p, .productspotlights p, .productfeature p {
   font-family: $serif;
 }
 
-.product-details article {
-  padding: 0 3em !important;
+h2.product-subhead {
+		text-align: center;
+		color: $typegray;
+		font-weight: 300;
+		margin: 0 0 1.75em 0;
+		font-size: 125%;
 }
 
-.details-headline {
-  color: $typegray;
-  font-weight: 300;
-  background: $dark;
-  padding: 0 2em 1em;
-  display: table;
-  margin: 0 auto;
-  letter-spacing: 0.2em;
-  font-size: 0.875em;
-}
+
+
 
 .details-list {
-  width: 100%;
-  margin: 3em 0 0 0;
+  display: table;
+  margin: 3em auto 0 auto;
   color: $typegray;
-  list-style-type: circle;
-  padding: 0 0 3em 0;
-  border-bottom: 2px solid $dark;
+  padding: 2em 0;
+  border-top: 1px solid $strokegray;
+  border-bottom: 1px solid $strokegray;
   li {
-    display: block;
-    background: $dark;
-    padding: 1em 2em;
+    display: list-item;
+    padding: 1em 1em;
     font-size: 0.875em;
-    width: 49.5%;
+    font-family: $serif;
+     background: $lightgray;
+    width: 25em;
     float: left;
     margin: 0.5em 0 0;
     position: relative;
-    
+    list-style-type: disc !important;
   }
 }
 
 .details-list li:nth-child(odd) {
   clear: both;
-  margin: 0.5em 1% 0 0;
+  margin: 0.5em 3em 0 0;
 }
 
 a.purchase {
@@ -971,13 +968,6 @@ figure.feature-img {
 
 
 section.productexplore {
-	h1 {
-		text-align: center;
-		color: $typegray;
-		font-weight: 300;
-		margin: 0 0 1.75em 0;
-		font-size: 125%;
-	}
 	aside.third {
 		width: 18em;
 		margin: 0 3em 0 0;

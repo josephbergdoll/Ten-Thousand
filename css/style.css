@@ -650,42 +650,38 @@ section.productspotlights aside.third {
     font-size: 0.875em;
     line-height: 1.5em; }
 
-.productspotlights p, .productfeature p {
+.productdesc p, .productspotlights p, .productfeature p {
   font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif; }
 
-.product-details article {
-  padding: 0 3em !important; }
-
-.details-headline {
+h2.product-subhead {
+  text-align: center;
   color: #acadb0;
   font-weight: 300;
-  background: #19191b;
-  padding: 0 2em 1em;
-  display: table;
-  margin: 0 auto;
-  letter-spacing: 0.2em;
-  font-size: 0.875em; }
+  margin: 0 0 1.75em 0;
+  font-size: 125%; }
 
 .details-list {
-  width: 100%;
-  margin: 3em 0 0 0;
+  display: table;
+  margin: 3em auto 0 auto;
   color: #acadb0;
-  list-style-type: circle;
-  padding: 0 0 3em 0;
-  border-bottom: 2px solid #19191b; }
+  padding: 2em 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
   .details-list li {
-    display: block;
-    background: #19191b;
-    padding: 1em 2em;
+    display: list-item;
+    padding: 1em 1em;
     font-size: 0.875em;
-    width: 49.5%;
+    font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+    background: #fafbfd;
+    width: 25em;
     float: left;
     margin: 0.5em 0 0;
-    position: relative; }
+    position: relative;
+    list-style-type: disc !important; }
 
 .details-list li:nth-child(odd) {
   clear: both;
-  margin: 0.5em 1% 0 0; }
+  margin: 0.5em 3em 0 0; }
 
 a.purchase {
   margin: 4em auto 0 !important;
@@ -741,12 +737,6 @@ figure.feature-img {
   figure.feature-img img {
     max-width: 200%; }
 
-section.productexplore h1 {
-  text-align: center;
-  color: #acadb0;
-  font-weight: 300;
-  margin: 0 0 1.75em 0;
-  font-size: 125%; }
 section.productexplore aside.third {
   width: 18em;
   margin: 0 3em 0 0; }

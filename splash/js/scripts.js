@@ -1,3 +1,9 @@
 $(document).ready(function(){
-  $(".submitform").delay(500).queue(function(){$(this).addClass('submit-reveal');});
-});
+
+   $(".bg").delay(800).queue(function(){$(this).addClass('loaded');});
+
+  $(".hero-text").delay(1000).queue(function(){$(this).addClass('hero-reveal');});
+  
+  $(".submitform").delay(1700).queue(function(){$(this).addClass('loaded');});
+  
+  });

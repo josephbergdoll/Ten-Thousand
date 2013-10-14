@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title></title>
+<meta name="description" content="" />
+      <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="">
+
+<!-- CSS Styles -->
+<link href="https://www.dropbox.com/s/5ziyi0u6agpwgdk/journal.css?dl=1" rel="stylesheet" type="text/css">
+
+<!-- jQuery() -->
+
+ <!--[if lt IE 9]>
+<script src="http://www.osephj.com/varsity/10k/js/html5shiv.js"></script>
+<![endif]-->
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://www.osephj.com/varsity/10k/js/masonry.js"></script>
+<script src="https://www.dropbox.com/s/cw4wuuu041kki9e/scripts-ck.js?dl=1"></script>
+
+<!-- TypeKit-->
+<script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script>
+$(window).load(function() {
+         var $container = $('div#journalcontainer');
+        $container.masonry({
+            itemSelector: ".post",
+            gutter: ".gutter-sizer",
+            transitionDuration: "0.2s"
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<section class="cart-disp-empty">
+  <article>
+    <h1>Your cart is empty</h1>
+    <p><a href="products/">Click here to check out our products</a></p>
+  </article>
+</section>
+
+<header>
+<article class="clearfix">
+<a href="../index.html" class="logo">Ten Thousand</a>
+<nav>
+<a href="../products/">Products</a>
+<a href="../mission/">About</a>
+<a href="../journal/" class="current">Journal</a>
+<span class="cart">
+	<a href="http://ten-thousand.myshopify.com/">Cart
+	<figure class="counter">0<div class="closebtn">close</div></figure>
+	</a>
+</span>
+</nav>
+</article>
+</header>
+
+<section class="journal">
+  <article>
+  <div id="journalcontainer">
+      <div class="grid-sizer">&nbsp;</div>
+    <div class="gutter-sizer">&nbsp;</div>
+    
+    {block:Posts}
+
+     {block:Text}
+                <div class="post text">
+                <div class="content">
+                {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                {Body}
+                {block:Date}
+                <div class="date"><a href="{Permalink}">{DayOfMonth} {Month} {Year}<br>@{24Hour}:{Minutes}:{Seconds}</a></div>
+                {/block:Date}
+                {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
+                </div>
+                </div>
+    {/block:Text}
+
+    {block:Photo}
+                <div class="post">
+                <div class="content photocontent">
+                   {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" {block:IndexPage}width="288"{/block:IndexPage}/>{block:IndexPage}</a>{/block:IndexPage}
+                {block:PermalinkPage}
+	                {block:Caption}
+	                <div class="caption">{Caption}</div>
+	                {/block:Caption}
+	                
+	                {block:Exif}
+	                <div class="caption">
+	                <p class="camera">{block:Camera}{Camera}{/block:Camera}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / ISO{ISO}{/block:ISO}</p></div>
+	                {/block:Exif}
+                {/block:PermalinkPage}
+                {block:Date}
+                <div class="date"><a href="{Permalink}">{DayOfMonth} {Month} {Year}<br>@{24Hour}:{Minutes}:{Seconds}</a></div>
+                {/block:Date}
+                {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
+                </div>
+                </div>
+    {/block:Photo}
+
+    {block:Quote}
+                <div class="post">
+                <div class="content">
+                <blockquote class="quote">"{Quote}"</blockquote>
+
+                        {block:Source}
+                            <h2 class="source">{Source}</h2>
+                       {/block:Source}
+                       {block:Date}
+                <div class="date"><a href="{Permalink}">{DayOfMonth} {Month} {Year}<br>@{24Hour}:{Minutes}:{Seconds}</a></div>
+                {/block:Date}
+                       {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
+                </div>
+                </div>
+                {/block:Quote}
+
+
+   
+
+
+    {/block:Posts}
+  </div>
+  </article>
+</section>
+
+
+<footer>
+	<article>
+		<nav>
+		<ul>
+		  <li><a href="legal/">Gear Refresh</a></li>
+			<li><a href="terms/">Terms</a></li>
+			<li><a href="privacy/">Privacy</a></li>
+			<li><a href="shipping-info/">Shipping Info</a></li>
+			<li><a href="#">Email</a></li>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">888 212 4913</a></li>
+		</ul>
+		</nav>
+	<div class="clear"></div>
+	<h5> &copy; Ten Thousand Inc 2013. All rights reserved.</h5>
+	</article>
+</footer>
+</body>
+</html>

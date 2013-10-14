@@ -1,0 +1,527 @@
+/* Ten Thousand */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Variables */
+/* Base Styles */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%;
+  background: #f0f1f5; }
+
+body {
+  font-size: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  width: 100%;
+  height: auto;
+  font-family: "ars-maquette-web", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: black;
+  background: white; }
+  body.template-index {
+    height: 100%; }
+
+::selection {
+  background: black;
+  color: white; }
+
+::-moz-selection {
+  background: black;
+  color: white; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a, h1, h2, h3, h4, h5, span {
+  transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  -webkit-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  -moz-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  -o-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in; }
+  a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, span:hover {
+    transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    -webkit-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    -moz-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    -o-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in; }
+
+a.current {
+  color: black; }
+
+div.clear {
+  clear: left;
+  height: 0; }
+
+div.clearright {
+  clear: both;
+  height: 0; }
+
+em {
+  font-style: italic; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.purple {
+  color: #784485 !important; }
+
+.white {
+  color: white; }
+
+.clearfix {
+  display: block; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* Type Styles */
+h1.white, h2.white, h3.white, h4.white, h5.white, p.white {
+  color: white; }
+h1.gray, h2.gray, h3.gray, h4.gray, h5.gray, p.gray {
+  color: #a3a3a6; }
+h1.notrack, h2.notrack, h3.notrack, h4.notrack, h5.notrack, p.notrack {
+  letter-spacing: normal; }
+h1.inlineblock, h2.inlineblock, h3.inlineblock, h4.inlineblock, h5.inlineblock, p.inlineblock {
+  display: inline-block; }
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1em; }
+
+h2 {
+  font-size: 1.15em;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 0.875em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  /*@include aa-text;*/ }
+
+h4 {
+  font-size: 0.75em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+p {
+  color: #acadb0;
+  line-height: 1.5em; }
+
+a.logo {
+  display: block;
+  width: 18em;
+  height: 2.25em;
+  background: url(http://www.osephj.com/varsity/10k/img/tenthoulogo_lg.png) no-repeat center center;
+  background-size: 100%;
+  text-indent: -9999px;
+  float: left;
+  cursor: pointer; }
+  a.logo:hover {
+    opacity: 0.5; }
+
+a.btn {
+  display: table;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.9em 2em 1em;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased; }
+  a.btn:hover {
+    background: #784485; }
+
+article {
+  width: 63em;
+  margin: 0 auto;
+  padding: 3em 1.5em; }
+
+section, header, footer {
+  width: 100%; }
+
+header article {
+  padding: 4em 3em; }
+
+header nav {
+  font-size: 0.875em;
+  margin: 0.55em 0 0 0;
+  float: right;
+  -webkit-font-smoothing: antialiased; }
+
+header nav a {
+  display: inline-block;
+  margin: 0 2em 0 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #a3a3a6;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.25); }
+  header nav a:hover {
+    color: black; }
+  header nav a.current {
+    color: black; }
+
+span.cart a {
+  margin: 0; }
+  span.cart a.cartclicked {
+    color: black; }
+span.cart figure {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #a3a3a6;
+  text-indent: 1px;
+  height: 2em;
+  width: 2em;
+  font-size: 90%;
+  line-height: 1.7em;
+  text-align: center;
+  border-radius: 2em;
+  margin: 0 0 0 0.5em;
+  color: #a3a3a6;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  -webkit-transition: border 0.35s ease-in, color 0.35s ease-in;
+  -moz-transition: border 0.35s ease-in, color 0.35s ease-in;
+  -o-transition: border 0.35s ease-in, color 0.35s ease-in;
+  transition: border 0.35s ease-in, color 0.35s ease-in; }
+  span.cart figure a {
+    color: white; }
+
+.cart-circle-hovered {
+  border: 2px solid black !important; }
+
+.cart-circle-span-hovered {
+  color: black !important; }
+
+div.closebtn {
+  text-indent: -9999px;
+  position: absolute;
+  display: none;
+  top: -2px;
+  left: -2px;
+  background: black url(http://osephj.com/varsity/10k/img/closebtn_w.svg) no-repeat center center;
+  width: 1.95em;
+  border-radius: 1em;
+  height: 1.95em;
+  background-size: 75%;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in; }
+  div.closebtn:hover {
+    background-color: #414141;
+    transition: background-color 0.1s ease-out; }
+
+footer {
+  padding: 1em 3em 5em;
+  text-transform: uppercase;
+  background: white url(http://osephj.com/varsity/10k/img/xlogo.png) no-repeat center 8.35em;
+  background-size: 20px 20px; }
+
+footer article {
+  padding: 1.5em 0em 4em;
+  width: 60em;
+  border-top: 1px solid #e5e5e5; }
+
+footer nav {
+  text-align: center; }
+
+footer nav a {
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  color: #acadb0;
+  line-height: 1.85em;
+  white-space: nowrap; }
+  footer nav a:hover {
+    color: black; }
+
+footer ul li {
+  display: inline-block;
+  margin: 0 2.35rem 0 0; }
+
+footer nav ul li:last-child {
+  margin: 0; }
+
+footer h5 {
+  margin: 1.5em 0 0 0;
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  color: #acadb0;
+  text-align: center; }
+
+section.cart-disp-empty {
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: absolute;
+  top: 100px;
+  color: white;
+  z-index: 5; }
+  section.cart-disp-empty article {
+    padding: 8em 3em;
+    position: relative;
+    text-align: center; }
+  section.cart-disp-empty h1 {
+    font-weight: 300;
+    letter-spacing: 0.2em; }
+  section.cart-disp-empty p {
+    margin: 0.5em 0 0 0; }
+  section.cart-disp-empty a {
+    color: #6e7174; }
+    section.cart-disp-empty a:hover {
+      color: white; }
+
+section.cart-disp-full {
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: absolute;
+  top: 100px;
+  color: white;
+  z-index: 5; }
+  section.cart-disp-full article {
+    padding: 3em 3em 4em;
+    position: relative; }
+    section.cart-disp-full article * {
+      box-sizing: content-box; }
+
+div.cart-contain {
+  width: 40em;
+  float: left; }
+
+table.shopcart {
+  border-collapse: collapse;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 0 0 1em 0; }
+  table.shopcart tr {
+    border-bottom: 1px solid white; }
+  table.shopcart thead {
+    font-size: 75%;
+    font-weight: 600;
+    letter-spacing: 0.1em; }
+  table.shopcart .td-name {
+    text-align: left;
+    padding: 20px 0;
+    font-weight: 500;
+    letter-spacing: 0.1em; }
+  table.shopcart .td-quantity, table.shopcart .td-price, table.shopcart .td-remove {
+    text-align: center;
+    padding: 20px 0; }
+    table.shopcart .td-quantity.sm, table.shopcart .td-price.sm, table.shopcart .td-remove.sm {
+      padding: 10px 0; }
+  table.shopcart .td-remove a {
+    display: block;
+    text-indent: -9999px;
+    width: 1.1em;
+    border-radius: 1em;
+    height: 1.1em;
+    margin: 0 auto;
+    background: url(../img/closebtn_w.svg) center center no-repeat; }
+    table.shopcart .td-remove a:hover {
+      background-color: #4b4b4b; }
+  table.shopcart .td-quantity {
+    width: 80px; }
+  table.shopcart .td-price {
+    width: 150px; }
+  table.shopcart .td-remove {
+    width: 90px; }
+
+/* Closed Shop Cart */
+div.cart-actions {
+  width: 20em;
+  float: left;
+  box-sizing: border-box !important;
+  padding: 0.625em 0 0 3em;
+  text-align: center; }
+  div.cart-actions * {
+    box-sizing: border-box; }
+  div.cart-actions h3 {
+    color: #a3a3a6; }
+  div.cart-actions h2 {
+    margin: 0.25em auto 0.75em;
+    font-size: 2.25em;
+    padding: 0 0 0.15em;
+    display: table;
+    border-bottom: 2px solid white;
+    font-weight: 300; }
+  div.cart-actions a.checkout {
+    display: table;
+    margin: 0 auto;
+    color: white;
+    background: #6e7174;
+    padding: 1em 3em 1.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 0.813em; }
+    div.cart-actions a.checkout:hover {
+      background-color: #784485; }
+
+section.copy {
+  background: white; }
+  section.copy p {
+    font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+    font-size: 1.05em;
+    text-align: left;
+    line-height: 1.625em;
+    -webkit-font-smoothing: antialiased; }
+
+.p-single-col {
+  width: 55%;
+  margin: 0 auto 1em; }
+
+section.journal article {
+  border-top: 1px solid #e5e5e5; }
+
+.post {
+  display: block;
+  max-width: 18.5em;
+  height: auto;
+  margin: 0 0 36px 0;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none; }
+
+.date a {
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 0.625em;
+  text-transform: uppercase;
+  color: #6e7174;
+  line-height: 1em; }
+
+.text div.date {
+  border-top: 1px solid #e5e5e5;
+  margin: 0.5em 0 0 0;
+  padding: 0.25em 0 0 0; }
+
+.post img {
+  max-width: 100%;
+  height: auto; }
+
+div.gutter-sizer {
+  width: 36px;
+  margin: 0 !important; }
+
+.content p {
+  font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  margin: 0 0 1em 0; }
+  .content p a {
+    text-decoration: underline;
+    color: #6e7174; }
+  .content p a:hover {
+    text-decoration: none; }
+
+.text h2 {
+  font-size: 1em;
+  margin: 0 0 0.75em 0;
+  line-height: 1.35em; }
+
+.text blockquote {
+  margin: 1.5em auto; }
+
+blockquote {
+  font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125em;
+  line-height: 1.4em;
+  font-style: italic;
+  color: #6e7174; }
+  blockquote:before {
+    content: "\0022"; }
+  blockquote:after {
+    content: "\0022"; }
+
+.source {
+  font-size: 0.833em;
+  line-height: 1.35em;
+  margin: 0.35em 0 0.3em; }
+  .source:before {
+    content: "- "; }

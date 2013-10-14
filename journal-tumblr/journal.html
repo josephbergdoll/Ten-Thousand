@@ -5,11 +5,11 @@
 <meta name="description" content="" />
       <meta name="keywords" content="" />
     <meta name="robots" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="shortcut icon" type="image/x-icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="">
 
 <!-- CSS Styles -->
-<link href="https://www.dropbox.com/s/5ziyi0u6agpwgdk/journal.css?dl=1" rel="stylesheet" type="text/css">
+<link href="http://osephj.com/varsity/10k/journal-tumblr/css/journal.css" rel="stylesheet" type="text/css">
 
 <!-- jQuery() -->
 
@@ -18,27 +18,11 @@
 <![endif]-->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://www.osephj.com/varsity/10k/js/masonry.js"></script>
-<script src="http://osephj.com/varsity/10k/js/fitvids.js"></script>
-<script src="https://www.dropbox.com/s/cw4wuuu041kki9e/scripts-ck.js?dl=1"></script>
+<script src="http://osephj.com/varsity/10k/journal-tumblr/js/scripts-ck.js"></script>
 
 <!-- TypeKit-->
 <script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-{block:IndexPage}
-<script>
-$(window).load(function() {
-         var $container = $('div#journalcontainer');
-        $container.masonry({
-            itemSelector: ".post",
-            gutter: ".gutter-sizer",
-            transitionDuration: "0s",
-            columnWidth: ".post",
-            isInitLayout: true
-        });
-    });
-</script>
-{/block:IndexPage}
 </head>
 
 <body>
@@ -58,9 +42,9 @@ $(window).load(function() {
 <a href="http://ten-thousand.myshopify.com/pages/mission">About</a>
 <a href="http://ten-thousand-10000.tumblr.com/" class="current">Journal</a>
 <span class="cart">
-	<a href="#">Cart
-	<figure class="counter">0<div class="closebtn">close</div></figure>
-	</a>
+  <a href="#">Cart
+  <figure class="counter">0<div class="closebtn">close</div></figure>
+  </a>
 </span>
 </nav>
 </article>
@@ -68,16 +52,12 @@ $(window).load(function() {
 
 <section class="journal">
   <article>
-  <div id="journalcontainer">
-    {block:IndexPage}
-      <div class="grid-sizer">&nbsp;</div>
-      <div class="gutter-sizer">&nbsp;</div>
-    {/block:IndexPage}
+  <div id="journalcontainer" {block:IndexPage}class="masonry"{/block:IndexPage}>
 
     {block:Posts}
 
      {block:Text}
-                <div class="post text{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="post text{block:PermalinkPage} wide{/block:PermalinkPage}{block:IndexPage} post-masonry{/block:IndexPage}">
                 <div class="content text-content">
                 {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
                 {Body}
@@ -90,19 +70,19 @@ $(window).load(function() {
     {/block:Text}
 
     {block:Photo}
-                <div class="post photo{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="post photo{block:PermalinkPage} wide{/block:PermalinkPage}{block:IndexPage} post-masonry{/block:IndexPage}">
                 <div class="content">
                    {block:IndexPage}<a href="{Permalink}"><img src="{PhotoURL-400}" alt="{PhotoAlt}"></a>{/block:IndexPage}
                 {block:PermalinkPage}
                 <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
-	                {block:Caption}
-	                <div class="caption">{Caption}</div>
-	                {/block:Caption}
-	                
-	                {block:Exif}
-	                <div class="caption">
-	                <p class="camera">{block:Camera}{Camera}{/block:Camera}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / ISO{ISO}{/block:ISO}</p></div>
-	                {/block:Exif}
+                  {block:Caption}
+                  <div class="caption">{Caption}</div>
+                  {/block:Caption}
+                  
+                  {block:Exif}
+                  <div class="caption">
+                  <p class="camera">{block:Camera}{Camera}{/block:Camera}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / ISO{ISO}{/block:ISO}</p></div>
+                  {/block:Exif}
                 {/block:PermalinkPage}
                 {block:Date}
                 <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
@@ -113,7 +93,7 @@ $(window).load(function() {
     {/block:Photo}
 
     {block:Quote}
-                <div class="post quote{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="post quote{block:PermalinkPage} wide{/block:PermalinkPage}{block:IndexPage} post-masonry{/block:IndexPage}">
                 <div class="content">
                 <blockquote class="quote">"{Quote}"</blockquote>
 
@@ -129,7 +109,7 @@ $(window).load(function() {
     {/block:Quote}
 
     {block:Photoset}
-                <div class="post photoset{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="post photoset{block:PermalinkPage} wide{/block:PermalinkPage}{block:IndexPage} post-masonry{/block:IndexPage}">
                 <div class="content">
                 {block:IndexPage}{Photoset-250}{/block:IndexPage}
                 {block:PermalinkPage}
@@ -147,7 +127,7 @@ $(window).load(function() {
     {/block:Photoset}
 
     {block:Video}
-                <div class="post video{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="post video{block:PermalinkPage} wide{/block:PermalinkPage}{block:IndexPage} post-masonry{/block:IndexPage}">
                 
                 <div class="content">
                 
@@ -178,21 +158,21 @@ $(window).load(function() {
 
 
 <footer>
-	<article class="clearfix">
-		<nav>
-		<ul>
-		  <li><a href="http://ten-thousand.myshopify.com/pages/gear-refresh">Gear Refresh</a></li>
-			<li><a href="http://ten-thousand.myshopify.com/pages/terms">Terms</a></li>
-			<li><a href="http://ten-thousand.myshopify.com/pages/privacy">Privacy</a></li>
-			<li><a href="http://ten-thousand.myshopify.com/pages/shipping-info">Shipping Info</a></li>
-			<li><a href="#">Email</a></li>
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">Facebook</a></li>
-			<li><a href="#">888 212 4913</a></li>
-		</ul>
-		</nav>
-	<h5> &copy; Ten Thousand Inc 2013. All rights reserved.</h5>
-	</article>
+  <article class="clearfix">
+    <nav>
+    <ul>
+      <li><a href="http://ten-thousand.myshopify.com/pages/gear-refresh">Gear Refresh</a></li>
+      <li><a href="http://ten-thousand.myshopify.com/pages/terms">Terms</a></li>
+      <li><a href="http://ten-thousand.myshopify.com/pages/privacy">Privacy</a></li>
+      <li><a href="http://ten-thousand.myshopify.com/pages/shipping-info">Shipping Info</a></li>
+      <li><a href="#">Email</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">888 212 4913</a></li>
+    </ul>
+    </nav>
+  <h5> &copy; Ten Thousand Inc 2013. All rights reserved.</h5>
+  </article>
 </footer>
 </body>
 </html>

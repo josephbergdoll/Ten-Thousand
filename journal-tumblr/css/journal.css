@@ -102,11 +102,6 @@ img {
 
 iframe#tumblr_controls {
   white-space: nowrap;
-  -webkit-filter: invert(100%);
-  -moz-filter: invert(100%);
-  -o-filter: invert(100%);
-  -ms-filter: invert(100%);
-  filter: invert(100%);
   opacity: 0.25;
   -webkit-tranition: opacity 0.35s ease-in;
   -moz-transition: opacity 0.35s ease-in;
@@ -474,6 +469,15 @@ section.copy {
 section.journal article {
   border-top: 1px solid #e5e5e5; }
 
+.masonry {
+  -moz-column-count: 3;
+  -moz-column-gap: 36px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 36px;
+  column-count: 3;
+  column-gap: 36px;
+  width: 100%; }
+
 .post {
   display: block;
   width: 18.5em;
@@ -483,6 +487,10 @@ section.journal article {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none; }
+
+.post-masonry {
+  display: inline-block;
+  width: 100%; }
 
 .date a {
   letter-spacing: 1px;

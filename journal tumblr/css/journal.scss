@@ -96,7 +96,6 @@ body, html {
 
 html {
   height: 100%;
-  background: $altgray;
   }
 
 body {
@@ -137,6 +136,23 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+iframe#tumblr_controls {
+white-space:nowrap;
+-webkit-filter: invert(100%);
+-moz-filter: invert(100%);
+-o-filter: invert(100%);
+-ms-filter: invert(100%);
+filter: invert(100%);
+opacity:0.25;
+ -webkit-tranition: opacity 0.35s ease-in;
+ -moz-transition: opacity 0.35s ease-in;
+ -o-transition: opacity 0.35s-easein;
+ transition: opacity 0.35s ease-in;
+  &:hover {
+    opacity:0.5;
+  }
 }
 
 
@@ -285,9 +301,9 @@ a.btn {
 }
 
 article {
-  width: 63em;
+  width: 60em;
   margin: 0 auto;
-  padding: 3em 1.5em;
+  padding: 3em 0em;
 }
 
 section,header,footer {
@@ -301,7 +317,7 @@ header {
 }
 
 header article {
-  padding: 4em 3em;
+  padding: 4em 0em;
 }
 
 
@@ -365,6 +381,7 @@ span.cart {
 
 .cart-circle-hovered {
   border: 2px solid $black !important;
+  color: $black !important;
 }
 
 .cart-circle-span-hovered {
@@ -378,9 +395,9 @@ div.closebtn {
   top: -2px;
   left: -2px;
   background: $black url(http://osephj.com/varsity/10k/img/closebtn_w.svg) no-repeat center center;
-  width: 1.95em;
+  width: 1.93em;
   border-radius: 1em;
-  height: 1.95em;
+  height: 1.93em;
   background-size: 75%;
   cursor: pointer;
   transition: background-color 0.5s ease-in;
@@ -399,8 +416,8 @@ div.closebtn {
 footer {
   padding: 1em 3em 5em;
   text-transform: uppercase;
-  background: white url(http://osephj.com/varsity/10k/img/xlogo.png) no-repeat center 8.35em;
-  background-size: 20px 20px;
+  background: white url(http://osephj.com/varsity/10k/img/xlogo.png) no-repeat center 7.75em;
+  background-size: 16px 16px;
 }
 
 footer article {
@@ -413,8 +430,9 @@ footer article {
 footer nav {
   text-align: center;
 }
+
 footer nav a {
-    font-size: 0.875em;
+    font-size: 0.75em;
     letter-spacing: 0.1em;
     font-weight: 300;
     color: $typegray;
@@ -427,16 +445,16 @@ footer nav a {
 
 footer ul li {
   display: inline-block;
-  margin: 0 2.35rem 0 0;
+  margin: 0 1.5rem 0 0;
 }
 
 footer nav ul li:last-child {
   margin: 0;
 }
   
-footer  h5 {
-    margin: 1.5em 0 0 0;
-    font-size: 0.875em;
+footer h5 {
+    margin: 1.85em 0 0 0;
+    font-size: 0.75em;
     letter-spacing: 0.1em;
     font-weight: 300;
     color: $typegray;
@@ -451,7 +469,7 @@ section.cart-disp-empty {
   background: $cartoverlaybg;
   display: none;
 	position: absolute;
-	top: 100px;
+	top: 164px;
 	color: white;
 	z-index: 5;
 	   article {
@@ -460,20 +478,25 @@ section.cart-disp-empty {
   	  text-align: center;
   	 }
   	 h1 {
-    	 font-weight: 300;
-    	 letter-spacing: 0.2em;
-  	 }
-  	 p {
-    	 margin: 0.5em 0 0 0;
-  	 }
-  	 a {
-    	 color: $darkertype;
-    	 &:hover {
-      	 color:white;
-    	 }
-  	 }
+       font-weight: 300;
+       letter-spacing: 0.2em;
+     }
+     p {
+       margin: 0.5em 0 0 0;
+       letter-spacing: 0.1em;
+       text-transform: uppercase;
+       font-size: 0.875em;
+     }
+     a {
+       color: $darkertype;
+       &:hover {
+         color:white;
+       }
+     }
   
 }
+
+
 
 
 // Full Cart Styles
@@ -618,7 +641,7 @@ section.copy {
 }
 
 
-// End Missoin Page Styles
+// End Mission Page Styles
 
 
 // Begin Journal Page Styles
@@ -629,9 +652,9 @@ section.journal article {
 
 .post {
   display: block;
-  max-width: 18.5em;
+  width: 18.5em;
   height: auto;
-  margin: 0 0 36px 0;
+  margin: 0 0 64px 0;
   transition: none;
   -webkit-transition: none;
   -moz-transition: none;
@@ -647,15 +670,75 @@ section.journal article {
   line-height: 1em;
 }
 
-.text div.date {
+.wide {
+  width: 100% !important;
+  margin:0 auto !important;
+}
+
+.wide div.fluid-width-video-wrapper {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  max-width: 97%;
+}
+
+.wide img {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  max-width: 97%;
+}
+
+.wide iframe {
+  margin:0 auto;
+  display: block;
+}
+
+.wide div.content p {
+  font-size: 1em;
+  margin: 0 auto 1em;
+  line-height: 1.5em;
+}
+
+.wide div.caption, {
+  margin: 3em auto;
+  text-align: center;
+  width: 55%;
+}
+
+.wide div.text-content {
+  width: 55%;
+  margin:0 auto;
+}
+
+.wide div.text-content h2 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1em;
+  text-align: center;
+  margin: 0 auto 1.5em;
+}
+
+.wide div.date {
+  width: 55%;
+  text-align: center;
+  padding: 0 !important;
+  border-top: none !important;
+  margin: 3em auto 0 !important;
+  a {
+    color: $typegray;
+  }
+}
+
+.text div.date, .quote div.date {
   border-top: 1px solid $strokegray;
   margin: 0.5em 0 0 0;
   padding: 0.25em 0 0 0;
 }
 
 .post img {
+  display: block;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 div.gutter-sizer {
@@ -711,4 +794,10 @@ blockquote {
   &:before {
     content: "- ";
   }
+}
+
+.photoset {
+}
+
+.photoset iframe {
 }

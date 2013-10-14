@@ -19,21 +19,26 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://www.osephj.com/varsity/10k/js/masonry.js"></script>
+<script src="http://osephj.com/varsity/10k/js/fitvids.js"></script>
 <script src="https://www.dropbox.com/s/cw4wuuu041kki9e/scripts-ck.js?dl=1"></script>
 
 <!-- TypeKit-->
 <script type="text/javascript" src="//use.typekit.net/qcv7rrn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{block:IndexPage}
 <script>
 $(window).load(function() {
          var $container = $('div#journalcontainer');
         $container.masonry({
             itemSelector: ".post",
             gutter: ".gutter-sizer",
-            transitionDuration: "0.2s"
+            transitionDuration: "0s",
+            columnWidth: ".post",
+            isInitLayout: true
         });
     });
 </script>
+{/block:IndexPage}
 </head>
 
 <body>
@@ -47,13 +52,13 @@ $(window).load(function() {
 
 <header>
 <article class="clearfix">
-<a href="../index.html" class="logo">Ten Thousand</a>
+<a href="http://ten-thousand.myshopify.com/" class="logo">Ten Thousand</a>
 <nav>
-<a href="../products/">Products</a>
-<a href="../mission/">About</a>
-<a href="../journal/" class="current">Journal</a>
+<a href="http://ten-thousand.myshopify.com/collections/all">Products</a>
+<a href="http://ten-thousand.myshopify.com/pages/mission">About</a>
+<a href="http://ten-thousand-10000.tumblr.com/" class="current">Journal</a>
 <span class="cart">
-	<a href="http://ten-thousand.myshopify.com/">Cart
+	<a href="#">Cart
 	<figure class="counter">0<div class="closebtn">close</div></figure>
 	</a>
 </span>
@@ -64,18 +69,20 @@ $(window).load(function() {
 <section class="journal">
   <article>
   <div id="journalcontainer">
+    {block:IndexPage}
       <div class="grid-sizer">&nbsp;</div>
-    <div class="gutter-sizer">&nbsp;</div>
-    
+      <div class="gutter-sizer">&nbsp;</div>
+    {/block:IndexPage}
+
     {block:Posts}
 
      {block:Text}
-                <div class="post text">
-                <div class="content">
+                <div class="post text{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="content text-content">
                 {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
                 {Body}
                 {block:Date}
-                <div class="date"><a href="{Permalink}">{DayOfMonth} {Month} {Year}<br>@{24Hour}:{Minutes}:{Seconds}</a></div>
+                <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
                 {/block:Date}
                 {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
                 </div>
@@ -83,10 +90,11 @@ $(window).load(function() {
     {/block:Text}
 
     {block:Photo}
-                <div class="post">
-                <div class="content photocontent">
-                   {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" {block:IndexPage}width="288"{/block:IndexPage}/>{block:IndexPage}</a>{/block:IndexPage}
+                <div class="post photo{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="content">
+                   {block:IndexPage}<a href="{Permalink}"><img src="{PhotoURL-400}" alt="{PhotoAlt}"></a>{/block:IndexPage}
                 {block:PermalinkPage}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
 	                {block:Caption}
 	                <div class="caption">{Caption}</div>
 	                {/block:Caption}
@@ -97,7 +105,7 @@ $(window).load(function() {
 	                {/block:Exif}
                 {/block:PermalinkPage}
                 {block:Date}
-                <div class="date"><a href="{Permalink}">{DayOfMonth} {Month} {Year}<br>@{24Hour}:{Minutes}:{Seconds}</a></div>
+                <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
                 {/block:Date}
                 {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
                 </div>
@@ -105,7 +113,7 @@ $(window).load(function() {
     {/block:Photo}
 
     {block:Quote}
-                <div class="post">
+                <div class="post quote{block:PermalinkPage} wide{/block:PermalinkPage}">
                 <div class="content">
                 <blockquote class="quote">"{Quote}"</blockquote>
 
@@ -113,13 +121,52 @@ $(window).load(function() {
                             <h2 class="source">{Source}</h2>
                        {/block:Source}
                        {block:Date}
-                <div class="date"><a href="{Permalink}">{DayOfMonth} {Month} {Year}<br>@{24Hour}:{Minutes}:{Seconds}</a></div>
+                <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
                 {/block:Date}
                        {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
                 </div>
                 </div>
-                {/block:Quote}
+    {/block:Quote}
 
+    {block:Photoset}
+                <div class="post photoset{block:PermalinkPage} wide{/block:PermalinkPage}">
+                <div class="content">
+                {block:IndexPage}{Photoset-250}{/block:IndexPage}
+                {block:PermalinkPage}
+                {Photoset-700}
+                  {block:Caption}
+                  <div class="caption">{Caption}</div>
+                  {/block:Caption}
+                {/block:PermalinkPage}
+                {block:Date}
+                <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
+                {/block:Date}
+                {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
+                </div>
+              </div>
+    {/block:Photoset}
+
+    {block:Video}
+                <div class="post video{block:PermalinkPage} wide{/block:PermalinkPage}">
+                
+                <div class="content">
+                
+                {block:IndexPage}{Video-250}{/block:IndexPage}
+                
+                {block:PermalinkPage}
+                {Video-700}
+                  {block:Caption}
+                  <div class="caption">{Caption}</div>
+                  {/block:Caption}
+                {/block:PermalinkPage}
+                {block:Date}
+                <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
+                {/block:Date}
+                {block:PostNotes}<div class="postnotes">{PostNotes}</div>{/block:PostNotes}
+                <script>$(document).ready(function() {$(".video").fitVids();});</script>
+                </div>
+              </div>
+        {/block:Video}
 
    
 
@@ -131,20 +178,19 @@ $(window).load(function() {
 
 
 <footer>
-	<article>
+	<article class="clearfix">
 		<nav>
 		<ul>
-		  <li><a href="legal/">Gear Refresh</a></li>
-			<li><a href="terms/">Terms</a></li>
-			<li><a href="privacy/">Privacy</a></li>
-			<li><a href="shipping-info/">Shipping Info</a></li>
+		  <li><a href="http://ten-thousand.myshopify.com/pages/gear-refresh">Gear Refresh</a></li>
+			<li><a href="http://ten-thousand.myshopify.com/pages/terms">Terms</a></li>
+			<li><a href="http://ten-thousand.myshopify.com/pages/privacy">Privacy</a></li>
+			<li><a href="http://ten-thousand.myshopify.com/pages/shipping-info">Shipping Info</a></li>
 			<li><a href="#">Email</a></li>
 			<li><a href="#">Twitter</a></li>
 			<li><a href="#">Facebook</a></li>
 			<li><a href="#">888 212 4913</a></li>
 		</ul>
 		</nav>
-	<div class="clear"></div>
 	<h5> &copy; Ten Thousand Inc 2013. All rights reserved.</h5>
 	</article>
 </footer>

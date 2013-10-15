@@ -409,7 +409,7 @@ div.closebtn {
 // Begin Footer Styles
 
 footer {
-  padding: 1em 3em 5em;
+  padding: 0 3em 5em;
   text-transform: uppercase;
   background: white url(http://osephj.com/varsity/10k/img/xlogo.png) no-repeat center 7.75em;
   background-size: 16px 16px;
@@ -643,6 +643,7 @@ section.copy {
 
 section.journal article {
   border-top: 1px solid $strokegray;
+  padding: 3em 0 0;
 }
 
 .masonry {
@@ -659,16 +660,42 @@ section.journal article {
   display: block;
   width: 18.5em;
   height: auto;
-  margin: 0 0 64px 0;
-  transition: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
+  margin: 0 0 36px 0;
+}
+
+.photo:hover, .photoset:hover {
+  opacity: 0.85;
 }
 
 .post-masonry {
   display: inline-block;
   width: 100%;
+}
+
+blockquote {
+   transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  -webkit-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  -moz-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  -o-transition: color 0.35s ease-in, opacity 0.35s ease-in, background-color 0.35s ease-in;
+  &:hover {
+      transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    -webkit-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    -moz-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    -o-transition: color 0.15s ease-in, opacity 0.15s ease-in, background-color 0.15s ease-in;
+    }
+}
+
+.quote a blockquote:hover {
+  color: $linkgray !important;
+}
+
+.text-content h2 a:hover {
+  color: $linkgray !important;
+}
+
+
+.date {
+  display: none;
 }
 
 .date a {
@@ -680,18 +707,74 @@ section.journal article {
   line-height: 1em;
 }
 
+.pagination {
+  letter-spacing: 1px;
+  margin: -5em 0 5em;
+  font-weight: 300;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  color: $darkertype;
+  line-height: 1em;
+  text-align: right;
+}
+
+.pagination a {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid $linkgray;
+    text-indent: 1px;
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+    border-radius: 2em;
+    color: $linkgray;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    top: -1px;
+    -webkit-transition: border 0.35s ease-in, color 0.35s ease-in;
+    -moz-transition: border 0.35s ease-in, color 0.35s ease-in;
+    -o-transition: border 0.35s ease-in, color 0.35s ease-in;
+    transition: border 0.35s ease-in, color 0.35s ease-in;
+    &:hover {
+      color: $black;
+      border: 2px solid $black;
+    }
+}
+
+.page-next {
+  margin: 0 0 0 0.75em;
+  text-indent: 2px !important;
+}
+
+.page-prev {
+  margin: 0 0.75em 0 0;
+}
+
 .wide {
   width: 100% !important;
   margin:0 auto !important;
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+.wide blockquote.quote {
+  font-size: 4em;
+}
+
+.wide h2.source {
+  text-align: center;
+  margin: 0.5em 0 0.3em;
 }
 
 .wide div.fluid-width-video-wrapper {
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   max-width: 97%;
 }
 
 .wide img {
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   max-width: 97%;
 }
 
@@ -728,14 +811,25 @@ section.journal article {
 }
 
 .wide div.date {
+  display: block;
   width: 55%;
   text-align: center;
   padding: 0 !important;
   border-top: none !important;
-  margin: 3em auto 0 !important;
+  margin: 3em auto 3em !important;
   a {
     color: $typegray;
   }
+}
+
+.text ul {
+  font-size: inherit;
+  font-family: $serif;
+  @include aa-text;
+  color: $darkertype;
+  list-style-type: disc;
+  margin: 0 auto 1em;
+  padding: 0 0 0 1em;
 }
 
 .text div.date, .quote div.date {

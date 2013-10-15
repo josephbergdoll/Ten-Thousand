@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<title></title>
-<meta name="description" content="" />
-      <meta name="keywords" content="" />
-    <meta name="robots" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <link rel="shortcut icon" type="image/x-icon" href="">
+<title>{Title}</title>
+<meta name="description" content="{MetaDescription}" />
+<meta name="keywords" content="" />
+<meta name="robots" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
 
 <!-- CSS Styles -->
 <link href="http://osephj.com/varsity/10k/journal-tumblr/css/journal.css" rel="stylesheet" type="text/css">
@@ -95,11 +96,11 @@
     {block:Quote}
                 <div class="post quote{block:PermalinkPage} wide{/block:PermalinkPage}{block:IndexPage} post-masonry{/block:IndexPage}">
                 <div class="content">
-                <blockquote class="quote">"{Quote}"</blockquote>
+                {block:IndexPage}<a class="no-style" href="{Permalink}">{/block:IndexPage}<blockquote class="quote">"{Quote}"</blockquote>
 
                         {block:Source}
                             <h2 class="source">{Source}</h2>
-                       {/block:Source}
+                       {/block:Source}{block:IndexPage}</a>{/block:IndexPage}
                        {block:Date}
                 <div class="date"><a href="{Permalink}">{Month} {DayOfMonth} {Year}</a></div>
                 {/block:Date}
@@ -153,6 +154,9 @@
 
     {/block:Posts}
   </div>
+  {block:Pagination}
+    <div class="pagination">{block:PreviousPage}<a class="page-prev" href="{PreviousPage}">&lt;</a>{/block:PreviousPage}Page {CurrentPage}/{TotalPages}{block:NextPage}<a class="page-next" href="{NextPage}">&gt;</a>{/block:NextPage}</div>
+  {/block:Pagination}
   </article>
 </section>
 

@@ -137,11 +137,7 @@ input {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   padding: 1.25em 1em;
-  margin: 0.5em 0 0 0;
-  -webkit-transition: background 0.25s ease-in;
-  -moz-transition: background 0.25s ease-in;
-  -o-transition: background 0.25s ease-in;
-  transition: background 0.25s ease-in; }
+  margin: 0.5em 0 0 0; }
 
 input:first-child {
   margin: 1em 0 0 0;
@@ -151,6 +147,14 @@ input[type="email"] {
   border: 2px solid rgba(0, 0, 0, 0.1); }
   input[type="email"]:focus {
     background: white; }
+
+.form-submitted .email-input {
+  background: rgba(255, 255, 255, 0.85) url(../img/success.svg) 95% center no-repeat;
+  background-size: 20px 20px; }
+
+.input-error .email-input {
+  background: rgba(255, 255, 255, 0.85) url(../img/fail.svg) 95% center no-repeat !important;
+  background-size: 20px 20px !important; }
 
 input[type="submit"] {
   background: black;

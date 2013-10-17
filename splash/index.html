@@ -44,6 +44,7 @@
       var TT = TT || {};
 
       TT.submitted=false;
+      TT.errorClass = 'input-error';
 
       TT.submitForm = function () {
         var value = $('.email-input').val();
@@ -51,24 +52,22 @@
 
         if (isValid) {
           TT.submitted = true;
-          console.log('t')
         } else {
-          TT.onFormError()
-          console.log('f')
+          TT.onFormError();
           return false;
         }
       };
 
       TT.onFormError = function () {
-        var $form = $('.email-form');
-        var errorClass = 'input-error';
+        //var $form = $('.email-form');
+        
 
-        $form.addClass(errorClass)
-        setTimeout(function () { $form.removeClass(errorClass) }, 500);
+        $('body').addClass(TT.errorClass);
+        
       };
 
       TT.onFormSubmit = function () {
-        $('body').addClass('form-submitted');
+        $('body').removeClass(TT.errorClass).addClass('form-submitted');
       };
     </script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(TT.submitted) { TT.onFormSubmit();}"></iframe>

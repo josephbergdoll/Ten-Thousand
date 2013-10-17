@@ -56,6 +56,7 @@ body, html {
 
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -67,6 +68,10 @@ body {
   -webkit-tap-highlight-color: $black;
   color: $black;
   display: table;
+  -webkit-transition: top 0.5s ease-in-out 1s, height 0.5s ease-in-out 1s;
+  -moz-transition: top 0.5s ease-in-out 1s, height 0.5s ease-in-out 1s;
+  -o-transition: top 0.5s ease-in-out 1s, height 0.5s ease-in-out 1s;
+  transition: top 0.5s ease-in-out 1s, height 0.5s ease-in-out 1s;
 }
 
 .bg {
@@ -116,6 +121,26 @@ a.current {
   color: $black;
 }
 
+div.flash {
+  width: 100%;
+  position: absolute;
+  padding: 2em 1em;
+  background: $black;
+  color: white;
+  text-align: center;
+  font-size: 0.875em;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  top: -70px;
+  opacity: 0;
+  -webkit-transition: top 0.5s ease-in-out 1s, opacity 0s linear 1.05s;
+  -moz-transition: top 0.5s ease-in-out 1s, opacity 0s linear 1.05s;
+  -o-transition: top 0.5s ease-in-out 1s, opacity 0s linear 1.05s;
+  transition: top 0.5s ease-in-out 1s, opacity 0s linear 1.05s;
+  z-index: 20;
+}
+
 header {
   position: absolute;
   text-align: center;
@@ -126,10 +151,10 @@ header {
 
 .logo {
   width: 375px;
-  height: 76px;
+  height: 39px;
   display: inline-block;
-  background: url(../img/logo_dropshadow.png) no-repeat center center;
-  background-size: 375px 76px;
+  background: url(../img/logo_b.png) no-repeat center center;
+  background-size: 375px 39px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -191,10 +216,13 @@ input {
   font-family: $sans !important;
   font-size: 0.875em;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
   padding: 1.25em 1em;
   margin: 0.5em 0 0 0;
+}
+
+::-webkit-input-placeholder {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 input:first-child {
@@ -205,19 +233,33 @@ input:first-child {
   background: rgba(240,240,242,1);
   &:focus {
     background: rgba(240,240,242,1);
+    outline: none;
+    box-shadow: inset 0px 0px 0px 2px rgba(210,210,212,1)
   }
 }
 
 .form-submitted {
+  position: relative;
+  top: 70px;
   .email-input {
-    background: rgba(240,240,242,1) url(../img/success.svg) 95% center no-repeat;
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 225, 0, 0.5);
     background-size: 20px 20px;
+  }
+  .flash {
+    opacity: 1;
+  }
+  .submitform {
+    opacity: 0 !important;
+    -webkit-transition: opacity 0.5s ease-in 0.5s, height 0s linear 0.55s;
+    -moz-transition: opacity 0.5s ease-in 0.5s, height 0s linear 0.55s;
+    -o-transition: opacity 0.5s ease-in 0.5s, height 0s linear 0.55s;
+    transition: opacity 0.5s ease-in 0.5s, height 0s linear 0.55s;
   }
 }
 
 .input-error {
   .email-input {
-    background: rgba(240,240,242,1) url(../img/fail.svg) 95% center no-repeat !important;
+    box-shadow: inset 0px 0px 0px 2px rgba(225, 0, 0, 0.5);
     background-size: 20px 20px !important;
   }
 }
@@ -229,12 +271,18 @@ input:first-child {
   -webkit-transition: background 0.5s ease-in;
   transition: background 0.5s ease-in;
   padding: 1.5em 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .submit:hover {
-    background: $darkertype;
+    background: rgba(60,60,62,1);
     -webkit-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out;
+}
+
+.submit:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1600px) {
@@ -280,35 +328,41 @@ input:first-child {
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   header {
-    top: 1em;
+    top: 1.75em;
   }
   
   .logo {
     width: 270px;
-    height: 55px;
-    background-size: 270px 55px;
+    height: 28px;
+    background-size: 270px 28px;
   }
   
   .hero {
-    padding: 2.5em 1em 0;
+    padding: 4em 1em 0;
   }
   
   .hero-text {
     font-size: 100%;  
   }
+
+  .flash h4 {
+    font-size: 80%;
+    line-height: 1.6em;
+  }
     
   h1 {
-    font-size:225%;
+    font-size:210%;
     line-height: 1.1em;
+    letter-spacing: 2px;
   }
   
   h2 {
-    font-size: 95%;
-    margin: 0.5em 0 0 0;
+    font-size: 65%;
+    margin: 1em 0 0 0;
   }
   
   .submitform {
-    margin: 2em auto 0;
+    margin: 4.5em auto 0;
     font-size: 75%;
   }
   
@@ -324,6 +378,22 @@ input:first-child {
   input:first-child {
     margin: 1.5em 0 0 0;
   }
+
+  .flash {
+    top: -90px !important;
+    line-height: 1.4em;
+  }
+
+  .form-submitted {
+    position: relative;
+    top: 90px;
+    .email-input {
+      background-size: 20px 20px;
+    }
+    .flash {
+    }
+  }
+
 }
 
 @media screen and (min-width: 480px) and (max-width:568px) and (orientation: landscape) {
@@ -336,10 +406,25 @@ input:first-child {
     position: relative;
     width: 100%;
   }
-  
+
   .hero {
     display: block;
     padding: 2.5em 1em 1.5em 1em !important;
   }
+
+  .form-submitted {
+  position: relative;
+  top: 110px;
+  .email-input {
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 225, 0, 0.5);
+    background-size: 20px 20px;
+  }
+  .flash {
+    top: 0;
+  }
+  .submitform {
+    opacity: 0 !important;
+  }
+}
 
 }

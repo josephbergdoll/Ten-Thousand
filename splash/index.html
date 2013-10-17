@@ -37,15 +37,48 @@
   <h1>A Revolution is Afoot</h1>
   <h2>Athletic apparel to challenge the stasis</h2>
   </article>
-  
+
   <article class="submitform">
     <h3>Be the first to know when Ten Thousand launches.</h3>
-    <form>
-      <input type="email" placeholder="email address" required>
-      <input type="submit" value="submit">
+    <script type="text/javascript">
+      var TT = TT || {};
+
+      TT.submitted=false;
+
+      TT.submitForm = function () {
+        var value = $('.email-input').val();
+        var isValid = value.match(/.+\@.+\..+/);
+
+        if (isValid) {
+          TT.submitted = true;
+          console.log('t')
+        } else {
+          TT.onFormError()
+          console.log('f')
+          return false;
+        }
+      };
+
+      TT.onFormError = function () {
+        var $form = $('.email-form');
+        var errorClass = 'input-error';
+
+        $form.addClass(errorClass)
+        setTimeout(function () { $form.removeClass(errorClass) }, 500);
+      };
+
+      TT.onFormSubmit = function () {
+        $('body').addClass('form-submitted');
+      };
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(TT.submitted) { TT.onFormSubmit();}"></iframe>
+
+    <form action="https://docs.google.com/forms/d/1KdfPivA3iV6ODZbMSKsdw3j71oYy2Fmm_edTG_r7Cio/formResponse" method="POST" id="ss-form" class="email-form" target="hidden_iframe" onsubmit="TT.submitForm();">
+      <input type="text" class="email-input" placeholder="email address" name="entry.1007311059" value="" id="entry_1007311059" dir="auto" title="">
+      <input type="submit" name="submit" value="Submit" id="ss-submit">
     </form>
   </article>
-  
+
 </section>
 
 

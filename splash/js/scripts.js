@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-   $(".bg").delay(800).queue(function(){$(this).addClass('loaded');});
+   //$(".bg").delay(800).queue(function(){$(this).addClass('loaded');});
 
   $(".hero-text").delay(1000).queue(function(){$(this).addClass('hero-reveal');});
   
